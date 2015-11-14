@@ -1,0 +1,120 @@
+[ 2015-10-28T18:06:34+08:00 ] 127.0.0.1 /thcmf/index.php?m=list&a=index&id=3
+ERR: SQLSTATE[HY000] [2002] ����Ŀ�����������ܾ����޷����ӡ�
+
+
+[ 2015-10-28T18:07:04+08:00 ] ::1 /thcmf/index.php?m=list&a=index&id=3&select=test
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001257s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004109s ]
+NOTIC: [8] Undefined index: date E:\wamp\www\thcmf\application\Portal\Controller\ListController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0231s ]
+SQL: SELECT * FROM `sp_terms` WHERE ( parent=3 )  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: date E:\wamp\www\thcmf\application\Portal\Controller\ListController.class.php 第 36 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000377s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000563s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0262s ]
+SQL: SHOW COLUMNS FROM `sp_nav_cat` [ RunTime:0.0171s ]
+SQL: SELECT * FROM `sp_nav_cat` WHERE ( active=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sp_nav` WHERE ( cid=1 and status=1 ) ORDER BY `listorder` ASC  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0124s ]
+SQL: SELECT * FROM `sp_terms` WHERE ( status=1 and parent=3 ) ORDER BY listorder asc  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: ty E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 150 行.
+NOTIC: [8] Undefined index: tl E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 150 行.
+NOTIC: [8] Undefined index: status E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 150 行.
+SQL: SELECT `term_id` FROM `sp_terms` WHERE ( status=1 and ( term_id=3 OR path like '%-3-%' ) ) ORDER BY term_id asc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0116s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sp_term_relationships a INNER JOIN sp_posts as b on a.object_id =b.id INNER JOIN sp_users as c on b.post_author = c.id  WHERE `status` = 1 AND `post_status` = 1 AND `term_id` IN ('3','4','5','6') LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `active_status`,`object_id`,`tid`,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_term_relationships a INNER JOIN sp_posts as b on a.object_id =b.id INNER JOIN sp_users as c on b.post_author = c.id  WHERE `status` = 1 AND `post_status` = 1 AND `term_id` IN ('3','4','5','6') ORDER BY post_date desc LIMIT 0,16   [ RunTime:0.0155s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 167 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 170 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 175 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 167 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 170 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 175 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 167 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 170 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 175 行.
+SQL: SHOW COLUMNS FROM `sp_links` [ RunTime:0.0134s ]
+SQL: SELECT * FROM `sp_links` WHERE ( link_status=1 ) ORDER BY listorder ASC  [ RunTime:0.0004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.342975s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.343198s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000805s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000835s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001889s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001021s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001172s ]
+
+[ 2015-10-28T18:10:07+08:00 ] ::1 /thcmf/index.php?m=list&a=index&id=3&time_limit=1&ajax=1&select=test
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001066s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003432s ]
+NOTIC: [8] Undefined index: date E:\wamp\www\thcmf\application\Portal\Controller\ListController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `sp_terms` WHERE ( parent=3 )  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: date E:\wamp\www\thcmf\application\Portal\Controller\ListController.class.php 第 36 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000372s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000546s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0458s ]
+SQL: SHOW COLUMNS FROM `sp_nav_cat` [ RunTime:0.0179s ]
+SQL: SELECT * FROM `sp_nav_cat` WHERE ( active=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sp_nav` WHERE ( cid=1 and status=1 ) ORDER BY `listorder` ASC  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0158s ]
+SQL: SELECT * FROM `sp_terms` WHERE ( status=1 and parent=3 ) ORDER BY listorder asc  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: ty E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 152 行.
+NOTIC: [8] Undefined index: tl E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 152 行.
+NOTIC: [8] Undefined index: status E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 152 行.
+SQL: SELECT `term_id` FROM `sp_terms` WHERE ( status=1 and ( term_id=3 OR path like '%-3-%' ) ) ORDER BY term_id asc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0166s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sp_term_relationships a INNER JOIN sp_posts as b on a.object_id =b.id INNER JOIN sp_users as c on b.post_author = c.id  WHERE `status` = 1 AND `post_status` = 1 AND `term_id` IN ('3','4','5','6') LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `active_status`,`object_id`,`tid`,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_term_relationships a INNER JOIN sp_posts as b on a.object_id =b.id INNER JOIN sp_users as c on b.post_author = c.id  WHERE `status` = 1 AND `post_status` = 1 AND `term_id` IN ('3','4','5','6') ORDER BY post_date desc LIMIT 0,16   [ RunTime:0.0122s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 169 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 172 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 177 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 169 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 172 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 177 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 169 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 172 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Portal\a211368cc39f9f9fbe1c2a26be687c13.php 第 177 行.
+SQL: SHOW COLUMNS FROM `sp_links` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `sp_links` WHERE ( link_status=1 ) ORDER BY listorder ASC  [ RunTime:0.0004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.354533s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.354719s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000765s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000735s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001752s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001222s ]
+
+[ 2015-10-28T18:47:04+08:00 ] ::1 /thcmf/index.php?m=recruit&a=index
+ERR: 无法加载控制器:Recruit
+
+[ 2015-10-28T19:53:43+08:00 ] ::1 /thcmf/index.php?g=&m=AdminPost&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001485s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002172s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005115s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0171s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0125s ]
+NOTIC: [8] Undefined index: ac_start E:\wamp\www\thcmf\application\Portal\Controller\AdminPostController.class.php 第 50 行.
+NOTIC: [8] Undefined index: ac_end E:\wamp\www\thcmf\application\Portal\Controller\AdminPostController.class.php 第 51 行.
+NOTIC: [8] Undefined variable: reet E:\wamp\www\thcmf\application\Portal\Controller\AdminPostController.class.php 第 52 行.
+NOTIC: [8] Undefined variable: acet E:\wamp\www\thcmf\application\Portal\Controller\AdminPostController.class.php 第 52 行.
+NOTIC: [8] Undefined variable: reet E:\wamp\www\thcmf\application\Portal\Controller\AdminPostController.class.php 第 53 行.
+NOTIC: [8] Undefined variable: acet E:\wamp\www\thcmf\application\Portal\Controller\AdminPostController.class.php 第 53 行.
+SQL: INSERT INTO `sp_posts` (`post_modified`,`post_status`,`istop`,`recommended`,`post_title`,`ac_start`,`ac_end`,`duration`,`post_address`,`post_keywords`,`post_source`,`post_excerpt`,`post_content`,`post_date`,`post_author`,`quality`,`smeta`) VALUES ('2015-10-28 19:53:14','1','0','0','敬老','1212','1212','1545','地址','','','','<p>发说说</p>','2015-10-28 19:53:43','1','1,2','{\"thumb\":\"\"}') [ RunTime:0.0385s ]
+SQL: INSERT INTO `sp_term_relationships` (`term_id`,`object_id`) VALUES ('4','4') [ RunTime:0.0004s ]
+

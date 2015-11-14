@@ -1,0 +1,322 @@
+[ 2015-10-29T13:55:16+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001200s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001983s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004305s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T15:40:48+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001254s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004679s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T15:49:37+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000981s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003303s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T15:50:17+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000981s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003366s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T15:50:40+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001027s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001941s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003822s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T15:51:42+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000813s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001270s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002820s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T15:51:44+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001933s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003677s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T15:56:15+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001154s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003862s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T15:56:33+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001222s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004321s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T15:56:35+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001028s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003534s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T15:57:18+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001426s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004575s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T21:48:43+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002934s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T21:49:45+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002812s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T21:51:23+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001404s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004741s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T21:51:50+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001259s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004342s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T21:52:39+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002106s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007410s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T21:52:42+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001046s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003394s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T21:52:46+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000821s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003753s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T21:52:51+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001293s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001978s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005022s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T21:52:58+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001225s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004440s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T21:53:17+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002250s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007168s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T21:54:00+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001468s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006360s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T21:57:24+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001065s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003482s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T21:57:33+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000994s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001880s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003678s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T21:57:47+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002140s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001851s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004956s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T21:58:10+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001659s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005270s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:00:08+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001502s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002270s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005702s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:00:54+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001316s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001818s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004041s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:00:57+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001556s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005033s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:01:16+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000982s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003495s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:05:51+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001076s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001819s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003694s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:05:56+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001054s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003656s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:06:04+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001572s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005262s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:08:04+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001678s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004312s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:08:31+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001071s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003574s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:09:10+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001274s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004239s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:36:45+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001704s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005008s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007705s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:36:49+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003176s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008301s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:37:34+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001299s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004215s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006409s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:37:38+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001558s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006173s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:41:47+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001246s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005169s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:41:49+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001370s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004509s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:41:56+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002395s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002864s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006419s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:42:16+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002143s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005721s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:42:52+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001966s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006505s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+
+[ 2015-10-29T22:43:03+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001127s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004701s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
+

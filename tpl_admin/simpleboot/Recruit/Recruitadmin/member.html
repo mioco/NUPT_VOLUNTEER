@@ -1,0 +1,51 @@
+<admintpl file="header" />
+</head>
+<body class="J_scroll_fixed" style="min-width:800px;">
+<div class="wrap J_check_wrap">
+	<ul class="nav nav-tabs">
+	   <li><a href="{:U('Recruitadmin/index')}">项目列表</a></li>
+	   <li class="active"><a href="{:U('Recruitadmin/not_check')}" target="_self">项目成员</a></li>
+	</ul>
+	<form class="J_ajaxForm" action="" method="post">
+		<div class="table-actions">
+			<button class="btn btn-primary btn-small J_ajax_submit_btn" type="submit" data-action="{:u('Recruitadmin/check',array('check'=>1))}" data-subcheck="true">审核</button>
+			<button class="btn btn-primary btn-small J_ajax_submit_btn" type="submit" data-action="{:u('Recruitadmin/check',array('uncheck'=>1))}" data-subcheck="true">取消审核</button>
+			<button class="btn btn-primary btn-small J_ajax_submit_btn" type="submit" data-action="{:u('Recruitadmin/delete')}" data-subcheck="true" data-msg="你确定删除吗？">删除</button>
+		</div>
+		<table class="table table-hover table-bordered table-list">
+			<thead>
+				<tr>
+					<th width="15"><label><input type="checkbox" class="J_check_all" data-direction="x" data-checklist="J_check_x"></label></th>
+					<th width="30">学号</th>
+					<th width="100">姓名</th>
+					<th width="100">学院</th>
+					<th width="100">专业</th>
+					<th width="100">所在组织</th>
+					<th width="100">联系方式</th>
+					<th width="50">审核状态</th>
+					<th width="50">操作</th>
+				</tr>
+			</thead>
+			<php>$status=array("1"=>"已审核","0"=>"未审核");</php>
+			<foreach name="menber" item="vo">
+			<tr>
+				<td><input type="checkbox" class="J_check" data-yid="J_check_y" data-xid="J_check_x" name="ids[]" value="{$vo.id}" ></td>
+				<td>{$vo.user_number}</td>
+				<td><a href="">{$vo.username}</a> </td>
+				<td>{$vo.user_faculty} </td>
+				<td>{$vo.user_major}</td>
+				<td>{$vo.org}</td>
+				<td>{$vo.user_email}</td>
+				<td>{$status[$vo['status']]}</td>
+				<td>
+					<a href="{:U('Recruitadmin/delete',array('id'=>$vo['id']))}" class="J_ajax_del btn" >删除</a>
+				</td>
+			</tr>
+			</foreach>
+		</table>
+		<div class="pagination">{$Page}</div>
+	</form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+a:6:{i:0;s:6:"navcid";i:1;s:4:"name";i:2;s:6:"active";i:3;s:6:"remark";s:3:"_pk";s:6:"navcid";s:5:"_type";a:4:{s:6:"navcid";s:7:"int(11)";s:4:"name";s:12:"varchar(255)";s:6:"active";s:6:"int(1)";s:6:"remark";s:4:"text";}}

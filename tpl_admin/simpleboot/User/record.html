@@ -1,0 +1,81 @@
+<admintpl file="header" />
+</head>
+<body class="J_scroll_fixed">
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('User/Indexadmin/index')}">本站用户</a></li>
+			<li class="active"><a>{$userInfo['username']}</a></li>
+		</ul>
+		<form method="post" class="J_ajaxForm" action="#">
+			<div class="table_list">
+				<table class="table table-hover table-bordered">
+				<caption><h2 style="margin-bottom:0;">南京邮电大学</h2></caption> 
+				<caption><h2>志愿者个人服务记录表</h2></caption>
+				<tr>
+					<th>姓名</th>
+					<td>{$userInfo['username']}</td>
+					<th>性别</th>
+					<td>{$userInfo['sex']}</td>
+					<th>学号</th>
+					<td>{$userInfo['user_number']}</td>
+				</tr>
+				<tr>
+					<th>出生年月</th>
+					<td>{$userInfor['birthday']}</td>
+					<th>学院</th>
+					<td>{$userInfo['faculty']}</td>
+					<th>专业</th>
+					<td>{$userInfo['major']}</td>
+				</tr>
+				<tr><th colspan="6"><h3>服务记录</h3></th></tr>
+				<foreach name="record" item="re">
+				<tr>
+					<th colspan="2">活动名称</th>
+					<td colspan="4">{$re.post_title}</td>
+				</tr>
+				<tr>
+					<th colspan="2">活动时间</th>
+					<th colspan="2">活动地点</th>
+					<th colspan="2">活动时长</th>
+				</tr>
+				<tr>
+					<td colspan="2">{$re.ac_start}到{$re.ac_end}</td>
+					<td colspan="2">{$re.post_address}</td>
+					<td colspan="2">{$re.duration}</td>
+				</tr>
+			</foreach>
+				<tr>
+					<th>共计时长</th>
+					<td colspan="5">{$userInfo['duration']}</td>
+				</tr>
+				<tr>		
+					<th>校团委意见</th>
+					<td colspan="2"></td>
+					<th>校团委盖章</th>
+					<td colspan="2"></td>
+				</tr>
+			</table>
+				<div class="pagination">{$page}</div>
+			</div>
+		</form>
+        <form action="__ROOT__/simplewind/Core/Library/Vendor/printExcel.php" method="post">
+        	<input type="hidden" name="username" value="{$userInfo['username']}">
+        	<input type="hidden" name="table" id="table">
+        	<script type="text/javascript">
+        	  var td = document.getElementsByTagName("td"),
+        	      table = document.getElementById('table'),
+        	      inner = '';
+        	      for (var i = td.length - 1; i >= 0; i--) {
+        	      	inner = td[i].innerText + ',' + inner;
+        	      };
+        	      table.value = inner;
+        	      console.log(td);
+        	</script>
+        	<input type="submit" value="导出excel">
+        </form>
+	</div>
+
+	</div>
+	<tc_include file="Public:scripts" />
+</body>
+</html>

@@ -1,0 +1,82 @@
+<admintpl file="header" />
+</head>
+<body class="J_scroll_fixed" style="min-width:800px;">
+<div class="wrap J_check_wrap">
+	<ul class="nav nav-tabs">
+	   <li class="active"><a href="{:U('Recruitadmin/index')}">项目列表</a></li>
+	</ul>
+			<form method="post" style="float:right;">
+				 <input type="text" placeholder="Search" value="">
+				 <input type="submit" class="btn" value="搜索">
+			</form>
+	<form class="J_ajaxForm" action="" method="post">
+		<div class="table-actions">
+			<button class="btn btn-primary btn-small J_ajax_submit_btn" type="submit" data-action="{:u('Recruitadmin/check',array('check'=>1))}" data-subcheck="true">审核</button>
+			<button class="btn btn-primary btn-small J_ajax_submit_btn" type="submit" data-action="{:u('Recruitadmin/check',array('uncheck'=>1))}" data-subcheck="true">取消审核</button>
+			<button class="btn btn-primary btn-small J_ajax_submit_btn" type="submit" data-action="{:u('Recruitadmin/active_status',array('active_start'=>1))}" data-subcheck="true">开始活动</button>
+			<button class="btn btn-primary btn-small J_ajax_submit_btn" type="submit" data-action="{:u('Recruitadmin/active_status',array('active_end'=>1))}" data-subcheck="true">结束活动</button>
+			<button class="btn btn-primary btn-small J_ajax_submit_btn" type="submit" data-action="{:u('Recruitadmin/delete')}" data-subcheck="true" data-msg="你确定删除吗？">删除</button>
+		</div>
+		<table class="table table-hover table-bordered table-list">
+			<thead>
+				<tr>
+					<th width="15"><label><input type="checkbox" class="J_check_all" data-direction="x" data-checklist="J_check_x"></label></th>
+					<th width="30">ID</th>
+					<th width="100">项目名称</th>
+					<th width="30">发布组织</th>
+					<th width="70">参与人数</th>
+					<th width="70">未审核人数</th>
+					<th width="80">活动时间</th>
+					<th width="30">活动状态</th>
+					<th width="100">操作</th>
+				</tr>
+			</thead>
+			<php>
+				$status=array("2" => "已结束","1"=>"进行中","0"=>"招募中");
+				dump($article);
+			</php>
+			<foreach name="article" item="vo">
+			<tr>
+				<td><input type="checkbox" class="J_check" data-yid="J_check_y" data-xid="J_check_x" name="ids[]" value="{$vo.id}" ></td>
+				<td>{$vo.id}</td>
+				<td>{$vo.post_title}</td>
+				<td><a href="">{$vo.user_number}</a></td>
+				<td><a href="{:U('Recruitadmin/member',array('id'=>$vo['tid']))}">{$vo.recruit_count}</a></td>
+				<td><a href="{:U('Recruitadmin/not_check',array('id'=>$vo['tid']))}">{$vo.un_check}</a></td>
+				<td>{$vo.ac_start}到{$vo.ac_end}</td>
+				<td>{$status[$vo['active_status']]}</td>
+				<td>
+					<a href="{:U('Recruitadmin/delete',array('tid'=>$vo['tid']))}" class="J_ajax_del btn" >删除</a>
+					<a href="{:u('Recruitadmin/active_status',array('active_start'=>1,'id'=>$vo['id']))}" class="btn J_ajax_submit_btn" >开始活动</a>
+					<a class="btn J_ajax_submit_btn" data-toggle="modal" data-target=".endBox">结束活动</a>
+					<div class="modal fade endBox" tabindex="-1" role="dialog">
+					  	<div class="modal-body">
+				            <label for="recipient-name" class="control-label">提供时长:</label>
+				            <input type="text" class="form-control" name="takeTime" value="{$vo.duration}">
+				        </div>
+				        <div class="modal-footer">
+				          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				          <a href="{:u('Recruitadmin/active_status',array('active_end'=>1,'id'=>$vo['id'],'status'=>$vo['active_status']))}" type="submit" class="btn btn-primary tk-submit">确定</a>
+				        </div>
+					</div>
+				</td>
+			</tr>
+			</foreach>
+		</table>
+		<div class="pagination">{$Page}</div>
+	</form>
+
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('.tk-submit').on('click', function(){
+			var tk = $('input[name=takeTime]').val();
+			console.log($(this).attr('href'));
+			$(this).attr('href', $(this).attr('href') + '&duration=' + tk);
+			console.log($(this).attr('href'));
+		})
+	})
+</script>
+</body>
+</html>

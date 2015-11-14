@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{$site_name}</title>
+<meta name="keywords" content="{$site_seo_keywords}" />
+<meta name="description" content="{$site_seo_description}">
+<meta name="author" content="ThinkCMF">
+<tc_include file="Public:head" />
+
+<style type="text/css">
+	th,td{width: 150px;height: 30px;}
+</style>
+</head>
+<body class="body-white" id="top">
+	<tc_include file="Public:nav" />
+		<div class="container tc-main">
+                <div class="row">
+                    <div class="span3">
+	                    <tc_include file="Public:usernav"/>
+                    </div>
+                    <div class="span9">
+                           <div class="tabs">
+                               <ul class="nav nav-tabs">
+                                   <li class="active"><a href="#one" data-toggle="tab"><i class="fa fa-star"></i> 个人志愿记录表</a></li>
+                               </ul>
+                               <div class="tab-content">
+                                   <div class="tab-pane active" id="one">
+                                   		<table class="table table-bordered">
+											<caption><h2 style="margin-bottom:0;">南京邮电大学</h2></caption> 
+											<caption><h2>志愿者个人服务记录表</h2></caption>
+											<tr>
+												<th>姓名</th>
+												<td>{$userInfo['username']}</td>
+												<th>性别</th>
+												<td>{$userInfo['sex']}</td>
+												<th>学号</th>
+												<td>{$userInfo['user_number']}</td>
+											</tr>
+											<tr>
+												<th>出生年月</th>
+												<td>{$userInfor['birthday']}</td>
+												<th>学院</th>
+												<td>{$userInfo['faculty']}</td>
+												<th>专业</th>
+												<td>{$userInfo['major']}</td>
+											</tr>
+											<tr><th colspan="6"><h3>服务记录</h3></th></tr>
+											<foreach name="record" item="re">
+											<tr>
+												<th colspan="2">活动名称</th>
+												<td colspan="4">{$re.post_title}</td>
+											</tr>
+											<tr>
+												<th colspan="2">活动时间</th>
+												<th colspan="2">活动地点</th>
+												<th colspan="2">活动时长</th>
+											</tr>
+											<tr>
+												<td colspan="2">{$re.ac_start}到{$re.ac_end}</td>
+												<td colspan="2">{$re.post_address}</td>
+												<td colspan="2">{$re.duration}</td>
+											</tr>
+										</foreach>
+											<tr>
+												<th>共计时长</th>
+												<td colspan="5">{$userInfo['duration']}</td>
+											</tr>
+											<tr>		
+												<th>校团委意见</th>
+												<td colspan="2"></td>
+												<th>校团委盖章</th>
+												<td colspan="2"></td>
+											</tr>
+										</table>
+                                   </div>
+                               </div>							
+                           </div>
+                    </div>
+                </div>
+                <form action="__ROOT__/simplewind/Core/Library/Vendor/printExcel.php" method="post">
+                	<input type="hidden" name="username" value="{$userInfo['username']}">
+                	<input type="hidden" name="table" id="table">
+                	<script type="text/javascript">
+                	  var td = document.getElementsByTagName("td"),
+                	      table = document.getElementById('table'),
+                	      inner = '';
+                	      for (var i = td.length - 1; i >= 0; i--) {
+                	      	inner = td[i].innerText + ',' + inner;
+                	      };
+                	      table.value = inner;
+                	      console.log(td);
+                	</script>
+                	<input type="submit" value="导出excel">
+                </form>
+		<tc_include file="Public:footer" />
+
+	</div>
+	<tc_include file="Public:scripts" />
+</body>
+</html>

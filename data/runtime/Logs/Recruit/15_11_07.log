@@ -1,0 +1,75 @@
+[ 2015-11-07T14:23:14+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001181s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004604s ]
+
+[ 2015-11-07T14:23:15+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000997s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002134s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003880s ]
+
+[ 2015-11-07T14:23:18+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000993s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003358s ]
+
+[ 2015-11-07T14:23:18+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000908s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003206s ]
+
+[ 2015-11-07T21:41:50+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-07T21:52:25+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-07T21:52:40+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-07T21:58:29+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-07T21:59:21+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-07T22:02:01+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-07T22:03:06+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-07T22:04:08+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-07T22:04:24+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&time_limit=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003361s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0146s ]
+SQL: SELECT `user_status` FROM `sp_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0121s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0121s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0106s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0140s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: term E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 28 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%1%' AND t.term_id LIKE '%%' AND `active_status` LIKE '%%'  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001544s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001789s ]
+
+[ 2015-11-07T23:03:41+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-07T23:05:09+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+

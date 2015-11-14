@@ -1,0 +1,1071 @@
+[ 2015-11-12T00:01:22+08:00 ] ::1 /thcmf/index.php?g=Recruit&m=Recruitadmin&a=index&menuid=163
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T12:08:51+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T12:09:49+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T13:35:46+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T13:42:04+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T13:42:05+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T13:43:26+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T13:43:28+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T13:43:32+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T13:44:38+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T13:44:39+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001070s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003575s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0188s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0134s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0131s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0160s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%9%' AND `active_status` LIKE '%%'  [ RunTime:0.0184s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001234s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001434s ]
+
+[ 2015-11-12T13:44:41+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001147s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002658s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0151s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0144s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%9%' AND `active_status` LIKE '%%'  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001218s ]
+
+[ 2015-11-12T13:44:43+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001039s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003698s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0171s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0141s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0150s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%9%' AND `active_status` LIKE '%%'  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001347s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001535s ]
+
+[ 2015-11-12T13:44:44+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002813s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0282s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0148s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0140s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: term E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 28 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 31 行.
+NOTIC: [8] Undefined variable: where E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 41 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001185s ]
+
+[ 2015-11-12T13:44:46+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&&time_limit=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001131s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001911s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003986s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0164s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0176s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0163s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: term E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 28 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%1%' AND t.term_id LIKE '%%' AND `active_status` LIKE '%%'  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001180s ]
+
+[ 2015-11-12T13:44:47+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&&time_limit=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000727s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002555s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0161s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0123s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0138s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0160s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: term E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 28 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%1%' AND t.term_id LIKE '%%' AND `active_status` LIKE '%%'  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001163s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001349s ]
+
+[ 2015-11-12T13:44:47+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&&time_limit=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001186s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002738s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0091s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0091s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0101s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0103s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: term E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 28 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%1%' AND t.term_id LIKE '%%' AND `active_status` LIKE '%%'  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001081s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001232s ]
+
+[ 2015-11-12T13:44:48+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&&time_limit=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000810s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001158s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002941s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0161s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0141s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0146s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0265s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: term E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 28 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%1%' AND t.term_id LIKE '%%' AND `active_status` LIKE '%%'  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001021s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001175s ]
+
+[ 2015-11-12T13:44:49+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&&time_limit=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003091s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0146s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0178s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0106s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0144s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: term E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 28 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%1%' AND t.term_id LIKE '%%' AND `active_status` LIKE '%%'  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001557s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001809s ]
+
+[ 2015-11-12T18:18:36+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T18:18:47+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014264s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.045813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.061164s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0166s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0189s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0145s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0169s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%10%' AND `active_status` LIKE '%%'  [ RunTime:0.1590s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004645s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004838s ]
+
+[ 2015-11-12T18:18:47+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=10&time_limit=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013852s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.045872s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.060757s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0131s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0171s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0156s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%1%' AND t.term_id LIKE '%10%' AND `active_status` LIKE '%%'  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001204s ]
+
+[ 2015-11-12T18:18:48+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=10&time_limit=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001528s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004909s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0175s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0154s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0144s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0141s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%1%' AND t.term_id LIKE '%10%' AND `active_status` LIKE '%%'  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001009s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001162s ]
+
+[ 2015-11-12T18:18:50+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=10&time_limit=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000823s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003049s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0164s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0154s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0141s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%1%' AND t.term_id LIKE '%10%' AND `active_status` LIKE '%%'  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001186s ]
+
+[ 2015-11-12T18:18:52+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=10&time_limit=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001088s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003272s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0161s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0133s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0153s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0155s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%1%' AND t.term_id LIKE '%10%' AND `active_status` LIKE '%%'  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001324s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001572s ]
+
+[ 2015-11-12T18:19:21+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T18:19:23+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001937s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006722s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0139s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0125s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0145s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0163s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%9%' AND `active_status` LIKE '%%'  [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001186s ]
+
+[ 2015-11-12T18:37:42+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T18:45:16+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T18:45:42+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T18:45:50+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T18:47:45+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.023845s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.037621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.062469s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0197s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0132s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0122s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0131s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%9%' AND `active_status` LIKE '%%'  [ RunTime:0.0174s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008104s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008271s ]
+
+[ 2015-11-12T19:52:11+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T19:52:23+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011742s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.012127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.061749s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0213s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0153s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0197s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%9%' AND `active_status` LIKE '%%'  [ RunTime:0.0145s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.033963s ]
+INFO: [ app_end ] --END-- [ RunTime:0.034181s ]
+
+[ 2015-11-12T21:04:03+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T21:10:43+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T21:10:57+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T21:11:07+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T21:11:11+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T21:38:34+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.030310s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.020858s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.053915s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0182s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0136s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0179s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0130s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%9%' AND `active_status` LIKE '%%'  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.020790s ]
+INFO: [ app_end ] --END-- [ RunTime:0.020972s ]
+
+[ 2015-11-12T23:30:36+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T23:30:39+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000734s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002571s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0176s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0131s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0162s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%9%' AND `active_status` LIKE '%%'  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001118s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001294s ]
+
+[ 2015-11-12T23:31:50+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T23:31:53+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001272s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004674s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0198s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0161s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0172s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0153s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%9%' AND `active_status` LIKE '%%'  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001115s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001275s ]
+
+[ 2015-11-12T23:31:54+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004075s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0127s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%9%' AND `active_status` LIKE '%%'  [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001069s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001226s ]
+
+[ 2015-11-12T23:31:56+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001169s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004485s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0149s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0122s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0126s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: term E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 28 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 31 行.
+NOTIC: [8] Undefined variable: where E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 41 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001279s ]
+
+[ 2015-11-12T23:31:58+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&&term=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001294s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002204s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004822s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0138s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0142s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%9%' AND `active_status` LIKE '%%'  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001122s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001285s ]
+
+[ 2015-11-12T23:31:59+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&&term=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002805s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0153s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0127s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0149s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0163s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%9%' AND `active_status` LIKE '%%'  [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001221s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001380s ]
+
+[ 2015-11-12T23:32:03+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&&term=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000936s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003272s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0185s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0155s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0142s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0149s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%9%' AND `active_status` LIKE '%%'  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001089s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001290s ]
+
+[ 2015-11-12T23:32:04+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&&
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000824s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002904s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0185s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0172s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0132s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0147s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: term E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 28 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 31 行.
+NOTIC: [8] Undefined variable: where E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 41 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001228s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001437s ]
+
+[ 2015-11-12T23:32:08+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&&&term=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000823s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003275s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0193s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0185s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0187s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%10%' AND `active_status` LIKE '%%'  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001116s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001270s ]
+
+[ 2015-11-12T23:32:10+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&&&term=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001097s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003335s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0164s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0139s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0143s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0139s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%10%' AND `active_status` LIKE '%%'  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001191s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001353s ]
+
+[ 2015-11-12T23:32:14+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&&&term=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000841s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001811s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003531s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0169s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0143s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0143s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%10%' AND `active_status` LIKE '%%'  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001204s ]
+
+[ 2015-11-12T23:32:15+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&&&
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000814s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002834s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0154s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0137s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0149s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: term E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 28 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 31 行.
+NOTIC: [8] Undefined variable: where E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 41 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001302s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001530s ]
+
+[ 2015-11-12T23:41:19+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T23:41:20+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T23:41:21+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T23:41:21+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T23:41:24+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001216s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005072s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0227s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0146s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0147s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0149s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%9%' AND `active_status` LIKE '%%'  [ RunTime:0.0314s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001096s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001250s ]
+
+[ 2015-11-12T23:41:27+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000858s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001691s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003318s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0187s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0135s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0178s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0183s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%9%' AND `active_status` LIKE '%%'  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001089s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001252s ]
+
+[ 2015-11-12T23:41:30+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000826s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002911s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0155s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0211s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0177s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: term E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 28 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 31 行.
+NOTIC: [8] Undefined variable: where E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 41 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002123s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002490s ]
+
+[ 2015-11-12T23:41:52+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T23:41:54+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001186s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004145s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0188s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0166s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0178s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0167s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%9%' AND `active_status` LIKE '%%'  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001665s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001932s ]
+
+[ 2015-11-12T23:41:55+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001377s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006091s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0168s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0144s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0147s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: term E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 28 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 31 行.
+NOTIC: [8] Undefined variable: where E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 41 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id   [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001797s ]
+
+[ 2015-11-12T23:42:55+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T23:42:58+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001673s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007061s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0172s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0145s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0153s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0157s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%9%' AND `active_status` LIKE '%%'  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001133s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001292s ]
+
+[ 2015-11-12T23:42:59+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002013s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006028s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0175s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0157s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0156s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: term E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 28 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 31 行.
+NOTIC: [8] Undefined variable: where E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 41 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id   [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001458s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001687s ]
+
+[ 2015-11-12T23:45:43+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T23:45:44+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000821s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002977s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0224s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0173s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0155s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%9%' AND `active_status` LIKE '%%'  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001333s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001549s ]
+
+[ 2015-11-12T23:45:45+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001196s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003871s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0177s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0169s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: term E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 28 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 31 行.
+NOTIC: [8] Undefined variable: where E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 41 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id   [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001227s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001441s ]
+
+[ 2015-11-12T23:47:12+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T23:47:14+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&term=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001356s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005129s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0189s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0135s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0214s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 34 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id  WHERE `quality` LIKE '%%' AND t.term_id LIKE '%9%' AND `active_status` LIKE '%%'  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001104s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001262s ]
+
+[ 2015-11-12T23:47:15+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=listIndex&
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001904s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007994s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0172s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0129s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0145s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0125s ]
+NOTIC: [8] Undefined index: time_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 27 行.
+NOTIC: [8] Undefined index: term E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 28 行.
+NOTIC: [8] Undefined index: time_limit E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: term_type E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 30 行.
+NOTIC: [8] Undefined variable: time_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 31 行.
+NOTIC: [8] Undefined variable: where E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 41 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 67 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001235s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001405s ]
+
+[ 2015-11-12T23:58:06+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T23:59:16+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+

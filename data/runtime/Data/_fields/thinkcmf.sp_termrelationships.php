@@ -1,0 +1,1 @@
+a:7:{i:0;s:3:"tid";i:1;s:9:"object_id";i:2;s:7:"term_id";i:3;s:9:"listorder";i:4;s:6:"status";s:3:"_pk";s:3:"tid";s:5:"_type";a:5:{s:3:"tid";s:10:"bigint(20)";s:9:"object_id";s:19:"bigint(20) unsigned";s:7:"term_id";s:19:"bigint(20) unsigned";s:9:"listorder";s:7:"int(10)";s:6:"status";s:6:"int(2)";}}

@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit(); header("HTTP/1.1 301 Moved Permanently"); $url = u("recruit/recruit/index"); header('location: '.$url); ?>

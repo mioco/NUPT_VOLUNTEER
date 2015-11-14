@@ -1,0 +1,168 @@
+<?php
+$ajax = @$_REQUEST['ajax'];
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{$name} {$seo_title} {$site_name}</title>
+    <meta name="keywords" content="{$seo_keywords}" />
+    <meta name="description" content="{$seo_description}">
+    <tc_include file="Public:head" />
+    <style>
+    .term-bar{
+        border: 1px solid #ddd;
+        padding: 0.8em;
+    }
+    .term-bar>form>div{
+        border-bottom: 1px dashed #ddd;
+        padding: 0.4em;
+    }
+    </style>
+</head>
+<body>
+<tc_include file="Public:nav" />
+<div class="container">
+    <div>
+        <span>所有活动&nbsp;></span>
+    </div>
+    <div class="term-bar">
+        <form action="">
+        <div id="time_type">
+            <span>时间类型</span>
+            <a href="{:u('index',array('id'=>'3'))}">全部活动</a>
+            <a value="1">长期活动</a>
+            <a value="0">临时活动</a>
+        </div>
+        <div id="term">
+            <span>服务类型</span>
+            <foreach name="terms" item="te">
+                <!-- {:u('list/index?id='.$te['term_id'])} -->
+                <a id="term-item-{$te.term_id}" value="{$te.term_id}" target="main"><span>{$te.name}</span></a>
+            </foreach>
+            <button class="pull-right">多选</button>
+        </div>
+        <div id="time_limit">
+            <span>时间限制</span>
+            <a href="" type="checkbox" value="0" target="main">全周</a>
+            <a value="1" target="main">周一</a>
+            <a value="2" target="main">周二</a>
+            <a value="3" target="main">周三</a>
+            <a value="4" target="main">周四</a>
+            <a value="5" target="main">周五</a>
+            <a value="6" target="main">周六</a>
+            <a value="7" target="main">周日</a>
+            <button class="pull-right">多选</button>
+        </div>
+        <div id="active_status" class=" status-bar">
+            <span>活动状态</span>
+            <a href="">全部</a>
+            <a value="0" class="recruiting">招募中</a>
+            <a value="1" class="underway">进行中</a>
+            <a value="2" class="over">已结束</a>
+            <button class="pull-right">多选</button>
+        </div>
+        </form>
+    </div>
+    <div class="order-bar">
+        <a href="{:u('recruit/recruit/index?id=3')}">最新</a>
+        <a href="">时长</a>
+        <a href="">热度</a>
+    </div>
+    <div class="list-container">
+        <php>
+            $smeta=json_decode($vo['smeta'],true);
+        </php>
+        <volist name="posts" id="vo">
+        <div class="post-box">
+            <div class="tc-gridbox">
+                <div class="header">
+                    <div class="item-image">
+                        <a href="{:leuu('article/index',array('id'=>$vo['tid']))}">
+                            <if condition="empty($smeta['thumb'])"> 
+                                <img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
+                            <else /> 
+                                <img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive img-thumbnail" alt="{$vo.post_title}" />
+                            </if>
+                        </a>
+                    </div>
+                </div>
+                <div class="body">
+                    <h3><a href="{:leuu('portal/article/index',array('id'=>$vo['tid']))}">{$vo.post_title}</a></h3>
+                    <p>活动地点：{$vo.post_address}</p>
+                    <p>活动发起：{$vo.user_login}</p>
+                    <div class="timebox">
+                        <p>报名截止：</p>
+                        <p><div class="time"><div class="pass_time" id="{$vo.tid}" style="width:{$vo.time_width}%"></div></div></p>
+                        <p class="residue">{$status[$vo['active_status']]}</p>
+                    </div>
+                </div>
+                <div class="footer">
+                    <i class="iconfont">&#xe608</i>{$vo.join_count}&nbsp;
+                    <i class="iconfont">&#xe610</i>{$vo.post_hits}
+                </div>
+            </div>
+        </div>
+        </volist>
+    </div>
+    <div class="pagination"><ul>{$posts['page']}</ul></div>
+    <hr>
+    <input class="seachUrl" value="{:u('recruit/recruit/listIndex')}" type="hidden">
+</div>
+<tc_include file="Public:footer"/>
+    
+<!-- JavaScript -->
+<tc_include file="Public:scripts" />
+ <script src="__TMPL__Public/js/imagesloaded.pkgd.min.js"></script>
+    <script src="__TMPL__Public/js/masonry.pkgd.min.js"></script>
+    <script>
+    $(function(){
+        $('.term-bar').on('click','a',function(){
+            var variate = $(this).parent().attr('id'),
+                value = $(this).attr('value'),
+                url = $('.seachUrl').val(),
+                time_type = '',
+                term = '',
+                time_limit = '',
+                active_status = '',
+                // check = url.indexOf(vari);
+                check = url.indexOf(variate);
+            // if (check>0) {
+            //     console.log('data:'+data[variate]);
+            //     console.log('value:'+value)
+            //     var reg = RegExp(value),
+            //         variate = data[variate].replace(reg, '');
+            // }else{
+                // data[variate] = value +','+ data[variate];
+            // }
+            if (check >= 0) {
+                var reg = RegExp(variate +'='+ value)
+                    check = reg.test(url);
+                if (check) {
+                    url = url.replace(reg, '');
+                    $('.seachUrl').val(url);
+                console.log(url+','+check);
+                }else{
+                    console.log(url+','+reg);
+                    url = url.replace(reg, variate +'='+ value);
+                    $('.seachUrl').val(url);
+                console.log(url+','+check);
+
+                }              
+            }else{
+                url = url + '&' + variate + '=' + value;
+                $('.seachUrl').val(url);
+            }
+
+            // console.log('check:'+check+','+'url:'+url+','+'vari:'+variate+','+'value:'+ value);
+            $.ajax({
+                url: url,
+                success:function(data){
+                    $('.list-container').html(data);
+                }
+            });
+        })
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+[ 2015-10-20T19:22:43+08:00 ] ::1 /thcmf/index.php?g=Portal&m=AdminPost&a=delete
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001058s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003566s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0153s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0112s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0182s ]
+SQL: UPDATE `sp_term_relationships` SET `status`='0' WHERE ( tid in (1) ) [ RunTime:0.0006s ]
+
+[ 2015-10-20T19:26:34+08:00 ] ::1 /thcmf/index.php?g=Portal&m=AdminPost&a=delete
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001047s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003508s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0146s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0111s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0108s ]
+SQL: UPDATE `sp_term_relationships` SET `status`='0' WHERE ( tid in (1) ) [ RunTime:0.0004s ]
+
+[ 2015-10-20T20:21:24+08:00 ] ::1 /thcmf/index.php?g=&m=AdminPost&a=restore&term=&id=73
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002989s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0128s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0108s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0115s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0097s ]
+SQL: UPDATE `sp_term_relationships` SET `status`='1' WHERE `tid` = 73 [ RunTime:0.0004s ]
+
+[ 2015-10-20T20:22:28+08:00 ] ::1 /thcmf/index.php?g=&m=AdminPost&a=restore&term=&id=73
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003130s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0123s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0106s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0094s ]
+SQL: UPDATE `sp_term_relationships` SET `status`='1' WHERE `tid` = 73 [ RunTime:0.0003s ]
+
+[ 2015-10-20T20:23:02+08:00 ] ::1 /thcmf/index.php?g=&m=AdminPost&a=restore&term=&id=73
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000882s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002877s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0123s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0105s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0103s ]
+SQL: UPDATE `sp_term_relationships` SET `status`='1' WHERE `tid` = 73 [ RunTime:0.0003s ]
+

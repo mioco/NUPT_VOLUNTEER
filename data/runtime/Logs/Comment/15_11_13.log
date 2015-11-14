@@ -1,0 +1,6 @@
+[ 2015-11-13T00:25:07+08:00 ] ::1 /thcmf/index.php?g=comment&m=comment&a=post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001032s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003936s ]
+

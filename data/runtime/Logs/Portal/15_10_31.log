@@ -1,0 +1,9 @@
+[ 2015-10-31T15:29:27+08:00 ] ::1 /thcmf/index.php?m=recruit&a=index&id=3
+ERR: 无法加载控制器:Recruit
+
+[ 2015-10-31T15:31:53+08:00 ] ::1 /thcmf/index.php?m=recruit
+ERR: 无法加载控制器:Recruit
+
+[ 2015-10-31T15:32:18+08:00 ] ::1 /thcmf/index.php?m=recruit&a=index&id=3
+ERR: 无法加载控制器:Recruit
+

@@ -1,0 +1,53 @@
+[ 2015-10-17T00:27:28+08:00 ] ::1 /thcmf/index.php?g=&m=AdminPost&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003005s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0167s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0125s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0175s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0131s ]
+NOTIC: [8] Undefined index: ac_start E:\wamp\www\thcmf\application\Portal\Controller\AdminPostController.class.php 第 50 行.
+NOTIC: [8] Undefined index: ac_end E:\wamp\www\thcmf\application\Portal\Controller\AdminPostController.class.php 第 51 行.
+NOTIC: [8] Undefined variable: reet E:\wamp\www\thcmf\application\Portal\Controller\AdminPostController.class.php 第 52 行.
+NOTIC: [8] Undefined variable: acet E:\wamp\www\thcmf\application\Portal\Controller\AdminPostController.class.php 第 52 行.
+NOTIC: [8] Undefined variable: reet E:\wamp\www\thcmf\application\Portal\Controller\AdminPostController.class.php 第 53 行.
+NOTIC: [8] Undefined variable: acet E:\wamp\www\thcmf\application\Portal\Controller\AdminPostController.class.php 第 53 行.
+SQL: INSERT INTO `sp_posts` (`post_modified`,`post_status`,`istop`,`recommended`,`post_title`,`ac_start`,`ac_end`,`duration`,`post_address`,`post_keywords`,`post_source`,`post_excerpt`,`post_content`,`post_date`,`post_author`,`quality`,`smeta`) VALUES ('2015-10-17 00:26:25','1','0','0','支教1','123','234','45','支教地区','','','','<p>123</p>','2015-10-17 00:27:28','1','1,7,8,9','{\"thumb\":\"5621256ce09b6.jpg\"}') [ RunTime:0.0508s ]
+SQL: INSERT INTO `sp_term_relationships` (`term_id`,`object_id`) VALUES ('5','45') [ RunTime:0.0004s ]
+
+[ 2015-10-17T00:44:12+08:00 ] ::1 /thcmf/index.php?g=&m=AdminPost&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002432s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006895s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0155s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0126s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0125s ]
+NOTIC: [8] Undefined index: ac_start E:\wamp\www\thcmf\application\Portal\Controller\AdminPostController.class.php 第 50 行.
+NOTIC: [8] Undefined index: ac_end E:\wamp\www\thcmf\application\Portal\Controller\AdminPostController.class.php 第 51 行.
+NOTIC: [8] Undefined variable: reet E:\wamp\www\thcmf\application\Portal\Controller\AdminPostController.class.php 第 52 行.
+NOTIC: [8] Undefined variable: acet E:\wamp\www\thcmf\application\Portal\Controller\AdminPostController.class.php 第 52 行.
+NOTIC: [8] Undefined variable: reet E:\wamp\www\thcmf\application\Portal\Controller\AdminPostController.class.php 第 53 行.
+NOTIC: [8] Undefined variable: acet E:\wamp\www\thcmf\application\Portal\Controller\AdminPostController.class.php 第 53 行.
+SQL: INSERT INTO `sp_posts` (`post_modified`,`post_status`,`istop`,`recommended`,`post_title`,`ac_start`,`ac_end`,`duration`,`post_address`,`post_keywords`,`post_source`,`post_excerpt`,`post_content`,`post_date`,`post_author`,`quality`,`smeta`) VALUES ('2015-10-17 00:27:30','1','0','0','敬老2','111','333','123','还是敬老院','','','','<p>大师傅</p>','2015-10-17 00:44:12','1','1,2','{\"thumb\":\"5621295985a94.jpg\"}') [ RunTime:0.0006s ]
+SQL: INSERT INTO `sp_term_relationships` (`term_id`,`object_id`) VALUES ('4','46') [ RunTime:0.0004s ]
+
+[ 2015-10-17T02:03:22+08:00 ] ::1 /thcmf/index.php?m=list&a=index&id=3
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'field:active_status' in 'field list'
+
+[ 2015-10-17T02:04:18+08:00 ] ::1 /thcmf/index.php?m=list&a=index&id=3
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'active_status' in 'field list'
+
+[ 2015-10-17T02:04:47+08:00 ] ::1 /thcmf/index.php?m=list&a=index&id=3
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'object_id' in 'field list'
+
+[ 2015-10-17T02:08:35+08:00 ] ::1 /thcmf/index.php?m=list&a=index&id=3
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'object_id' in 'field list'
+
+[ 2015-10-17T02:08:52+08:00 ] ::1 /thcmf/index.php?m=list&a=index&id=3
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tid' in 'field list'
+

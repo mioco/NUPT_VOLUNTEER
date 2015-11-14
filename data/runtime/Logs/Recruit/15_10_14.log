@@ -1,0 +1,18 @@
+[ 2015-10-14T23:53:54+08:00 ] ::1 /thcmf/index.php?g=Recruit&m=Recruitadmin&a=index&menuid=163
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-14T23:54:04+08:00 ] ::1 /thcmf/index.php?g=Recruit&m=Recruitadmin&a=member&id=68
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-14T23:54:13+08:00 ] ::1 /thcmf/index.php?g=Recruit&m=Recruitadmin&a=not_check
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-14T23:54:22+08:00 ] ::1 /thcmf/index.php?g=Recruit&m=Recruitadmin&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-14T23:57:17+08:00 ] ::1 /thcmf/index.php?g=Recruit&m=Recruitadmin&a=member&id=68
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-14T23:57:23+08:00 ] ::1 /thcmf/index.php?g=Recruit&m=Recruitadmin&a=member&id=68
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+

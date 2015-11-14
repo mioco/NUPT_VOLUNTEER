@@ -1,0 +1,412 @@
+[ 2015-10-29T15:38:40+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index&id=3
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status' in field list is ambiguous
+
+[ 2015-10-29T15:40:25+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index&id=3
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 're.tid' in 'field list'
+
+[ 2015-10-29T15:40:47+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index&id=3
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T15:49:37+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index&id=3
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T15:50:16+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index&id=3
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T15:50:39+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index&id=3
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T15:56:13+08:00 ] ::1 /thcmf/index.php?g=Recruit&m=list&a=index&id=3
+ERR: 无法加载控制器:List
+
+[ 2015-10-29T15:56:33+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index&id=3
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T15:56:35+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index&id=3
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T15:57:18+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index&id=3
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T20:09:25+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index&id=3&ajax=1&select=test
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.026000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.021287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.076492s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0984s ]
+SQL: SELECT `user_status` FROM `sp_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0014s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0438s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0315s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0643s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0250s ]
+NOTIC: [8] Undefined index: ty E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 20 行.
+NOTIC: [8] Undefined index: tl E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 22 行.
+NOTIC: [8] Undefined index: status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 23 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `sp_terms` WHERE ( parent=3 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000379s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000581s ]
+NOTIC: [8] Undefined variable: name E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 6 行.
+NOTIC: [8] Undefined variable: seo_title E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 6 行.
+NOTIC: [8] Undefined variable: seo_keywords E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 7 行.
+NOTIC: [8] Undefined variable: seo_description E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 8 行.
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0994s ]
+SQL: SHOW COLUMNS FROM `sp_nav_cat` [ RunTime:0.0301s ]
+SQL: SELECT * FROM `sp_nav_cat` WHERE ( active=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sp_nav` WHERE ( cid=1 and status=1 ) ORDER BY `listorder` ASC  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 167 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 170 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined variable: status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 175 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 167 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 170 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined variable: status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 175 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 167 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 170 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined variable: status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 175 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 167 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 170 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined variable: status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 175 行.
+NOTIC: [8] Undefined index: page E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 181 行.
+SQL: SHOW COLUMNS FROM `sp_links` [ RunTime:0.0394s ]
+SQL: SELECT * FROM `sp_links` WHERE ( link_status=1 ) ORDER BY listorder ASC  [ RunTime:0.0005s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.798378s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.798622s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.073190s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.034566s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.108104s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.051556s ]
+INFO: [ app_end ] --END-- [ RunTime:0.051797s ]
+
+[ 2015-10-29T20:45:17+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index&id=3&ajax=1&select=test
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.022654s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.023647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.056817s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0660s ]
+SQL: SELECT `user_status` FROM `sp_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0192s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0351s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0372s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0563s ]
+NOTIC: [8] Undefined index: ty E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 20 行.
+NOTIC: [8] Undefined index: tl E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 22 行.
+NOTIC: [8] Undefined index: status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 23 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sp_terms` WHERE ( parent=3 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000343s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000516s ]
+NOTIC: [8] Undefined variable: name E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 6 行.
+NOTIC: [8] Undefined variable: seo_title E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 6 行.
+NOTIC: [8] Undefined variable: seo_keywords E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 7 行.
+NOTIC: [8] Undefined variable: seo_description E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 8 行.
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0768s ]
+SQL: SHOW COLUMNS FROM `sp_nav_cat` [ RunTime:0.0223s ]
+SQL: SELECT * FROM `sp_nav_cat` WHERE ( active=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sp_nav` WHERE ( cid=1 and status=1 ) ORDER BY `listorder` ASC  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 167 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 170 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined variable: status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 175 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 167 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 170 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined variable: status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 175 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 167 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 170 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined variable: status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 175 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 167 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 170 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined variable: status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 175 行.
+NOTIC: [8] Undefined index: page E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 181 行.
+SQL: SHOW COLUMNS FROM `sp_links` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `sp_links` WHERE ( link_status=1 ) ORDER BY listorder ASC  [ RunTime:0.0004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.795565s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.795769s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.011059s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.014803s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.026203s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013705s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013883s ]
+
+[ 2015-10-29T21:52:38+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index&id=3
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T21:52:42+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index&id=3
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T21:52:42+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index&id=3&ajax=1&select=test
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001974s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005731s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0361s ]
+SQL: SELECT `user_status` FROM `sp_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0205s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0169s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0162s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0180s ]
+NOTIC: [8] Undefined index: ty E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 20 行.
+NOTIC: [8] Undefined index: tl E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 22 行.
+NOTIC: [8] Undefined index: status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 23 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `sp_terms` WHERE ( parent=3 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000381s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000614s ]
+NOTIC: [8] Undefined variable: name E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 6 行.
+NOTIC: [8] Undefined variable: seo_title E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 6 行.
+NOTIC: [8] Undefined variable: seo_keywords E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 7 行.
+NOTIC: [8] Undefined variable: seo_description E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 8 行.
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0241s ]
+SQL: SHOW COLUMNS FROM `sp_nav_cat` [ RunTime:0.0215s ]
+SQL: SELECT * FROM `sp_nav_cat` WHERE ( active=1 ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `sp_nav` WHERE ( cid=1 and status=1 ) ORDER BY `listorder` ASC  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 167 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 170 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined variable: status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 175 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 167 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 170 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined variable: status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 175 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 167 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 170 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined variable: status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 175 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 167 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 170 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined variable: status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 175 行.
+NOTIC: [8] Undefined index: page E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 181 行.
+SQL: SHOW COLUMNS FROM `sp_links` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `sp_links` WHERE ( link_status=1 ) ORDER BY listorder ASC  [ RunTime:0.0004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.342257s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.342504s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001026s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000849s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001298s ]
+
+[ 2015-10-29T21:52:48+08:00 ] ::1 /thcmf/index.php?g=Recruit&m=list&a=index&id=3
+ERR: 无法加载控制器:List
+
+[ 2015-10-29T21:52:58+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T21:53:17+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T21:54:00+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index&ajax=1&select=test
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001569s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005167s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0260s ]
+SQL: SELECT `user_status` FROM `sp_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0188s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0265s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0201s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0168s ]
+NOTIC: [8] Undefined index: ty E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 20 行.
+NOTIC: [8] Undefined index: id E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 21 行.
+NOTIC: [8] Undefined index: tl E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 22 行.
+NOTIC: [8] Undefined index: status E:\wamp\www\thcmf\application\Recruit\Controller\RecruitController.class.php 第 23 行.
+SQL: SELECT `object_id`,tr.tid,`object_id`,`post_title`,`post_address`,`post_date`,`ac_start`,`ac_end`,`smeta`,`post_hits`,`post_like` FROM sp_posts po INNER JOIN sp_term_relationships tr on po.id = tr.object_id INNER JOIN sp_terms t on tr.term_id = t.term_id   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sp_terms` WHERE ( parent=3 )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000345s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000515s ]
+NOTIC: [8] Undefined variable: name E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 6 行.
+NOTIC: [8] Undefined variable: seo_title E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 6 行.
+NOTIC: [8] Undefined variable: seo_keywords E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 7 行.
+NOTIC: [8] Undefined variable: seo_description E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 8 行.
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0296s ]
+SQL: SHOW COLUMNS FROM `sp_nav_cat` [ RunTime:0.0198s ]
+SQL: SELECT * FROM `sp_nav_cat` WHERE ( active=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sp_nav` WHERE ( cid=1 and status=1 ) ORDER BY `listorder` ASC  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 167 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 170 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined variable: status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 175 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 167 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 170 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined variable: status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 175 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 167 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 170 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined variable: status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 175 行.
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 167 行.
+NOTIC: [8] Undefined index: time_width E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 170 行.
+NOTIC: [8] Undefined index: active_status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined variable: status E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 171 行.
+NOTIC: [8] Undefined index: join_count E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 175 行.
+NOTIC: [8] Undefined index: page E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 181 行.
+SQL: SHOW COLUMNS FROM `sp_links` [ RunTime:0.0129s ]
+SQL: SELECT * FROM `sp_links` WHERE ( link_status=1 ) ORDER BY listorder ASC  [ RunTime:0.0004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.310858s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.311068s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000796s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.001108s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002206s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001085s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001253s ]
+
+[ 2015-10-29T21:54:00+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T21:57:24+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T21:57:33+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T21:57:47+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T21:58:07+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=list
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:00:07+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:00:54+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:00:57+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:01:16+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:05:50+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:05:55+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:06:04+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:06:45+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index&ajax=1&select=test
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001012s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003507s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0151s ]
+SQL: SELECT `user_status` FROM `sp_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+SQL: SHOW COLUMNS FROM `sp_recruit` [ RunTime:0.0118s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0144s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0113s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0128s ]
+SQL: SELECT * FROM `sp_terms` WHERE ( parent=3 )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000335s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000501s ]
+NOTIC: [8] Undefined variable: name E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 6 行.
+NOTIC: [8] Undefined variable: seo_title E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 6 行.
+NOTIC: [8] Undefined variable: seo_keywords E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 7 行.
+NOTIC: [8] Undefined variable: seo_description E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 8 行.
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0276s ]
+SQL: SHOW COLUMNS FROM `sp_nav_cat` [ RunTime:0.0212s ]
+SQL: SELECT * FROM `sp_nav_cat` WHERE ( active=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sp_nav` WHERE ( cid=1 and status=1 ) ORDER BY `listorder` ASC  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: posts E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 154 行.
+NOTIC: [8] Undefined variable: posts E:\wamp\www\thcmf\data\runtime\Cache\Recruit\4010720ce5459aebc7c3f96ba0ffd551.php 第 157 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.254430s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.254639s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000888s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001848s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001073s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001242s ]
+
+[ 2015-10-29T22:07:45+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+ERR: XML标签语法错误
+
+[ 2015-10-29T22:08:03+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:08:30+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:09:10+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:36:44+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:36:49+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:37:33+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:37:38+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:41:46+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:41:48+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:41:56+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:42:15+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:42:52+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-29T22:43:02+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+

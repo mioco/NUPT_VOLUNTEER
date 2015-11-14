@@ -1,0 +1,50 @@
+<admintpl file="header" />
+</head>
+<body class="J_scroll_fixed">
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a>本站用户</a></li>
+		</ul>
+		<form method="post" class="J_ajaxForm" action="#">
+			<div class="table_list">
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th align='center'>学号</th>
+							<th>姓名</th>
+							<th>学院</th>
+							<th>专业</th>
+							<th>所在组织</th>
+							<th>志愿服务活动总时长</th>
+						</tr>
+					</thead>
+					<tbody>
+						<php>$user_statuses=array("0"=>"已拉黑","1"=>"正常","2"=>"未验证");</php>
+						<foreach name="lists" item="vo">
+						<tr>
+							<td align='center'>{$vo.user_number}</td>
+							<!-- <td><img width="25" height="25" src="{:U('user/public/avatar',array('id'=>$vo['id']))}" /></td>
+			                <if condition="empty($vo['user_nicename'])"> -->
+							  <td><a href="{:U('User/Indexadmin/record',array('id'=>$vo['id']))}">{$vo.username}</a> </td>
+			                <else /> 
+							  <td><a href="">{$vo.user_faculty}</a> </td>                   
+			                </if>
+							<td>{$vo.user_org}</td>
+							<td>{$vo.duration}</td>
+							<td></td>
+							<td>{$user_statuses[$vo['user_status']]}</td>
+							<td align='center'>
+								<a href="{:U('indexadmin/ban',array('id'=>$vo['id']))}" class="J_ajax_dialog_btn" data-msg="您确定要拉黑此用户吗？">拉黑</a>|
+								<a href="{:U('indexadmin/cancelban',array('id'=>$vo['id']))}" class="J_ajax_dialog_btn" data-msg="您确定要启用此用户吗？">启用</a>
+							</td>
+						</tr>
+						</foreach>
+					</tbody>
+				</table>
+				<div class="pagination">{$page}</div>
+			</div>
+		</form>
+	</div>
+	<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

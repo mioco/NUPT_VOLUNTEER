@@ -1,0 +1,23 @@
+[ 2015-10-31T15:33:07+08:00 ] ::1 /thcmf/index.php?g=recruit
+ERR: 无法加载控制器:Index
+
+[ 2015-10-31T15:33:33+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+ERR: Think\Controller:listIndex方法不存在！
+
+[ 2015-10-31T15:33:41+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-31T15:34:09+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&id=3
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-31T15:34:15+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-31T17:14:01+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-31T17:14:59+08:00 ] ::1 /thcmf/index.php?g=recruit&m=recruit&time_limit=4,5
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'term_id' in where clause is ambiguous
+

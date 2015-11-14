@@ -1,0 +1,9 @@
+[ 2015-11-02T15:16:57+08:00 ] ::1 /thcmf/index.php?m=recurit&a=recruit
+ERR: 无法加载控制器:Recurit
+
+[ 2015-11-02T15:17:24+08:00 ] ::1 /thcmf/index.php?m=recurit&a=recruit
+ERR: 无法加载控制器:Recurit
+
+[ 2015-11-02T17:28:16+08:00 ] ::1 /thcmf/index.php?m=recruit&a=recruit
+ERR: 无法加载控制器:Recruit
+

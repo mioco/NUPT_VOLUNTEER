@@ -1,0 +1,33 @@
+[ 2015-10-19T20:12:07+08:00 ] ::1 /thcmf/index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001043s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002182s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003931s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `sp_users` WHERE `user_number` = 'admin' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_role_user` [ RunTime:0.0303s ]
+SQL: SELECT `role_id` FROM sp_role_user a INNER JOIN sp_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0245s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Admin\Controller\PublicController.class.php 第 75 行.
+SQL: UPDATE `sp_users` SET `user_number`='admin',`user_carnumber`='0',`user_pass`='c535018ee94621232f297a57a5a743894a0e4a801fc389af',`username`='admin',`user_email`='1234@qq.com',`user_major`='',`org`='0',`user_url`='',`avatar`='55d6e0de6127e.jpg',`sex`='0',`birthday`='0000-00-00',`signature`='我是admin',`last_login_ip`='0.0.0.0',`last_login_time`='2015-10-19 20:12:07',`create_time`='2015-07-30 02:54:22',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`duration`='0' WHERE `id` = '1' [ RunTime:0.0135s ]
+
+[ 2015-10-19T20:12:07+08:00 ] ::1 /thcmf/index.php?g=Admin&m=Main&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-19T20:28:35+08:00 ] ::1 /thcmf/index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001044s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003756s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0124s ]
+SQL: SELECT * FROM `sp_users` WHERE `user_number` = 'admin' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_role_user` [ RunTime:0.0114s ]
+SQL: SELECT `role_id` FROM sp_role_user a INNER JOIN sp_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Admin\Controller\PublicController.class.php 第 75 行.
+SQL: UPDATE `sp_users` SET `user_number`='admin',`user_carnumber`='0',`user_pass`='c535018ee94621232f297a57a5a743894a0e4a801fc389af',`username`='admin',`user_email`='1234@qq.com',`user_major`='',`org`='0',`user_url`='',`avatar`='55d6e0de6127e.jpg',`sex`='0',`birthday`='0000-00-00',`signature`='我是admin',`last_login_ip`='0.0.0.0',`last_login_time`='2015-10-19 20:28:35',`create_time`='2015-07-30 02:54:22',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`duration`='0' WHERE `id` = '1' [ RunTime:0.0006s ]
+
+[ 2015-10-19T20:28:35+08:00 ] ::1 /thcmf/index.php?g=Admin&m=Main&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-10-19T20:36:35+08:00 ] ::1 /thcmf/index.php?g=Admin&m=Main&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>{$post_title} {$site_name} </title>
+		<meta name="keywords" content="{$post_keywords}" />
+		<meta name="description" content="{$post_excerpt}">
+		<tc_include file="Public:head" />
+		<link href="__TMPL__Public/css/recruit.css" rel="stylesheet">
+		<style>
+			#article_content img{height:auto !important}
+		</style>
+	</head>
+<body class="">
+<tc_include file="Public:nav" />
+<div class="container tc-main">
+	<div class="row detail">
+		<div class="item-info span9">
+			<div class="item-info-l span4">
+				<div class="gallery">
+					<if condition="empty($smeta['thumb'])"> 
+						<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
+					<else /> 
+						<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive img-thumbnail" alt="{$vo.post_title}" />
+					</if>
+				</div>
+				<div class="handle">					
+		    		<span>
+		    			<a href="javascript:;"><i class="fa fa-eye"></i><span>{$post_hits}</span></a>
+						<a href="{:U('user/favorite/do_favorite',array('id'=>$object_id))}" class="J_favorite_btn" data-title="{$post_title}" data-url="{:U('article/index',array('id'=>$tid))}" data-key="{:sp_get_favorite_key('posts',$object_id)}">
+							<i class="fa fa-star-o"></i>
+						</a>
+					</span>
+				</div>
+			</div>
+			<div class="item-info-r span4">
+				<h2>{$post_title}</h2>
+				<p>{$post_excerpt}</p>
+				<p>时间： {$recruit_end_time}&nbsp;到&nbsp;{$active_end_time}</p>
+				<p>地址： {$post_address}</p>
+				<p>分类： {$term[name]}</p>
+				<form class="recruit_form" action="{:u('recruit/recruit/post')}" method="post">
+				    <input type="hidden" name="post_id" value="{$id}"/>
+				    <input type="hidden" name="tid" value="{$tid}">
+				<a type="submit" class="btn btn-primary recruit-btn" value="{:u('Recruit/RecruitPost/post', array('tid'=>$tid))}">报名</a></form>
+				<a href="{:U('article/do_like',array('id'=>$object_id))}" class="J_count_btn btn btn-default">感兴趣&nbsp;<i class="fa fa-thumbs-up"></i><span class="count">{$post_like}</span></a>
+			</div>
+		</div>
+		<div class="sidebar span3">
+			<a href=""><p><strong>发起组织： {$user_nicename|default=$user_login}</strong></p></a>
+			<p>发布时间： {$post_date}</p>
+			<p>联系方式</p>
+			<button class="btn btn-default">团队信息</button>
+			<p>该组织的信息介绍</p>
+		</div>
+	</div>
+	<div>
+		<php>
+			$avatar=json_decode($us['avatar'],true);
+			$path = 'avatar/'.$us['avatar'];
+		</php>
+		<ul>
+			<foreach name="joinMan" item="jm">
+			<li></li>
+		</foreach>
+		</ul>
+	</div>
+	<div class="row">		
+    	<div class="tag">
+    		<div class="btn active-detail active">活动详情</div>
+    		<div class="btn active-comment">讨论</div>
+    	</div>
+		<div class="span9">			
+			<div class="tc-box first-box article-box">
+		    	<h2>{$post_title}</h2>
+		    	<hr>
+		    	<div id="article_content">
+		    	{$post_content}
+		    	</div>
+		    </div>
+	    	<div class="article-comment">
+			{:Comments("posts",$id)}
+	    	</div>		    
+		</div>
+		<div class="span3">        	
+        	<div class="tc-box">
+	        	<div class="headtitle">
+	        		<h2>热门文章</h2>
+	        	</div>
+	        	<div class="ranking">
+	        		<php>
+						$hot_articles=sp_sql_posts("cid:$portal_index_lastnews;field:post_title,post_excerpt,tid,smeta;order:post_hits desc;limit:5;"); 
+					</php>
+		        	<ul class="unstyled">
+		        		<foreach name="hot_articles" item="vo">
+		        			<php>$top=$key<3?"top3":"";</php>
+							<li class="{$top}"><i>{$key+1}</i><a title="{$vo.post_title}" href="{:leuu('article/index',array('id'=>$vo['tid']))}">{$vo.post_title}</a></li>
+						</foreach>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="tc-box">
+	        	<div class="headtitle">
+	        		<h2>最新评论</h2>
+	        	</div>
+	        	<div class="comment-ranking">
+	        		<php>$last_comments=sp_get_comments("field:*;limit:0,5;order:createtime desc;");</php>
+	        		<foreach name="last_comments" item="vo">
+	                    <div class="comment-ranking-inner">
+	                        <i class="fa fa-comment"></i>
+	                        <a href="{:U('user/index/index',array('id'=>$vo['uid']))}">{$vo.full_name}:</a>
+	                        <span>{$vo.content}</span>
+	                        <a href="__ROOT__/{$vo.url}#comment{$vo.id}">查看原文</a>
+	                        <span class="comment-time">{:date('m月d日  H:i',strtotime($vo['createtime']))}</span>
+	                    </div>
+                    </foreach>
+                </div>
+			</div>
+		</div>
+	</div>    
+</div>
+<tc_include file="Public:footer"/>
+
+<tc_include file="Public:scripts"/>
+<script>
+	$(function(){
+		$('.recruit-btn').click(function() {
+			var url = $(this).attr('value');
+			$.ajax({
+				url: url,
+				success: function() {
+					alert('报名成功');
+					return false;
+				},
+				error: function() {
+					alert('报名失败，请稍后再试');
+					return false;
+				}
+			});
+			return false;
+		})
+	})
+
+</script>
+</body>
+</html>

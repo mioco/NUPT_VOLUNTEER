@@ -1,0 +1,49 @@
+[ 2015-11-12T00:01:14+08:00 ] ::1 /thcmf/index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001630s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005564s ]
+
+[ 2015-11-12T00:01:18+08:00 ] ::1 /thcmf/index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002819s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0144s ]
+SQL: SELECT * FROM `sp_users` WHERE `user_number` = 'admin' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_role_user` [ RunTime:0.0636s ]
+SQL: SELECT `role_id` FROM sp_role_user a INNER JOIN sp_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0402s ]
+NOTIC: [8] Undefined index: user_login E:\wamp\www\thcmf\application\Admin\Controller\PublicController.class.php 第 75 行.
+SQL: UPDATE `sp_users` SET `user_number`='admin',`user_carnumber`='0',`user_pass`='c535018ee94621232f297a57a5a743894a0e4a801fc389af',`username`='admin',`user_email`='1234@qq.com',`user_major`='',`org`='0',`user_url`='',`avatar`='55d6e0de6127e.jpg',`sex`='0',`birthday`='0000-00-00',`signature`='我是admin',`last_login_ip`='0.0.0.0',`last_login_time`='2015-11-12 00:01:18',`create_time`='2015-07-30 02:54:22',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`duration`='0' WHERE `id` = '1' [ RunTime:0.0016s ]
+
+[ 2015-11-12T00:01:19+08:00 ] ::1 /thcmf/index.php?g=Admin&m=Main&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T12:10:01+08:00 ] ::1 /thcmf/index.php?g=Admin&m=Main&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T13:29:53+08:00 ] ::1 /thcmf/index.php?g=Admin&m=nav&a=edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.045724s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.086121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.178914s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0295s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0367s ]
+SQL: SHOW COLUMNS FROM `sp_nav_cat` [ RunTime:0.0238s ]
+SQL: UPDATE `sp_nav` SET `cid`='1',`parentid`='0',`label`='招募',`href`='a:2:{s:6:\"action\";s:17:\"Recreuit/recruit/index\";s:5:\"param\";a:1:{s:2:\"id\";s:1:\"3\";}}',`target`='',`icon`='',`status`='1',`path`='0-4' WHERE `id` = 4 [ RunTime:0.1010s ]
+
+[ 2015-11-12T13:30:55+08:00 ] ::1 /thcmf/index.php?g=Admin&m=Main&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\RecruitModel
+
+[ 2015-11-12T13:31:53+08:00 ] ::1 /thcmf/index.php?g=Admin&m=nav&a=edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016772s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.012798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.032319s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0322s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0580s ]
+SQL: SHOW COLUMNS FROM `sp_nav_cat` [ RunTime:0.0478s ]
+SQL: UPDATE `sp_nav` SET `cid`='1',`parentid`='0',`label`='招募',`href`='a:2:{s:6:\"action\";s:17:\"Portal/list/index\";s:5:\"param\";a:1:{s:2:\"id\";s:1:\"3\";}}',`target`='',`icon`='',`status`='1',`path`='0-4' WHERE `id` = 4 [ RunTime:0.0228s ]
+

@@ -18,7 +18,14 @@ class RecruitController extends HomeBaseController{
 	
 	function index(){
 		// $this->listIndex();
+        $field = "object_id,tr.tid,object_id,post_title,post_address,post_date,ac_start,ac_end,smeta,post_hits,post_like";
+        $posts = $this->posts_model
+        ->alias('po')
+        ->join(C('DB_PREFIX').'term_relationships tr on po.id = tr.object_id')
+        ->join(C('DB_PREFIX').'terms t on tr.term_id = t.term_id')
+        ->field($field) -> where("t.parent=3") -> select();
         $terms = $this->terms_model->where('parent=3')->select();
+        $this->assign('posts', $posts);
         $this->assign('terms', $terms);
 		$this->display(":index");
 	}

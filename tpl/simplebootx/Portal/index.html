@@ -43,59 +43,90 @@
 	</head>
 <body class="body-white">
 <tc_include file="Public:nav" />
-<!-- slide -->	
 <div class="container">
-<php>
-$home_slides=sp_getslide("home");
-$home_slides=empty($home_slides)?$default_home_slides:$home_slides;
-</php>
-<ul id="homeslider" class="unstyled">
-	<foreach name="home_slides" item="vo">
-	<li>
-		<div class="caption-wraper">
-			<div class="caption">{$vo.slide_name}</div>
-		</div>
-		<a href="{$vo.slide_url}"><img src="{:sp_get_asset_upload_path($vo['slide_pic'])}" alt=""></a>
-	</li>
-	</foreach>
-</ul>
-<!-- new important -->
-<div class="notice">
-	<h2>公告</h2><h4>NOTICE</h4>
-	<ul>
-		<php>
-			$tag = "field:post_title,post_content,post_date,post_content;order:post_modified DESC;limit:8;";
-			$notice = sp_sql_posts_bycatid(9,$tag);
-		</php>
-		<foreach name="notice" item="no">
-		<li><a href="">{$no.post_title}</a> <p>{$no.post_date|strtotime|date="Y-m-d",###}</p> </li>
-		<p><a href="">{$no.post_content} </a></p>
+	<!-- slide -->	
+	<php>
+	$home_slides=sp_getslide("home");
+	$home_slides=empty($home_slides)?$default_home_slides:$home_slides;
+	</php>
+	<ul id="homeslider" class="unstyled">
+		<foreach name="home_slides" item="vo">
+		<li>
+			<div class="caption-wraper">
+				<div class="caption">{$vo.slide_name}</div>
+			</div>
+			<a href="{$vo.slide_url}"><img src="{:sp_get_asset_upload_path($vo['slide_pic'])}" alt=""></a>
+		</li>
 		</foreach>
-		<li class="pull-right"><a href=""> >>></a></li>
 	</ul>
-</div>
-<div class="list-box">
-	<div class="recruit">
-		<span>活动</span><h4>VOLUNTTER</h4>
-		<hr>
+	<!-- new important -->
+	<div class="notice contain-box">
+		<span>公告</span><h4>NOTICE</h4>
 		<ul>
 			<php>
 				$tag = "field:post_title,post_content,post_date,post_content;order:post_modified DESC;limit:8;";
-				$volun = sp_sql_posts_bycatid(3,$tag);
+				$notice = sp_sql_posts_bycatid(6,$tag);
 			</php>
-			<foreach name="volun" item="vo">
-			<li><a href="">{$vo.post_title}</a> <p>{$vo.post_date}</p> </li>
+			<foreach name="notice" item="no">
+			<li><a href="">{$no.post_title}</a> <p>{$no.post_date|strtotime|date="Y-m-d",###}</p> </li>
+			<p><a href="">{$no.post_content} </a></p>
 			</foreach>
 			<li class="pull-right"><a href=""> >>></a></li>
 		</ul>
 	</div>
-	<div class="news">
+	<div class="recruit contain-box">
+		<span>志愿活动</span><h4>VOLUNTEER</h4>
+		<a href=""> >>></a>
+		<hr>
+		<ul>
+			<php>
+				$tag = "field:tid,post_title,post_content,post_address,post_date,ac_start,user_number,smeta,join_count,post_hits;order:post_modified DESC;limit:8;";
+				$volun = sp_sql_posts_bycatid(3,$tag);
+			</php>
+			<foreach name="volun" item="vo">
+			<php>
+	            $smeta=json_decode($vo['smeta'],true);
+	        </php>
+	        <div class="post-box">
+	            <div class="tc-gridbox">
+	                <div class="header">
+	                    <div class="item-image">
+	                        <a href="{:leuu('article/index',array('id'=>$vo['tid']))}">
+	                            <if condition="empty($smeta['thumb'])"> 
+	                                <img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
+	                            <else /> 
+	                                <img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive img-thumbnail" alt="{$vo.post_title}" />
+	                            </if>
+	                        </a>
+	                    </div>
+	                </div>
+	                <div class="body">
+	                    <h3><a href="{:leuu('portal/article/index',array('id'=>$vo['tid']))}">{$vo.post_title}</a></h3>
+	                    <p>活动地点：{$vo.post_address}</p>
+	                    <p>活动发起：{$vo.user_number}</p>
+	                    <div class="timebox">
+	                        <p>报名截止：{$vo.ac_start}</p>
+	                        <p><div class="time"><div class="pass_time" id="{$vo.tid}" style="width:{$vo.time_width}%"></div></div></p>
+	                        <p class="residue">{$status[$vo['active_status']]}</p>
+	                    </div>
+	                </div>
+	                <div class="footer">
+	                    <i class="iconfont">&#xe608</i>{$vo.join_count}&nbsp;
+	                    <i class="iconfont">&#xe610</i>{$vo.post_hits}
+	                </div>
+	            </div>
+	        </div>
+			</foreach>
+		</ul>
+	</div>
+	<div class="news contain-box">
 		<span>新闻</span><h4>NEWS</h4>
 		<hr>
 		<ul>
 			<php>
 				$tag = "field:post_title,post_content,post_date,post_content;order:post_modified DESC;limit:8;";
-				$notice = sp_sql_posts_bycatid(9,$tag);
+				$notice = sp_sql_posts_bycatid(7,$tag);
+				dump($notice);
 			</php>
 			<foreach name="notice" item="no">
 			<li><a href="">{$no.post_title}</a> <p>{$no.post_date|strtotime|date="Y-m-d",###}</p> </li>
@@ -103,7 +134,6 @@ $home_slides=empty($home_slides)?$default_home_slides:$home_slides;
 			<li class="pull-right"><a href=""> >>></a></li>
 		</ul>
 	</div>
-</div>
 </div>
 
 <tc_include file="Public:footer"/>

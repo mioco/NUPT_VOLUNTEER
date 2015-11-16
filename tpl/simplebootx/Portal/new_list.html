@@ -4,7 +4,9 @@
     <title>{$name} {$seo_title} {$site_name}</title>
     <meta name="keywords" content="{$seo_keywords}" />
     <meta name="description" content="{$seo_description}">
-    <tc_include file="Public:head" />
+    <tc_include file="Public:head" />   
+    <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/newList.css">
+
 </head>
 <body>
 <tc_include file="Public:nav" />
@@ -13,7 +15,7 @@
     <hr>
         <php>
             $tag = "field:tid,post_author,post_modified,post_title,post_content,post_like,user_number,avatar,comment_count;order:post_date desc;";
-            $posts = sp_sql_posts_paged_bycatid(1,$tag,16,$pagesetting);
+            $posts = sp_sql_posts_paged_bycatid(7,$tag,16,$pagesetting);
         </php>
         <foreach name="posts['posts']" item="vo">
             <php>
@@ -33,7 +35,7 @@
                 </div>
                 <div class="new-detail">
                     <div class="new-name"><a href="{:leuu('article/index',array('id'=>$vo['tid']))}">{$vo.post_title}</a></div>
-                    <div class="new-text">{$vo.post_content}</div>
+                    <div class="new-text"><?php echo substr($vo['post_content'],0,100); ?></div>
                     <div class="new-from">来自：<a href="{:leuu('article/index',array('id'=>$vo['tid']))}">{$vo.user_login}</a>&nbsp;{$vo.post_modified}</div>
                     <ul class="pull-right">
                         <li><a href=""> 评论&nbsp;{$vo.comment_count}</a></li>

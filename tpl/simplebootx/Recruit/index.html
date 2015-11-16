@@ -1,7 +1,3 @@
-<?php
-$ajax = @$_REQUEST['ajax'];
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,10 +66,10 @@ $ajax = @$_REQUEST['ajax'];
         <a href="">热度</a>
     </div>
     <div class="list-container">
+        <volist name="posts" id="vo">
         <php>
             $smeta=json_decode($vo['smeta'],true);
         </php>
-        <volist name="posts" id="vo">
         <div class="post-box">
             <div class="tc-gridbox">
                 <div class="header">
@@ -126,7 +122,7 @@ $ajax = @$_REQUEST['ajax'];
                 time_limit = '',
                 active_status = '',
                 // check = url.indexOf(vari);
-                check = url.indexOf(variate);
+                check = url.match(variate);
             // if (check>0) {
             //     console.log('data:'+data[variate]);
             //     console.log('value:'+value)
@@ -137,21 +133,25 @@ $ajax = @$_REQUEST['ajax'];
             // }
             if (check >= 0) {
                 var reg = RegExp(variate +'='+ value)
-                    check = reg.test(url);
+                check = url.match(reg);
+                console.log('匹配是否已存在该标签和值'+reg);
                 if (check) {
                     url = url.replace(reg, '');
                     $('.seachUrl').val(url);
-                console.log(url+','+check);
+                    console.log('检测到该标签和值，删除'+url);
                 }else{
                     console.log(url+','+reg);
+                    var reg = RegExp(variate +'=(\d+,?)+');
+                    //这里替换有问题，是自己替换自己了。
                     url = url.replace(reg, variate +'='+ value);
                     $('.seachUrl').val(url);
-                console.log(url+','+check);
+                    console.log('没检测到标签的值，添加');
 
                 }              
             }else{
                 url = url + '&' + variate + '=' + value;
                 $('.seachUrl').val(url);
+                console.log(url);
             }
 
             // console.log('check:'+check+','+'url:'+url+','+'vari:'+variate+','+'value:'+ value);

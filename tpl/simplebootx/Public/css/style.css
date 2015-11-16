@@ -27,10 +27,6 @@ margin-left: 0px;
 	vertical-align: middle;
 	margin: 0 5px;
 }
-/*tc widget*/
-.tc-main{
-	margin-top: 20px;
-}
 /*tc-box*/
 .tc-box{
 	background: #fff;
@@ -137,9 +133,14 @@ line-height: 24px;
 .tc-gridbox .body {
   padding-right: 14px;
   padding-left: 14px;
-  margin-bottom: 14px;
   color: #343a3f;
 }
+.tc-gridbox .body h3{
+	font-size: 1.4em;
+	line-height: 1em;
+}
+.tc-gridbox .body h3>a{color: #000;}
+.tc-gridbox .body p{margin: 0;}
 .tc-gridbox .body a{color: #666;}
 .tc-gridbox .body a:hover{color: #428bca;}
 .tc-gridbox .btn {

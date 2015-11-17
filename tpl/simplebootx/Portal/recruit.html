@@ -41,7 +41,7 @@
 				<form class="recruit_form" action="{:u('recruit/recruit/post')}" method="post">
 				    <input type="hidden" name="post_id" value="{$id}"/>
 				    <input type="hidden" name="tid" value="{$tid}">
-				<a type="submit" class="btn btn-primary recruit-btn" value="{:u('Recruit/RecruitPost/post', array('tid'=>$tid))}">报名</a></form>
+				<a type="submit" class="btn btn-primary recruit-btn" toUrl="{:u('Recruit/RecruitPost/post')}" tid="{$tid}">报名</a></form>
 				<a href="{:U('article/do_like',array('id'=>$object_id))}" class="J_count_btn btn btn-default">感兴趣&nbsp;<i class="fa fa-thumbs-up"></i><span class="count">{$post_like}</span></a>
 			</div>
 		</div>
@@ -125,11 +125,14 @@
 <script>
 	$(function(){
 		$('.recruit-btn').click(function() {
-			var url = $(this).attr('value');
+			var url = $(this).attr('toUrl'),
+				tid = $(this).attr('tid');
 			$.ajax({
 				url: url,
-				success: function() {
-					alert('报名成功');
+				data: {tid: tid},
+				type: 'post',
+				success: function(data) {
+					alert(data);
 					return false;
 				},
 				error: function() {

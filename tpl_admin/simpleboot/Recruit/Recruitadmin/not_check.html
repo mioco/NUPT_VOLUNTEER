@@ -31,9 +31,9 @@
 			<tr>
 				<td><input type="checkbox" class="J_check" data-yid="J_check_y" data-xid="J_check_x" name="ids[]" value="{$vo.id}" ></td>
 				<td>{$vo.user_number}</td>
-				<td><a href="">{$vo.username}</a> </td>
-				<td>{$vo.user_faculty} </td>
-				<td>{$vo.user_major}</td>
+				<td><a href="{:U('User/Indexadmin/record',array('id'=>$vo['uid']))}">{$vo.username}</a> </td>
+				<td>{$vo.faculty} </td>
+				<td>{$vo.fa_name}</td>
 				<td>{$vo.org}</td>
 				<td>{$vo.user_email}</td>
 				<td>{$status[$vo['status']]}</td>

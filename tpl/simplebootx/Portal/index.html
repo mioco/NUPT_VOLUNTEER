@@ -80,7 +80,7 @@
 		<hr>
 		<ul>
 			<php>
-				$tag = "field:tid,post_title,post_content,post_address,post_date,ac_start,user_number,smeta,join_count,post_hits;order:post_modified DESC;limit:8;";
+				$tag = "field:tid,post_title,post_content,post_address,post_date,ac_start,user_number,smeta,post_hits;order:post_modified DESC;limit:8;";
 				$volun = sp_sql_posts_bycatid(3,$tag);
 			</php>
 			<foreach name="volun" item="vo">

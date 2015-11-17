@@ -121,19 +121,12 @@
                 term = '',
                 time_limit = '',
                 active_status = '',
-                // check = url.indexOf(vari);
-                check = url.match(variate);
-            // if (check>0) {
-            //     console.log('data:'+data[variate]);
-            //     console.log('value:'+value)
-            //     var reg = RegExp(value),
-            //         variate = data[variate].replace(reg, '');
-            // }else{
-                // data[variate] = value +','+ data[variate];
-            // }
-            if (check >= 0) {
+                reg = RegExp(variate +'=(\d+,?)+', 'g'),
+                check = reg.exec(url);
+                console.log(url,variate,check);
+            if (check) {
                 var reg = RegExp(variate +'='+ value)
-                check = url.match(reg);
+                check = url.search(reg);
                 console.log('匹配是否已存在该标签和值'+reg);
                 if (check) {
                     url = url.replace(reg, '');
@@ -145,13 +138,13 @@
                     //这里替换有问题，是自己替换自己了。
                     url = url.replace(reg, variate +'='+ value);
                     $('.seachUrl').val(url);
-                    console.log('没检测到标签的值，添加');
+                    console.log('没检测到标签的值，添加',url);
 
                 }              
             }else{
                 url = url + '&' + variate + '=' + value;
                 $('.seachUrl').val(url);
-                console.log(url);
+                console.log('没检测到标签，添加',url);
             }
 
             // console.log('check:'+check+','+'url:'+url+','+'vari:'+variate+','+'value:'+ value);

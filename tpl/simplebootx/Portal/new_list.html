@@ -35,7 +35,7 @@
                 </div>
                 <div class="new-detail">
                     <div class="new-name"><a href="{:leuu('article/index',array('id'=>$vo['tid']))}">{$vo.post_title}</a></div>
-                    <div class="new-text"><?php echo substr($vo['post_content'],0,100); ?></div>
+                    <div class="new-text"><?php echo substr($vo['post_content'],0,80); ?></div>
                     <div class="new-from">来自：<a href="{:leuu('article/index',array('id'=>$vo['tid']))}">{$vo.user_login}</a>&nbsp;{$vo.post_modified}</div>
                     <ul class="pull-right">
                         <li><a href=""> 评论&nbsp;{$vo.comment_count}</a></li>

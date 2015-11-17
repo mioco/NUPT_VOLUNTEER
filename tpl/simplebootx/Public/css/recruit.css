@@ -1,4 +1,7 @@
-.item-info {margin-left: 0;}
+.item-info {
+	margin-left: 0;
+	width: 840px;
+}
 .detail {
 	height: 450px;
 	background-color: #fff;

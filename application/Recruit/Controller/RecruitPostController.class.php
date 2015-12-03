@@ -9,7 +9,6 @@ class RecruitPostController extends MemberbaseController{
 	function _initialize() {
 		parent::_initialize();
 		$this->comments_model=D("Common/Comments");
-		$this->recruit_model=D("Common/Recruit");
 	}
 	
 	function post(){
@@ -22,15 +21,17 @@ class RecruitPostController extends MemberbaseController{
 			if(isset($_SESSION["user"])){//用户已登陆,且是本站会员
 				$uid=$_SESSION["user"]['id'];
 				$where['uid'] = $uid;
-				$where['tid'] = $_POST['tid'];
+				$where['tid'] = $_GET['tid'];
+				var_dump($where);
+				die();
 				$check = $this->recruit_model->where($where)->find();
 				if ($check) {
-					echo"您已经报名，请耐心等待审核。";
+					echo"<script>alert('您已经报名，请耐心等待审核。');history.go(-1);</script>";
 				}else{
-					echo"报名成功。";
+					echo"<script>alert('报名成功。');history.go(-1);</script>";
 					$_POST['uid']=$uid;
 					if(C("JOIN_NEED_CHECK")){
-						$_POST['status']=1;//报名审核功能开启
+						$_POST['status']=1;//评论审核功能开启
 					}else{
 						$_POST['status']=0;
 					}

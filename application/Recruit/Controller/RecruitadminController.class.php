@@ -19,7 +19,9 @@ class RecruitadminController extends AdminbaseController{
 		if(!empty($table)){
 			$where['post_table']=$table;
 		}
-		// $where['post_author'] = $_SESSION['ADMIN_ID'] != 1 ? '' : $_SESSION['ADMIN_ID'];
+		if ($_SESSION['ADMIN_ID'] != 1) {
+			$where['post_author'] = $_SESSION['ADMIN_ID'];
+		}
 		$where['re.status'] = 1;
 		$page = $this->page($count, 20);
 		$article=$this->posts_model
@@ -46,8 +48,7 @@ class RecruitadminController extends AdminbaseController{
 	}
 	
 	function not_check() {
-		$where= $_GET['id'] ? array('jo.tid'=>$_GET['id'],"jo.status"=>"0") : '';
-		echo $_GET['id'];
+		$where=array('jo.tid'=>$_GET['id'],"jo.status"=>"0");
 		if ($_SESSION['ADMIN_ID'] != 1) {
 			$where['post_id'] = $_SESSION['ADMIN_ID'];
 		}
@@ -56,22 +57,14 @@ class RecruitadminController extends AdminbaseController{
 		->join(C ( 'DB_PREFIX' ).'users u on jo.uid = u.id')
 		->join(C ( 'DB_PREFIX' ).'term_relationships re on jo.tid = re.tid')
 		->join(C ( 'DB_PREFIX' ). 'posts po on re.object_id = po.id')
-		->join(C ( 'DB_PREFIX' ). 'faculty_relationships fr on jo.uid = fr.user_id')
-		->join(C ( 'DB_PREFIX' ). 'faculty fa on fr.major_id = fa.fid')
-		->field('user_number,username,user_email,post_title,jo.status,jo.id,jo.uid,fa_name,parent')
-		// ->where('jo.status=0')
+		->field('user_number,username,user_email,post_title,jo.status,jo.id')
+		->where($where)
 		->limit($page->firstRow . ',' . $page->listRows)
-		->order("createtime")
+		->order("createtime DESC")
 		->select();
-		var_dump($where);
 		$count=count($recruit);
 		$page = $this->page($count, 20);
-		foreach ($recruit as $key => &$r) {
-			$faculty = M('faculty')->field('fa_name')->where(array('fid'=>$r['parent']))->find();
-			$r['faculty'] = $faculty['fa_name'];
-		}
 		$this->assign("recruit",$recruit);
-		var_dump($recruit);
 		$this->assign("Page", $page->show('Admin'));
 		$this->display();
 	}

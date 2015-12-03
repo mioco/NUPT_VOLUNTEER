@@ -67,14 +67,10 @@ class RegisterController extends HomeBaseController {
     	if(strlen($password) < 5 || strlen($password) > 20){
     		$this->error("密码长度至少5位，最多20位！");
     	}
-
+    	
 
     	$where['user_number']=$user_number;
-    	$where['username']=$username;
-        // //身份验证
-        $user_infor = M('user_infor');
-        $is_user = $user_infor -> where($where) ->find();
-        if (!$is_user) {$this->error("不存在的姓名或学号");}
+    	$where['user_carnumber']=$user_carnumber;
     	$where['_logic'] = 'OR';
     	$ucenter_syn=C("UCENTER_ENABLED");
     	$uc_checkemail=1;

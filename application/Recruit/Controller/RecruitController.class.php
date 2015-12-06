@@ -39,6 +39,8 @@ class RecruitController extends HomeBaseController{
 	        $where['quality'] = array('like', '%'.$time_limit.'%');
 	        $where['t.term_id'] = array('like', '%'.$term.'%');
 	        $where['active_status'] = array('like', '%'.$time_status.'%');
+            $where['parent'] = 3;
+            dump($where);
         }
         $field = "object_id,tr.tid,object_id,post_title,post_address,post_date,ac_start,ac_end,smeta,post_hits,post_like";
         $posts = $this->posts_model
@@ -48,7 +50,6 @@ class RecruitController extends HomeBaseController{
         ->field($field) -> where($where) -> select();
         $status = array("0" => "招募中", "1" => "进行中", "2" => "已结束");
         // $this->assign('posts', $posts);
-        // dump($posts);
         foreach($posts as $vo) {
         	$smeta=json_decode($vo["smeta"],true);
         	echo '<div class="post-box">

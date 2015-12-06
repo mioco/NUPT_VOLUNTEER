@@ -12,6 +12,8 @@ class RecruitadminController extends AdminbaseController{
 		$this->posts_model=D("Common/posts");
 		$this->term_relationships=D('Common/term_relationships');
 		$this->users_model=D('Common/users');
+		$this->faculty_relationships=D('Common/faculty_relationships');
+		$this->faculty=D('Common/faculty');
 	}
 
 	function index($table=""){
@@ -48,7 +50,8 @@ class RecruitadminController extends AdminbaseController{
 	}
 	
 	function not_check() {
-		$where=array('jo.tid'=>$_GET['id'],"jo.status"=>"0");
+		$where['jo.status'] = 0;
+		if ($_GET['id']) $where['jo.tid'] = $_GET['id'];
 		if ($_SESSION['ADMIN_ID'] != 1) {
 			$where['post_id'] = $_SESSION['ADMIN_ID'];
 		}
@@ -73,11 +76,16 @@ class RecruitadminController extends AdminbaseController{
 		$menber=$this->recruit_model
 		->alias('jo')
 		->join(C('DB_PREFIX').'users u on jo.uid = u.id')
+		->join(C('DB_PREFIX').'faculty_relationships fr on jo.uid = fr.user_id')
+		->join(C('DB_PREFIX').'faculty f on fr.major_id = f.fid')
 		->where(array('tid'=>$_GET['id'],'status'=>1))
-		->field('jo.id,user_number,username,user_email,status')
+		->field('jo.id,u.id as uid,user_number,username,user_email,status,fa_name,faculty_id,org')
 		->limit($page->firstRow . ',' . $page->listRows)
 		->order("status")
 		->select();
+		foreach ($menber as &$m) {
+			$faculty = $this->faculty->where(array('fid'=>$m['faculty_id']))->getField('fa_name');
+		}
 		$this->assign("menber",$menber);
 		$this->assign("Page", $page->show('Admin'));
 		$this->display();

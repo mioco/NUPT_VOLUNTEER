@@ -190,8 +190,6 @@ class AdminPostController extends AdminbaseController {
 		->count();
 			
 		$page = $this->page($count, 20);
-			
-	    dump($where);
 		$posts=$this->term_relationships_model
 		->alias("a")
 		->join(C ( 'DB_PREFIX' )."posts b ON a.object_id = b.id")

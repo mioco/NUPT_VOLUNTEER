@@ -121,7 +121,7 @@
                 term = '',
                 time_limit = '',
                 active_status = '',
-                reg = RegExp(variate +'=(\d+,?)+', 'g'),
+                reg = RegExp(("variate+") +'=(\d+,?)+', 'g'),
                 check = reg.exec(url);
                 console.log(url,variate,check);
             if (check) {

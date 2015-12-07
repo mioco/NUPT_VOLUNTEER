@@ -23,7 +23,7 @@ class RecruitController extends HomeBaseController{
         ->alias('po')
         ->join(C('DB_PREFIX').'term_relationships tr on po.id = tr.object_id')
         ->join(C('DB_PREFIX').'terms t on tr.term_id = t.term_id')
-        ->field($field) -> where("t.parent=3") -> select();
+        ->field($field) -> where("t.parent=3 and tr.status=1") -> select();
         $terms = $this->terms_model->where('parent=3')->select();
         $this->assign('posts', $posts);
         $this->assign('terms', $terms);

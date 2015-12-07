@@ -149,8 +149,7 @@ class AdminPostController extends AdminbaseController {
 				'end_time'  => array("field"=>"post_date","operator"=>"<"),
 				'keyword'  => array("field"=>"post_title","operator"=>"like"),
 		);
-		if(IS_POST){
-			
+		if(IS_POST){			
 			foreach ($fields as $param =>$val){
 				if (isset($_POST[$param]) && !empty($_POST[$param])) {
 					$operator=$val['operator'];
@@ -176,24 +175,19 @@ class AdminPostController extends AdminbaseController {
 				}
 			}
 		}
-		
-		$status= join(" and ", $where_ands);
 		$admin_id = $_SESSION['ADMIN_ID'];
-		if ($admin_id != '1') {
-			$where =array(join(" and ", $where_ands),'post_author='.$admin_id);
-		}
-			
+		if ($admin_id != '1') array_push($where_ands,'post_author='.$admin_id);
+		$status= join(" and ", $where_ands);
 		$count=$this->term_relationships_model
 		->alias("a")
 		->join(C ( 'DB_PREFIX' )."posts b ON a.object_id = b.id")
 		->where($where)
 		->count();
-			
 		$page = $this->page($count, 20);
 		$posts=$this->term_relationships_model
 		->alias("a")
 		->join(C ( 'DB_PREFIX' )."posts b ON a.object_id = b.id")
-		->where($where)
+		->where($status)
 		->limit($page->firstRow . ',' . $page->listRows)
 		->order("a.listorder ASC,b.post_modified DESC")->select();
 		$users_obj = M("Users");

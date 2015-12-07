@@ -146,7 +146,7 @@ class RecruitadminController extends AdminbaseController{
 	}
 	
 	function active_status(){
-		if((isset($_POST['ids']) || isset($_GET['id'])) && $_GET["active_start"]){
+		if((isset($_REQUEST['id'])) && $_GET["active_start"]){
 			$data["active_status"]=1;
 			isset($_POST['ids']) ? $ids=join(",",$_POST['ids']) : $ids = $_GET['id'];
 			if ( $this->posts_model->where("id in ($ids)")->save($data)!==false) {
@@ -155,12 +155,12 @@ class RecruitadminController extends AdminbaseController{
 				$this->error("活动开始失败！");
 			}
 		}
-		if((isset($_POST['ids']) || isset($_GET['id'])) && $_GET["active_end"]){
+		if((isset($_REQUEST['id'])) && $_GET["active_end"]){
 			if ($_GET['status'] === '2') {
 				$this->error('活动已经是结束的了！');
 			}else{			
 				$data["active_status"]=2;
-				isset($_POST['ids']) ? $ids=join(",",$_POST['ids']) : $ids = $_GET['id'];
+				$ids = isset($_POST['ids']) ? join(",",$_POST['ids']) : $_GET['id'];
 				if ( $this->posts_model->where("id in ($ids)")->save($data)!==false) {
 					$uid = $this->posts_model
 					->alias('po')

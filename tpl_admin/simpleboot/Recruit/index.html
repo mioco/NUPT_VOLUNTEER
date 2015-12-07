@@ -1,4 +1,29 @@
 <admintpl file="header" />
+<style>
+	.disNone{
+		display: none;
+	}
+	.timeBox{
+		position: absolute;
+	    height: 110px;
+	    background-color: #eee;
+	    border: 1px solid #ddd;
+	    padding: 1em;
+	    width: 223px;
+	    margin-top: 1.2em;
+	}
+	.timeBox:before{
+	display: table;
+    content: '';
+    position: absolute;
+    right: 1em;
+    top: -1em;
+    border-right: .5em solid transparent;
+    border-left: .5em solid transparent;
+    border-bottom: 1em solid #eee;
+    right: 1em;
+	}
+</style>
 </head>
 <body class="J_scroll_fixed" style="min-width:800px;">
 <div class="wrap J_check_wrap">
@@ -37,6 +62,7 @@
 			<foreach name="article" item="vo">
 			<tr>
 				<td><input type="checkbox" class="J_check" data-yid="J_check_y" data-xid="J_check_x" name="ids[]" value="{$vo.id}" ></td>
+	</form>
 				<td>{$vo.id}</td>
 				<td>{$vo.post_title}</td>
 				<td><a href="">{$vo.user_number}</a></td>
@@ -44,30 +70,38 @@
 				<td><a href="{:U('Recruitadmin/not_check',array('id'=>$vo['tid']))}">{$vo.un_check}</a></td>
 				<td>{$vo.ac_start}到{$vo.ac_end}</td>
 				<td>{$status[$vo['active_status']]}</td>
-				<td>
+				<td id="setBox">
 					<a href="{:U('Recruitadmin/delete',array('tid'=>$vo['tid']))}" class="J_ajax_del btn" >删除</a>
 					<a href="{:u('Recruitadmin/active_status',array('active_start'=>1,'id'=>$vo['id']))}" class="btn J_ajax_submit_btn" >开始活动</a>
-					<a class="btn J_ajax_submit_btn" data-toggle="modal" data-target=".endBox">结束活动</a>
-					<div class="modal fade endBox" tabindex="-1" role="dialog">
+					<a class="btn J_ajax_submit_btn endBtn">结束活动</a>
+					<div class="disNone timeBox">
+						<form action="{:u('Recruitadmin/active_status',array('active_end'=>1,'id'=>$vo['id'],'status'=>$vo.active_status))}" method="get">
+							<label for="timeTake">提供时长</label>
+							<input type="text" name="timeTake" id="timeTake">
+							<button type="submit" class="TKsubmit btn">确定</button>
+							<button type="button" class="TKclose btn">取消</button>
+						</form>
+					</div>
+					<!-- <div class="modal fade endBox" tabindex="-1" role="dialog">
 					  	<div class="modal-body">
 				            <label for="recipient-name" class="control-label">提供时长:</label>
 				            <input type="text" class="form-control" name="takeTime" value="{$vo.duration}">
 				        </div>
 				        <div class="modal-footer">
 				          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-				          <a href="{:u('Recruitadmin/active_status',array('active_end'=>1,'id'=>$vo['id'],'status'=>$vo['active_status']))}" type="submit" class="btn btn-primary tk-submit">确定</a>
+				          <a href="{:u('Recruitadmin/active_status',array('active_end'=>1,'id'=>$vo['id'],'status'=>$vo.active_status))}" type="submit" class="btn btn-primary tk-submit">确定</a>
 				        </div>
-					</div>
+					</div> -->
 				</td>
 			</tr>
 			</foreach>
 		</table>
 		<div class="pagination">{$Page}</div>
-	</form>
 
 </div>
 <script src="__ROOT__/statics/js/common.js"></script>
 <script type="text/javascript">
+
 	$(function() {
 		$('.tk-submit').on('click', function(){
 			var tk = $('input[name=takeTime]').val();
@@ -75,6 +109,26 @@
 			$(this).attr('href', $(this).attr('href') + '&duration=' + tk);
 			console.log($(this).attr('href'));
 		})
+
+		var none = 1;
+		$('.endBtn').on('click', function() {
+			if (none) {
+				$(this).next('.timeBox').removeClass('disNone');
+				none = 0;
+			}else{
+				$(this).next('.timeBox').addClass('disNone');
+				none = 1;
+			}
+		});
+		$('.TKclose').on('click', function() {
+			if (none) {
+				$(this).parents('.timeBox').removeClass('disNone');
+				none = 0;
+			}else{
+				$(this).parents('.timeBox').addClass('disNone');
+				none = 1;
+			}
+		});
 	})
 </script>
 </body>

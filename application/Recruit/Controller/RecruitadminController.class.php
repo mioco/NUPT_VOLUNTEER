@@ -84,7 +84,7 @@ class RecruitadminController extends AdminbaseController{
 		->order("status")
 		->select();
 		foreach ($menber as &$m) {
-			$faculty = $this->faculty->where(array('fid'=>$m['faculty_id']))->getField('fa_name');
+			$m['faculty'] = $this->faculty->where(array('fid'=>$m['faculty_id']))->getField('fa_name');
 		}
 		$this->assign("menber",$menber);
 		$this->assign("Page", $page->show('Admin'));

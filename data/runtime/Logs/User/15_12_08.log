@@ -1,0 +1,9 @@
+[ 2015-12-08T01:23:58+08:00 ] ::1 /nupt_volunteer/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001630s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005276s ]
+SQL: SHOW COLUMNS FROM `sp_options` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `sp_options` WHERE ( option_name='site_options' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: url E:\wamp\www\NUPT_VOLUNTEER\application\Common\Controller\AppframeController.class.php 第 45 行.
+

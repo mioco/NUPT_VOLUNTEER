@@ -5,6 +5,10 @@ class RecruitadminController extends AdminbaseController{
 	
 	protected $recruit_model;
 	protected $posts_model;
+	protected $term_relationships;
+	protected $users_model;
+	protected $faculty_model;
+	protected $faculty_relationships;
 	
 	function _initialize(){
 		parent::_initialize();
@@ -50,35 +54,24 @@ class RecruitadminController extends AdminbaseController{
 	}
 	
 	function not_check() {
-		$where['jo.status'] = 0;
+		$this->memberList(0);
+	}
+	function member(){
+		$this->memberList(1);
+	}
+	function memberList($status){
+		$where['jo.status'] = $status;
 		if ($_GET['id']) $where['jo.tid'] = $_GET['id'];
 		if ($_SESSION['ADMIN_ID'] != 1) {
 			$where['post_id'] = $_SESSION['ADMIN_ID'];
 		}
-		$recruit=$this->recruit_model
-		->alias('jo')
-		->join(C ( 'DB_PREFIX' ).'users u on jo.uid = u.id')
-		->join(C ( 'DB_PREFIX' ).'term_relationships re on jo.tid = re.tid')
-		->join(C ( 'DB_PREFIX' ). 'posts po on re.object_id = po.id')
-		->field('user_number,username,user_email,post_title,jo.status,jo.id')
-		->where($where)
-		->limit($page->firstRow . ',' . $page->listRows)
-		->order("createtime DESC")
-		->select();
-		$count=count($recruit);
-		$page = $this->page($count, 20);
-		$this->assign("recruit",$recruit);
-		$this->assign("Page", $page->show('Admin'));
-		$this->display();
-	}
-	function member(){
 		$page = $this->page($count, 20);
 		$menber=$this->recruit_model
 		->alias('jo')
 		->join(C('DB_PREFIX').'users u on jo.uid = u.id')
 		->join(C('DB_PREFIX').'faculty_relationships fr on jo.uid = fr.user_id')
 		->join(C('DB_PREFIX').'faculty f on fr.major_id = f.fid')
-		->where(array('tid'=>$_GET['id'],'status'=>1))
+		->where($where)
 		->field('jo.id,u.id as uid,user_number,username,user_email,status,fa_name,faculty_id,org')
 		->limit($page->firstRow . ',' . $page->listRows)
 		->order("status")
@@ -146,6 +139,47 @@ class RecruitadminController extends AdminbaseController{
 	}
 	
 	function active_status(){
+		//ac_status {0:start;1:end}
+		switch ($_GET['ac_status']) {
+			case '0':
+				if ($_GET['status']) {$this->error('活动不在招募状态！');die();}
+				$data["active_status"]=1;
+				$ids = isset($_POST['ids']) ? join(',', $_POST['ids']) : $_GET['id'];
+				if ($this->posts_model->where("id in ($ids)")->save($data)!==false) {
+					$this->success("活动已开始！");
+				}else {
+					$this->error("活动开始失败！");
+				}
+				break;
+			case '1':
+				$data["active_status"]=2;
+				$ids = isset($_REQUEST['ids']) ? join(",",$_POST['ids']) : $_GET['id'];
+				if ( $this->posts_model->where("id in ($ids)")->save($data)!==false) {
+					$uid = $this->posts_model
+					->alias('po')
+					->join(C('DB_PREFIX').'term_relationships tr on po.id = tr.object_id')
+					->join(C('DB_PREFIX').'recruit re on tr.tid = re.tid')
+					->field('re.uid')->select();
+					foreach ($uid as $u) {
+						$insert = $this->users_model->where(array('id'=>$u['uid']))->save(array('duration'=>$_GET['timeTake']));
+						if (!$insert) {
+							$this->error("添加时长失败！");
+							return false;
+						}
+					}
+					$this->success("活动已结束！");
+				} else {
+					$this->error("取消审核失败！");
+				}
+				break;
+			
+			default:
+				$this->error('错误的操作');
+				break;
+		}
+
+
+
 		if((isset($_REQUEST['id'])) && $_GET["active_start"]){
 			$data["active_status"]=1;
 			isset($_POST['ids']) ? $ids=join(",",$_POST['ids']) : $ids = $_GET['id'];
@@ -158,7 +192,7 @@ class RecruitadminController extends AdminbaseController{
 		if((isset($_REQUEST['id'])) && $_GET["active_end"]){
 			if ($_GET['status'] === '2') {
 				$this->error('活动已经是结束的了！');
-			}else{			
+			}else{
 				$data["active_status"]=2;
 				$ids = isset($_POST['ids']) ? join(",",$_POST['ids']) : $_GET['id'];
 				if ( $this->posts_model->where("id in ($ids)")->save($data)!==false) {

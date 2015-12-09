@@ -72,26 +72,14 @@
 				<td>{$status[$vo['active_status']]}</td>
 				<td id="setBox">
 					<a href="{:U('Recruitadmin/delete',array('tid'=>$vo['tid']))}" class="J_ajax_del btn" >删除</a>
-					<a href="{:u('Recruitadmin/active_status',array('active_start'=>1,'id'=>$vo['id']))}" class="btn J_ajax_submit_btn" >开始活动</a>
+					<a href="{:u('Recruitadmin/active_status',array('ac_status'=>0,'id'=>$vo['id'],'status'=>$vo['active_status']))}" class="btn J_ajax_submit_btn" >开始活动</a>
 					<a class="btn J_ajax_submit_btn endBtn">结束活动</a>
-					<div class="disNone timeBox">
-						<form action="{:u('Recruitadmin/active_status',array('active_end'=>1,'id'=>$vo['id'],'status'=>$vo.active_status))}" method="get">
-							<label for="timeTake">提供时长</label>
-							<input type="text" name="timeTake" id="timeTake">
-							<button type="submit" class="TKsubmit btn">确定</button>
-							<button type="button" class="TKclose btn">取消</button>
-						</form>
+					<div class="disNone timeBox" url="{:u('Recruitadmin/active_status',array('ac_status'=>1,'id'=>$vo['id'],'status'=>$vo['active_status']))}" >
+						<label for="timeTake">提供时长</label>
+						<input type="text" name="timeTake" id="timeTake" placeholder="{$vo.duration}">
+						<div class="TKsubmit btn">确定</div>
+						<div class="TKclose btn">取消</div>
 					</div>
-					<!-- <div class="modal fade endBox" tabindex="-1" role="dialog">
-					  	<div class="modal-body">
-				            <label for="recipient-name" class="control-label">提供时长:</label>
-				            <input type="text" class="form-control" name="takeTime" value="{$vo.duration}">
-				        </div>
-				        <div class="modal-footer">
-				          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-				          <a href="{:u('Recruitadmin/active_status',array('active_end'=>1,'id'=>$vo['id'],'status'=>$vo.active_status))}" type="submit" class="btn btn-primary tk-submit">确定</a>
-				        </div>
-					</div> -->
 				</td>
 			</tr>
 			</foreach>
@@ -103,13 +91,6 @@
 <script type="text/javascript">
 
 	$(function() {
-		$('.tk-submit').on('click', function(){
-			var tk = $('input[name=takeTime]').val();
-			console.log($(this).attr('href'));
-			$(this).attr('href', $(this).attr('href') + '&duration=' + tk);
-			console.log($(this).attr('href'));
-		})
-
 		var none = 1;
 		$('.endBtn').on('click', function() {
 			if (none) {
@@ -129,6 +110,29 @@
 				none = 1;
 			}
 		});
+		$('.TKsubmit').on('click', function() {
+			var val = $(this).siblings('#timeTake').val(),
+				val = val ? val : $(this).siblings('#timeTake').attr('placeholder'),
+				url = $(this).parent().attr('url')+'&timeTake='+val,
+				status = url.match(/&status=\d/g)[0].match(/\d/)[0];
+			switch(status){
+				case '0' : 
+				  var r = confirm('活动还没开始,确定结束吗?');
+				  if (!r) return false;
+				  break;
+				case '2' : 
+				  alert('错误：活动已经结束。');
+				  return false;
+			}
+			$.ajax({
+				url: url,
+				type: 'get',
+				success: function(){
+					alert('成功结束该活动，参与成员获得相应时间');
+					location.reload();
+				}
+			})
+		})
 	})
 </script>
 </body>

@@ -42,7 +42,7 @@ class RecruitController extends HomeBaseController{
             $where['parent'] = 3;
             dump($where);
         }
-        $field = "object_id,tr.tid,object_id,post_title,post_address,post_date,ac_start,ac_end,smeta,post_hits,post_like";
+        $field = "object_id,tr.tid,object_id,post_title,post_address,post_date,ac_start,ac_end,smeta,post_hits,post_like,duration";
         $posts = $this->posts_model
         ->alias('po')
         ->join(C('DB_PREFIX').'term_relationships tr on po.id = tr.object_id')

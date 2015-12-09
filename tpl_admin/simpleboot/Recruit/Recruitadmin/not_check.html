@@ -27,7 +27,7 @@
 				</tr>
 			</thead>
 			<php>$status=array("1"=>"已审核","0"=>"未审核");</php>
-			<foreach name="recruit" item="vo">
+			<foreach name="menber" item="vo">
 			<tr>
 				<td><input type="checkbox" class="J_check" data-yid="J_check_y" data-xid="J_check_x" name="ids[]" value="{$vo.id}" ></td>
 				<td>{$vo.user_number}</td>

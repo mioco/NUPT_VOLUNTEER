@@ -4,11 +4,14 @@ use Common\Controller\MemberbaseController;
 class RecruitPostController extends MemberbaseController{
 	
 	protected $comments_model;
-	protected $join_model;
+	protected $recruit_model;
+	protected $users_model;
 	
 	function _initialize() {
 		parent::_initialize();
 		$this->comments_model=D("Common/Comments");
+		$this->recruit_model=D("Common/recruit");
+		$this->users_model=D("Common/users");
 	}
 	
 	function post(){
@@ -21,17 +24,14 @@ class RecruitPostController extends MemberbaseController{
 			if(isset($_SESSION["user"])){//用户已登陆,且是本站会员
 				$uid=$_SESSION["user"]['id'];
 				$where['uid'] = $uid;
-				$where['tid'] = $_GET['tid'];
-				var_dump($where);
-				die();
+				$where['tid'] = $_REQUEST['tid'];
 				$check = $this->recruit_model->where($where)->find();
 				if ($check) {
-					echo"<script>alert('您已经报名，请耐心等待审核。');history.go(-1);</script>";
+					echo"您已经报名，请耐心等待审核。";
 				}else{
-					echo"<script>alert('报名成功。');history.go(-1);</script>";
 					$_POST['uid']=$uid;
 					if(C("JOIN_NEED_CHECK")){
-						$_POST['status']=1;//评论审核功能开启
+						$_POST['status']=1;//审核功能开启
 					}else{
 						$_POST['status']=0;
 					}
@@ -44,6 +44,7 @@ class RecruitPostController extends MemberbaseController{
 					} else {
 						$this->error($this->recruit_model->getError());
 					}
+					echo"报名成功。";
 				}
 			}
 		}

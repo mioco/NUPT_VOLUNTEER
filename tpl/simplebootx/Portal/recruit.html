@@ -35,7 +35,7 @@
 			<div class="item-info-r span4">
 				<h2>{$post_title}</h2>
 				<p>{$post_excerpt}</p>
-				<p>时间： {$recruit_end_time}&nbsp;到&nbsp;{$active_end_time}</p>
+				<p>时间： {$ac_start}&nbsp;到&nbsp;{$ac_end}</p>
 				<p>地址： {$post_address}</p>
 				<p>分类： {$term[name]}</p>
 				<form class="recruit_form" action="{:u('recruit/recruit/post')}" method="post">
@@ -46,7 +46,7 @@
 			</div>
 		</div>
 		<div class="sidebar span3">
-			<a href=""><p><strong>发起组织： {$user_nicename|default=$user_login}</strong></p></a>
+			<a href=""><p><strong>发起组织： {$user_number}</strong></p></a>
 			<p>发布时间： {$post_date}</p>
 			<p>联系方式</p>
 			<button class="btn btn-default">团队信息</button>

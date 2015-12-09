@@ -39,7 +39,6 @@ class RegisterController extends HomeBaseController {
     			array('user_number', 'require', '学号不能为空！', 1 ),
                 array('user_major', 'require', '专业不能为空！', 1 ),
                 array('username', 'require', '姓名不能为空！', 1 ),
-                array('user_carnumber', 'require', '校园卡号不能为空！', 1 ),
     			array('email', 'require', '邮箱不能为空！', 1 ),
     			array('password','require','密码不能为空！',1),
     			array('repassword', 'require', '重复密码不能为空！', 1 ),
@@ -70,7 +69,7 @@ class RegisterController extends HomeBaseController {
     	
 
     	$where['user_number']=$user_number;
-    	$where['user_carnumber']=$user_carnumber;
+    	$where['username']=$username;
     	$where['_logic'] = 'OR';
     	$ucenter_syn=C("UCENTER_ENABLED");
     	$uc_checkemail=1;
@@ -83,7 +82,7 @@ class RegisterController extends HomeBaseController {
     	$users_model=M("Users");
     	$result = $users_model->where($where)->count();
     	if($result || $uc_checkemail<0 || $uc_checkusername<0){
-    		$this->error("学号或该校园卡号已经存在！");
+    		$this->error("该用户已注册！");
     	}else{
     		$uc_register=true;
     		if($ucenter_syn){
@@ -100,7 +99,6 @@ class RegisterController extends HomeBaseController {
     					'user_number' => $user_number,
     					'user_email' => $email,
     					'username' =>$username,
-                        'user_carnumber'=>$user_carnumber,
                         'user_major'=>$user_major,
     					'user_pass' => sp_password($password),
     					'last_login_ip' => get_client_ip(),

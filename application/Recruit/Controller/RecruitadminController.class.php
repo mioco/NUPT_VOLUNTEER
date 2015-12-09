@@ -159,15 +159,16 @@ class RecruitadminController extends AdminbaseController{
 					->alias('po')
 					->join(C('DB_PREFIX').'term_relationships tr on po.id = tr.object_id')
 					->join(C('DB_PREFIX').'recruit re on tr.tid = re.tid')
+					->where('re.status=1')
 					->field('re.uid')->select();
 					foreach ($uid as $u) {
-						$insert = $this->users_model->where(array('id'=>$u['uid']))->save(array('duration'=>$_GET['timeTake']));
+						$duration = $this->users_model->where(array('id'=>$u['uid']))->getField('duration')+$_GET['timeTake'];
+						$insert = $this->users_model->where(array('id'=>$u['uid']))->save(array('duration'=>$duration));
 						if (!$insert) {
 							$this->error("添加时长失败！");
 							return false;
 						}
 					}
-					$this->success("活动已结束！");
 				} else {
 					$this->error("取消审核失败！");
 				}
@@ -176,43 +177,6 @@ class RecruitadminController extends AdminbaseController{
 			default:
 				$this->error('错误的操作');
 				break;
-		}
-
-
-
-		if((isset($_REQUEST['id'])) && $_GET["active_start"]){
-			$data["active_status"]=1;
-			isset($_POST['ids']) ? $ids=join(",",$_POST['ids']) : $ids = $_GET['id'];
-			if ( $this->posts_model->where("id in ($ids)")->save($data)!==false) {
-				$this->success("活动已开始！");
-			} else {
-				$this->error("活动开始失败！");
-			}
-		}
-		if((isset($_REQUEST['id'])) && $_GET["active_end"]){
-			if ($_GET['status'] === '2') {
-				$this->error('活动已经是结束的了！');
-			}else{
-				$data["active_status"]=2;
-				$ids = isset($_POST['ids']) ? join(",",$_POST['ids']) : $_GET['id'];
-				if ( $this->posts_model->where("id in ($ids)")->save($data)!==false) {
-					$uid = $this->posts_model
-					->alias('po')
-					->join(C('DB_PREFIX').'term_relationships tr on po.id = tr.object_id')
-					->join(C('DB_PREFIX').'recruit re on tr.tid = re.tid')
-					->field('re.uid')->find();
-					foreach ($uid as $u) {
-						$insert = $this->users_model->where(array('id'=>$u))->save(array('duration'=>$_GET['duration']));
-						if (!$insert) {
-							$this->error("添加时长失败！");
-							return false;
-						}
-					}
-					$this->success("活动已结束！");
-				} else {
-					$this->error("取消审核失败！");
-				}
-			}
 		}
 	}
 	// if ($result!==false){							

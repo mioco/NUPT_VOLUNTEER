@@ -154,12 +154,13 @@ class RecruitadminController extends AdminbaseController{
 			case '1':
 				$data["active_status"]=2;
 				$ids = isset($_REQUEST['ids']) ? join(",",$_POST['ids']) : $_GET['id'];
-				if ( $this->posts_model->where("id in ($ids)")->save($data)!==false) {
-					$uid = $this->posts_model
-					->alias('po')
-					->join(C('DB_PREFIX').'term_relationships tr on po.id = tr.object_id')
+				if (1) {
+					$where['re.status'] = 1;
+					$where['tr.object_id'] = array('in', $ids);
+					$uid = $this->term_relationships
+					->alias('tr')
 					->join(C('DB_PREFIX').'recruit re on tr.tid = re.tid')
-					->where('re.status=1')
+					->where($where)
 					->field('re.uid')->select();
 					foreach ($uid as $u) {
 						$duration = $this->users_model->where(array('id'=>$u['uid']))->getField('duration')+$_GET['timeTake'];

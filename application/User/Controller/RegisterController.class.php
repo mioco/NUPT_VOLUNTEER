@@ -32,6 +32,7 @@ class RegisterController extends HomeBaseController {
     	}
     	
     	$users_model=M("Users");
+        $user_infor = M('user_infor');
         $faculty_rel = M('faculty_relationships');
     	$rules = array(
     			//array(验证字段,验证规则,错误提示,验证条件,附加规则,验证时间)
@@ -66,74 +67,76 @@ class RegisterController extends HomeBaseController {
     	if(strlen($password) < 5 || strlen($password) > 20){
     		$this->error("密码长度至少5位，最多20位！");
     	}
-    	
 
-    	$where['user_number']=$user_number;
-    	$where['username']=$username;
-    	$where['_logic'] = 'OR';
-    	$ucenter_syn=C("UCENTER_ENABLED");
-    	$uc_checkemail=1;
-    	$uc_checkuser_number=1;
-    	if($ucenter_syn){
-    		include UC_CLIENT_ROOT."client.php";
-    		$uc_checkemail=uc_user_checkemail($email);
-    		$uc_checkusername=uc_user_checkname($username);
-    	}
-    	$users_model=M("Users");
-    	$result = $users_model->where($where)->count();
-    	if($result || $uc_checkemail<0 || $uc_checkusername<0){
-    		$this->error("该用户已注册！");
-    	}else{
-    		$uc_register=true;
-    		if($ucenter_syn){
-    	
-    			$uc_uid=uc_user_register($username,$password,$email);
-    			//exit($uc_uid);
-    			if($uc_uid<0){
-    				$uc_register=false;
-    			}
-    		}
-    		if($uc_register){
-    			$need_email_active=C("SP_MEMBER_EMAIL_ACTIVE");
-    			$data=array(
-    					'user_number' => $user_number,
-    					'user_email' => $email,
-    					'username' =>$username,
-                        'user_major'=>$user_major,
-    					'user_pass' => sp_password($password),
-    					'last_login_ip' => get_client_ip(),
-    					'create_time' => date("Y-m-d H:i:s"),
-    					'last_login_time' => date("Y-m-d H:i:s"),
-    					'user_status' => $need_email_active?2:1,
-    					"user_type"=>2,
-    			);
-    			$rst = $users_model->add($data);
-    			if($rst){
-                    $faculty_rel->add(array('user_id'=>$rst,'major_id'=>$_POST['user_major'],'faculty_id'=>$_POST['user_faculty']));
-    				//登入成功页面跳转
-    				$data['id']=$rst;
-    				$_SESSION['user']=$data;
+        $result = $user_infor->where(array('name'=>$username,'id'=>$user_number))->select();
+        $where['user_number']=$user_number;
+        $where['username']=$username;
+        if (!$result) {
+            $this->error('学号或姓名不存在！');
+        }else{
+        	$ucenter_syn=C("UCENTER_ENABLED");
+        	$uc_checkname=1;
+        	$uc_checkuser_number=1;
+        	if($ucenter_syn){
+        		include UC_CLIENT_ROOT."client.php";
+        		$uc_checkeuser_number=uc_user_checkuser_number($user_number);
+        		$uc_checkusername=uc_user_checkname($username);
+        	}
+        	$users_model=M("Users");
+        	$result = $users_model->where($where)->count();
+        	if($result || $uc_checkuser_number<0 && $uc_checkusername<0){
+        		$this->error("该用户已注册！");
+        	}else{
+        		$uc_register=true;
+        		if($ucenter_syn){
+        	
+        			$uc_uid=uc_user_register($user_number,$password,$email);
+        			//exit($uc_uid);
+        			if($uc_uid<0){
+        				$uc_register=false;
+        			}
+        		}
+        		if($uc_register){
+        			$need_email_active=C("SP_MEMBER_EMAIL_ACTIVE");
+        			$data=array(
+        					'user_number' => $user_number,
+        					'user_email' => $email,
+        					'username' =>$username,
+                            'user_major'=>$user_major,
+        					'user_pass' => sp_password($password),
+        					'last_login_ip' => get_client_ip(),
+        					'create_time' => date("Y-m-d H:i:s"),
+        					'last_login_time' => date("Y-m-d H:i:s"),
+        					'user_status' => $need_email_active?2:1,
+        					"user_type"=>2,
+        			);
+        			$rst = $users_model->add($data);
+        			if($rst){
+                        $faculty_rel->add(array('user_id'=>$rst,'major_id'=>$_POST['user_major'],'faculty_id'=>$_POST['user_faculty']));
+        				//登入成功页面跳转
+        				$data['id']=$rst;
+        				$_SESSION['user']=$data;
 
-    					
-    				//发送激活邮件
-    				if($need_email_active){
-    					$this->_send_to_active();
-    					unset($_SESSION['user']);
-    					$this->success("注册成功，激活后才能使用！",U("user/login/index"));
-    				}else {
-    					$this->success("注册成功！",__ROOT__."/");
-    				}
-    					
-    			}else{
-    				$this->error("注册失败！",U("user/register/index"));
-    			}
-    	
-    		}else{
-    			$this->error("注册失败！",U("user/register/index"));
-    		}
-    	
-    	}
-    	 
+        					
+        				//发送激活邮件
+        				if($need_email_active){
+        					$this->_send_to_active();
+        					unset($_SESSION['user']);
+        					$this->success("注册成功，激活后才能使用！",U("user/login/index"));
+        				}else {
+        					$this->success("注册成功！",__ROOT__."/");
+        				}
+        					
+        			}else{
+        				$this->error("注册失败！",U("user/register/index"));
+        			}
+        	
+        		}else{
+        			$this->error("注册失败！",U("user/register/index"));
+        		}
+        	
+        	}
+    	 }
     
 	}
 	

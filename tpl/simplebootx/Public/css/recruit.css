@@ -6,13 +6,12 @@
 	height: 450px;
 	background-color: #fff;
 	margin-bottom: 20px;
-	padding: 1em;
+	margin-top: 3em;
 }
 .item-info-l {
-	border: 1px solid #ddd;
 	height: 400px;
 	margin-right: 1em;
-	padding: 0.7em;
+	margin-left: 0;
 }
 .item-info-l .gallery {
 	height: 100%;
@@ -28,9 +27,12 @@
 	font-size: 25px;
 	margin-bottom: 20px;
 }
-.item-info-r .btn {
+.item-info-r>form,.item-info-r .J_count_btn{
 	width: 25%;
+	float: left;
+	margin-right: 10%;
 }
+.item-info-r>form>a{width: 100%;}
 .detail .sidebar {
 	background-color: #eee;
 	height: 96%;
@@ -42,7 +44,8 @@ p strong {font-size: 20px;}
 	width: 47%;
 	margin-top: 1em;
 }
-.tc-box.article-box{padding-top: 0;}
+.tc-box.article-box{padding-top: 2em;}
 
+.tc-main .row .span9{margin-left: 0;}
 .article-comment {display: none;}
 .article-comment-inline {display: none;}

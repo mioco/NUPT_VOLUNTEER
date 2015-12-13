@@ -7,39 +7,56 @@
     <tc_include file="Public:head" />
     <style>
     .term-bar{
-        border: 1px solid #ddd;
-        padding: 0.8em;
+        padding: 0 .5em;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 5em;
     }
+    .term-bar:before {
+    content: 'Index';
+    background-color: #FFF;
+    padding: 0 1.2em;
+    position: relative;
+    top: 170px;
+    left: 50%;
+    margin-left: -2em;
+    font-size: 1.3em;
+    color: #888;
+    font-weight: 400;}
     .term-bar>form>div{
-        border-bottom: 1px dashed #ddd;
-        padding: 0.4em;
+        padding: .5em;
+    }.term-bar>form>div>a{
+        color: #000;
+        padding: .3em .5em;
+        margin-right: .1em;
+        cursor: pointer;
+    }
+    .term-bar>form>div>a:hover{
+        padding: .3em .5em;
+        background-color: #579AD4;
+        color: #fff;
     }
     </style>
 </head>
 <body>
 <tc_include file="Public:nav" />
 <div class="container">
-    <div>
-        <span>所有活动&nbsp;></span>
-    </div>
     <div class="term-bar">
         <form action="">
         <div id="time_type">
-            <span>时间类型</span>
+            <span>时间类型：&nbsp;</span>
             <a href="{:u('index',array('id'=>'3'))}">全部活动</a>
             <a value="1">长期活动</a>
             <a value="0">临时活动</a>
         </div>
         <div id="term">
-            <span>服务类型</span>
+            <span>服务类型：&nbsp;</span>
             <foreach name="terms" item="te">
                 <!-- {:u('list/index?id='.$te['term_id'])} -->
-                <a id="term-item-{$te.term_id}" value="{$te.term_id}" target="main"><span>{$te.name}</span></a>
+                <a id="term-item-{$te.term_id}" value="{$te.term_id}"><span>{$te.name}</span></a>
             </foreach>
-            <button class="pull-right">多选</button>
         </div>
         <div id="time_limit">
-            <span>时间限制</span>
+            <span>时间限制：&nbsp;</span>
             <a href="" type="checkbox" value="0" target="main">全周</a>
             <a value="1" target="main">周一</a>
             <a value="2" target="main">周二</a>
@@ -48,15 +65,13 @@
             <a value="5" target="main">周五</a>
             <a value="6" target="main">周六</a>
             <a value="7" target="main">周日</a>
-            <button class="pull-right">多选</button>
         </div>
         <div id="active_status" class=" status-bar">
-            <span>活动状态</span>
+            <span>活动状态：&nbsp;</span>
             <a href="">全部</a>
             <a value="0" class="recruiting">招募中</a>
             <a value="1" class="underway">进行中</a>
             <a value="2" class="over">已结束</a>
-            <button class="pull-right">多选</button>
         </div>
         </form>
     </div>

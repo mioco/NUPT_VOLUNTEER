@@ -22,52 +22,14 @@ margin-left: 0px;
 	height: 50px;
 	border-radius: 50%;
 	overflow: hidden;
+	box-shadow: 0 2px rgba(0,0,0,.3);
 }
 .navbar .nav .user .caret{
 	vertical-align: middle;
 	margin: 0 5px;
 }
-/*tc-box*/
-.tc-box{
-	background: #fff;
-	padding:5px 10px;
-	margin: 10px 0;
-}
-.tc-box.first-box{
-	margin:0 0 10px 0;
-}
-.tc-box.article-box{padding:5px 20px;}
-
-/*tc-box end */
-
-
-
-
-/* The blog boxes */
-/*.tc-gridbox {
-  background-color: #ececec;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  -webkit-box-shadow: 0px 1px 1px #a8a8a8;
-  -moz-box-shadow: 0px 1px 1px #a8a8a8;
-  box-shadow: 0px 1px 1px #a8a8a8;
-  margin-bottom: 40px;
-}*/
-
 .tc-gridbox {
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  border: solid 1px #ddd;
-  background: #fff;
-	cursor: pointer;
-}
-.tc-gridbox:hover{ border: solid 1px #ccc;
--webkit-box-shadow: 0 5px 5px 0 rgba(50,50,50,0.1);
--moz-box-shadow: 0 5px 5px 0 rgba(50,50,50,0.1);
-box-shadow: 0 5px 5px 0 rgba(50,50,50,,0.1);
-
+  cursor: pointer;
 }
 .tc-gridbox a{text-decoration: none;}
 
@@ -87,26 +49,14 @@ box-shadow: 0 5px 5px 0 rgba(50,50,50,,0.1);
 .tc-gridbox .footer {
   padding: 5px 14px 5px 14px;
   text-align: right;
-	background: #fff;
 }
 .tc-gridbox .header .item-image{
 	overflow: hidden;
 }
 .tc-gridbox .header img {
   margin-bottom: 5px;
-	-webkit-transition: all 0.8s ease-in-out;
--moz-transition: all 0.8s ease-in-out;
--o-transition: all 0.8s ease-in-out;
--ms-transition: all 0.8s ease-in-out;
-transition: all 0.8s ease-in-out;
-}
-.tc-gridbox .header img:hover {
-
-	-webkit-transform: scale(1.2) rotate(2deg);
--moz-transform: scale(1.2) rotate(2deg);
--o-transform: scale(1.2) rotate(2deg);
--ms-transform: scale(1.2) rotate(2deg);
-transform: scale(1.2) rotate(2deg);
+  min-height: 100%;
+  min-width: 100%;
 }
 .tc-gridbox .header h3 {
   color: #454a4e;
@@ -133,16 +83,20 @@ line-height: 24px;
 .tc-gridbox .body {
   padding-right: 14px;
   padding-left: 14px;
-  color: #343a3f;
+  color: #fff;
+  position: absolute;
+  height: 242px;
+  background: linear-gradient(transparent 34%,rgba(0,0,0,0.1) 39%,rgba(0,0,0,0.3) 47%,rgba(0,0,0,0.5) 56%);
+  padding-top: 183px;
 }
+.tc-gridbox .body:hover{padding-top: 0;background: rgba(0,0,0,.6);}
 .tc-gridbox .body h3{
 	font-size: 1.4em;
 	line-height: 1em;
 }
-.tc-gridbox .body h3>a{color: #000;}
+.tc-gridbox .body h3>a{color: #fff;}
 .tc-gridbox .body p{margin: 0;}
-.tc-gridbox .body a{color: #666;}
-.tc-gridbox .body a:hover{color: #428bca;}
+.tc-gridbox .body a:hover{color: #dcdcdc;}
 .tc-gridbox .btn {
   float: right;
   margin-right: 10px;

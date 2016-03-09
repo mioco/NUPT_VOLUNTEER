@@ -5,91 +5,213 @@
 <meta name="keywords" content="{$site_seo_keywords}" />
 <meta name="description" content="{$site_seo_description}">
 <meta name="author" content="ThinkCMF">
-<tc_include file="Public:head" />
+<tc_include file=":function"/>
+  <tc_include file=":config"/>
+  <meta name="author" content="ThinkCMF">
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <!-- HTML5 shim for IE8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+  <link rel="icon" href="__TMPL__Public/images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="__TMPL__Public/images/favicon.ico" type="image/x-icon">
+    <link href="__TMPL__Public/simpleboot/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="__TMPL__Public/simpleboot/font-awesome/4.2.0/css/font-awesome.min.css"  rel="stylesheet" type="text/css">
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="__TMPL__Public/simpleboot/font-awesome/4.2.0/css/font-awesome-ie7.min.css">
+  <![endif]-->
+  <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/center.css">
+  <style>
+    /*html{filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-filter: grayscale(1);}*/
+    #backtotop{position: fixed;bottom: 50px;right:20px;display: none;cursor: pointer;font-size: 50px;z-index: 9999;}
+    #backtotop:hover{color:#333}
+    #main-menu-user li.user{display: none}
+  </style>
+  
 <style>
 .control-label{
 	font-weight: bold;
 	float: left;
 	width: 70px;
 }
+.join-btn,.join-box{display: none;}
 </style>
 </head>
 <body class="body-white" id="top">
-	<tc_include file="Public:nav" />
-
+    <nav id="main-menu">
+      <div class="container">
+      <?php
+      $effected_id="menu";
+        $filetpl="<a href='\$href' target='\$target'>\$label</a>";
+        $foldertpl="<a href='\$href' target='\$target' class='dropdown-toggle' data-toggle='dropdown'>\$label <b class='caret'></b></a>";
+        $ul_class="dropdown-menu" ;
+        $li_class="menu-item" ;
+        $style="nav";
+        $showlevel=6;
+        $dropdown='dropdown';
+        echo sp_get_menu("main",$effected_id,$filetpl,$foldertpl,$ul_class,$li_class,$style,$showlevel,$dropdown);
+    ?> 
+    <ul class="nav" id="main-menu-user" >
+        <li class="dropdown user login">
+                <a class="dropdown-toggle user" data-toggle="dropdown" href="#">
+                  <div class="nav-avatar"><img src="__TMPL__/Public/images/headicon_50.png" class="headicon"/></div></a>
+                <ul class="dropdown-menu pull-right hidden">
+                  <div>
+                    <p style="text-align:center;font-weight:600;">{$user['username']}</p>
+                    <p>头衔&nbsp;</p>
+                    <div><span>时长 {$user['duration']}</span><span>性别 </span></div>
+                    <li><a href="{:u('user/center/index')}"><i class="iconfont">&#xe60f</i> 个人中心</a></li>
+                  </div>            
+                   <li><a href="{:u('user/index/logout')}"><i class="iconfont">&#xe60d</i> &nbsp;退出</a></li>
+                </ul>
+              </li>
+      </ul>
+  </div>
+    <form method="post" class="form-inline" action="{:U('portal/search/index')}">
+         <input type="text" class="" placeholder="Search" name="keyword" value="{:I('get.keyword')}"/>
+         <button type="submit"><i class="iconfont">&#xe601</i></button>
+      </form>
+     </nav>
 		<div class="container tc-main">
-                <div class="row">
-                    <div class="span3">
-	                    <tc_include file="Public:usernav"/>
-                    </div>
-                    <div class="span9">
-                           <div class="tabs">
-                               <ul class="nav nav-tabs">
-                                   <li class="active"><a href="#one" data-toggle="tab"><i class="fa fa-list-alt"></i>个人中心</a></li>
-                               </ul>
-                               <div class="tab-content">
-                                   <div class="tab-pane active" id="one">
-                                   		  <div class="span2">
-                                   		  <a href="{:U('profile/avatar')}">
-                                   			<if condition="empty($avatar)">
-								            <img src="__TMPL__/Public/images/headicon_128.png" class="headicon"/>
-								            <else/>
-								            <img src="{:sp_get_user_avatar_url($avatar)}" class="headicon"/>
-								            </if>
-								          </a>
-										  </div>      
-										  <div class="span3">
-                                   			<div class="control-group">
-                                   				<label class="control-label" for="input-user_nicename">昵称</label>
-                                   				<div class="controls">
-                                   					{$user_nicename|default='未填写'}
-                                   				</div>
-                                   			</div>
-                                   			<div class="control-group">
-                                   				<label class="control-label" for="input-sex">性别</label>
-                                   				<div class="controls">
-                                   				<php>
-                                   				$sexs=array("0"=>"保密","1"=>"程序猿","2"=>"程序媛");
-                                   				
-                                   				</php>
-                                   					{$sexs[$sex]}
-                                   				</div>
-                                   			</div>
-                                   			<div class="control-group">
-                                   				<label class="control-label" for="input-birthday">生日</label>
-                                   				<div class="controls">
-                                   					{$birthday|default='未填写'}
-                                   				</div>
-                                   			</div>
-                                   			<div class="control-group">
-                                   				<label class="control-label" for="input-user_url">个人网址</label>
-                                   				<div class="controls">
-                                   					{$user_url|default='未填写'}
-                                   				</div>
-                                   			</div>
-                                   			<div class="control-group">
-                                   				<label class="control-label" for="input-signature">个性签名</label>
-                                   				<div class="controls">
-                                   					{$signature|default='未填写'}
-                                   				</div>
-                                   			</div>
-                                   			<div class="control-group">
-                                   				<div class="controls">
-                                   					<a href="{:U('user/profile/edit')}" type="submit" class="btn">编辑</a>
-                                   				</div>
-                                   			</div>
-                                   		</div>
-                                   </div>
-                               </div>							
-                           </div>
-                    </div>
+          <div id="user_detail">
+            <div id="mask"></div>
+            <div class="detail-box" id="left">
+              <div id="avatar">
+                <a href="{:U('profile/avatar')}" class="editLink">
+                  <if condition="empty($avatar)">
+                  <div class="avMask">更换头像</div>
+                  <img src="__TMPL__/Public/images/headicon_128.png" class="headicon"/>
+                  <else/>
+                  <div class="avMask">更换头像</div>
+                  <img src="{:sp_get_user_avatar_url($avatar)}" class="headicon"/>
+                  </if>
+                </a>
                 </div>
-
-
+                <div class="baseInfo">
+              <h2>{$user['username']}</h2>
+              <p>{$user['signature']|default='暂未填写'}</p></div>
+            </div>
+            <div class="detail-box" id="right">
+              <h2>{$user['duration']}小时</h2>             
+              <div class="controls">
+                <a href="{:U('user/profile/edit')}" type="submit" class="btn" style="color:#fff;" class="editLink">编辑</a>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <tc_include file="Public:usernav"/>
+          </div>
+          <div id="centerContent" class="row">
+            <!-- 进行中的项目 -->
+         		<div class="span8 i-link">
+            <h3>个人动态</h3>
+              <foreach name="posts" item="p">
+                <php>$smeta=json_decode($p['smeta'],true);</php>
+                <div id="link-item">
+                  <div id="user-name"><a href="" style="font-size:1.1em;font-weight:600;"><span>{$p.org_name}</span></a>
+                  <p id="time" style="color:#aaa;">{$p.createtime}</p></div>
+                  <div><span style="color:#aaa;">参加了&nbsp;</span><a href="" style="color:#00a1d6;">{$p.post_title}</a></div>
+                  
+                  <p>{$p.post_excerpt}</p>
+                  <div id="post-img">
+                    <a href="{:leuu('article/index',array('id'=>$vo['tid']))}">
+                    <if condition="empty($smeta['thumb'])"> 
+                        <img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
+                    <else /> 
+                        <img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive img-thumbnail" alt="{$vo.post_title}" />
+                    </if>
+                </a>
+                  </div>
+                </div>
+            </foreach>
+            </div>  
+            <!-- 个人信息    -->
+            <div class="span4 one-detail">
+            <h3>个人信息</h3>
+         			<div class="control-group">
+         				<label class="control-label" for="input-user_nicename">姓名</label>
+         				<div class="controls">
+         					{$username|default='未填写'}
+         				</div>
+         			</div>
+         			<div class="control-group">
+         				<label class="control-label" for="input-sex">性别</label>
+         				<div class="controls">
+         				<php>
+         				$sexs=array("0"=>"未填写","1"=>"男","2"=>"女");
+         				
+         				</php>
+         					{$sexs[$sex]}
+         				</div>
+         			</div>
+         			<div class="control-group">
+         				<label class="control-label" for="input-birthday">生日</label>
+         				<div class="controls">
+         					{$birthday|default='未填写'}
+         				</div>
+         			</div>
+         			<div class="control-group">
+         				<label class="control-label" for="input-signature">注册时间</label>
+         				<div class="controls">
+         					{$signature|default='未填写'}
+         				</div>
+         			</div>
+            <h3>社团</h3>
+            <div>
+              <div id="org-img">
+                    <a href="{:leuu('article/index',array('id'=>$vo['tid']))}">
+                    <if condition="empty($smeta['thumb'])"> 
+                        <img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
+                    <else /> 
+                        <img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive img-thumbnail" alt="{$vo.post_title}" />
+                    </if>
+                </a>
+              </div>
+              <span>{$org['org_name']}</span>
+              <p>{$org['org_des']}</p>
+            </div>
+         		</div>
+          </div>
 	</div>
 	<!-- /container -->
     <tc_include file="Public:footer" />
 
 	<tc_include file="Public:scripts" />
+  <input id="uid_hidden" type="text" value="{$_SESSION['user']['id']}" hidden>
+  <script>
+    $(function(){
+      $('.editLink').on('click', function(){
+        var link = $(this).attr('href'),
+            uid = $('#uid_hidden').val();
+            console.log(uid);
+          $.ajax({
+            url: link,
+            data: {uid:uid},
+            success: function(data){$('#centerContent').html(data);},
+            error: function(){$('#centerContent').html('Error:'+status);}
+          });
+          return false;
+      })
+      $('.nav-avatar,.dropdown-menu *').on({
+        mouseover:function(){$('.dropdown-menu').removeClass('hidden');$('.nav-avatar').css({
+          "width":"70px",
+          "height":"70px"
+        })},  
+        mouseout:function(){$('.dropdown-menu').addClass('hidden');$('.nav-avatar').css({
+          "width":"38px",
+          "height":"38px"
+        })}
+      })
+    })
+  </script>
 </body>
 </html>

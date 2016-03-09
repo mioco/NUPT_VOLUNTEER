@@ -278,10 +278,11 @@ nav#main-menu ul>li>a:hover{
 .list-container{
 	display: table;
 	width: 100%;
+	margin-top: 2em;
 }
 .post-box{
-	width: 24%;
-	height: 242px;
+	width: 19%;
+	height: 150px;
 	float: left;
 	margin: 10px 10px 0 0;
 	overflow: hidden;
@@ -289,16 +290,25 @@ nav#main-menu ul>li>a:hover{
 .post-box .tc-gridbox{position: relative;}
 .post-box .header{
 	width: 100%;
-	height: 240px;
+	height: 150px;
 	overflow: hidden;
 	position: absolute;
 }
 
-/*iframe*/
-iframe{
-	width: 100%;
-	height: 700px;
+/*org*/
+div.org-avatar{
+	height: 60px;
 }
+div.org-avatar>a>div{
+	    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    float: left;
+    border-radius: 50%;
+    margin-right: 1em;
+    box-shadow: 0 1px 2px #BDBDBD;
+}
+div.org-avatar>a>span{line-height: 3;}
 #footer{
 	background-color: #ddd;
 	padding: 1.2em;

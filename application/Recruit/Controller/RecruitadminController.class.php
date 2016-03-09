@@ -6,7 +6,7 @@ class RecruitadminController extends AdminbaseController{
 	protected $recruit_model;
 	protected $posts_model;
 	protected $term_relationships;
-	protected $users_model;
+	protected $users_model; 
 	protected $faculty_model;
 	protected $faculty_relationships;
 	
@@ -153,10 +153,11 @@ class RecruitadminController extends AdminbaseController{
 				break;
 			case '1':
 				$data["active_status"]=2;
-				$ids = isset($_REQUEST['ids']) ? join(",",$_POST['ids']) : $_GET['id'];
-				if (1) {
+				$ids = $_GET['id'];
+				$result = $this->posts_model->where(array('id'=>$ids))->save($data);
+				if ($result) {
 					$where['re.status'] = 1;
-					$where['tr.object_id'] = array('in', $ids);
+					$where['tr.object_id'] = $ids;
 					$uid = $this->term_relationships
 					->alias('tr')
 					->join(C('DB_PREFIX').'recruit re on tr.tid = re.tid')

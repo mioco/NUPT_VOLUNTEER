@@ -6,10 +6,14 @@
 <meta name="description" content="{$site_seo_description}">
 <meta name="author" content="ThinkCMF">
 <tc_include file="Public:head" />
+<style>
+	.control-group .controls input{border-radius: 4px;}
+	select.controls.span3{margin-top: -3em;}
+	select.major.span3{margin-left: 180px;}
+</style>
 </head>
 
 <body class="body-white">
-	<tc_include file="Public:nav" />
 
 	<div class="container tc-main">
 		<div class="row">
@@ -31,25 +35,6 @@
 					</div>
 
 					<div class="control-group">
-						<label class="control-label" for="input_email">联系方式</label>
-						<div class="controls">
-							<input type="text" id="input_email" name="email" placeholder="请输入邮箱" class="span3">
-						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label" for="input_faculty">学院</label>
-						<select class="controls faculty" name="user_faculty">
-							<option value="0">---选择学院---</option>
-							<foreach name="faculty" item="fa">
-							<option value="{$fa.fid}">{$fa.fa_name}</option>
-							</foreach>
-						</select>
-						<select class="major" name="user_major">
-							{$major}
-						</select>
-					</div>
-
-					<div class="control-group">
 						<label class="control-label" for="input_password">密码</label>
 						<div class="controls">
 							<input type="password" id="input_password" name="password" placeholder="请输入密码" class="span3">
@@ -64,9 +49,37 @@
 					</div>
 
 					<div class="control-group">
+						<label class="control-label" for="input_email">联系方式</label>
+						<div class="controls">
+							<input type="text" id="input_email" name="email" placeholder="请输入邮箱" class="span3">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="input_faculty">学院</label>
+						<select class="controls faculty span3" name="user_faculty">
+							<option value="0">---选择学院---</option>
+							<foreach name="faculty" item="fa">
+							<option value="{$fa.fid}">{$fa.fa_name}</option>
+							</foreach>
+						</select>
+						<select class="major span3" name="user_major">
+							{$major}
+						</select>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label" for="input_email">选择社团</label>
+						<select class="controls org span3" name="org">
+							<option value="0">---选择社团---</option>
+							<foreach name="org" item="o">
+							<option value="{$o.oid}">{$o.org_name}</option>
+							</foreach>
+						</select>
+					</div>
+					<div class="control-group">
 						<label class="control-label" for="input_verify">验证码</label>
 						<div class="controls">
-							<input type="text" id="input_verify" name="verify" placeholder="请输入验证码" class="span3">
+							<input type="text" id="input_verify" name="verify" placeholder="请输入验证码" style="width:154px;">
 							{:sp_verifycode_img('code_len=4&font_size=15&width=100&height=35&charset=1234567890')}
 						</div>
 					</div>
@@ -101,5 +114,21 @@
 	<!-- /container -->
 
 	<tc_include file="Public:scripts" />
+	<script>
+	// ------------------------
+		  //注册时院系选择
+		  $('.faculty').on("change", function() {
+		  	var pid = $(this).val();
+		  	$.ajax({
+		  		url: "{:U('user/register/majorSelect')}",
+		  		data: '&pid='+pid,
+		  		type: 'get',
+		  		success: function(data) {
+		  			$('.major').html(data);
+		  		}
+		  	})
+		  
+		  })
+	</script>
 </body>
 </html>

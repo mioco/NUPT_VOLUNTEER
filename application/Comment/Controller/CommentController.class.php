@@ -24,7 +24,6 @@ class CommentController extends MemberbaseController{
 		->order("createtime desc")
 		->limit($page->firstRow . ',' . $page->listRows)
 		->select();
-		
 		$this->assign("pager",$page->show("default"));
 		$this->assign("comments",$comments);
 		$this->display(":index");
@@ -40,22 +39,20 @@ class CommentController extends MemberbaseController{
 			$post_table=sp_authcode($_POST['post_table']);
 			
 			$_POST['post_table']=$post_table;
-			
 			$url=parse_url(urldecode($_POST['url']));
 			$query=empty($url['query'])?"":"?{$url['query']}";
 			$url="{$url['scheme']}://{$url['host']}{$url['path']}$query";
-
 			$_POST['url']=sp_get_relative_url($url);
 			
 			if(isset($_SESSION["user"])){//用户已登陆,且是本站会员
 				$uid=$_SESSION["user"]['id'];
 				$_POST['uid']=$uid;
 				$users_model=M('Users');
-				$user=$users_model->field("user_login,user_email,user_nicename")->where("id=$uid")->find();
-				$username=$user['user_login'];
-				$user_nicename=$user['user_nicename'];
+				$user=$users_model->field("user_number,user_email,username")->where("id=$uid")->find();
+				$username=$user['user_number'];
+				$username=$user['username'];
 				$email=$user['user_email'];
-				$_POST['full_name']=empty($user_nicename)?$username:$user_nicename;
+				$_POST['full_name']=empty($username)?$username:$username;
 				$_POST['email']=$email;
 			}
 			
@@ -69,7 +66,7 @@ class CommentController extends MemberbaseController{
 				$this->check_last_action(intval(C("COMMENT_TIME_INTERVAL")));
 				$result=$this->comments_model->add();
 				if ($result!==false){
-					
+					$this->ajaxReturn(sp_ajax_return(array("id"=>$result),"评论成功！",1));
 					//评论计数
 					$post_table=ucwords(str_replace("_", " ", $post_table));
 					$post_table=str_replace(" ","",$post_table);
@@ -82,7 +79,6 @@ class CommentController extends MemberbaseController{
 					$post_table_model->create(array("last_comment"=>time()));
 					$post_table_model->where(array($pk=>intval($_POST['post_id'])))->save();
 					
-					$this->ajaxReturn(sp_ajax_return(array("id"=>$result),"评论成功！",1));
 				} else {
 					$this->error("评论失败！");
 				}

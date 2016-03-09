@@ -1,17 +1,27 @@
 
 /*new*/
-hr{border-top: 1px solid #ccc;}
+hr{border-top: 1px solid #f2f2f5;}
 .new-container{
-	padding-top: 15px;
-	background-color: #fff;}
+	padding-top: 15px;}
 .new-container .span8{
 	width: 690px;
+	margin-left: 0;
 }
-.new-box{margin-bottom: 10px;}
-.new-box-up{padding: 10px 16px 10px 16px;}
+.new-box{
+	border-top: 3px solid #fff;
+	margin-bottom: 1em;
+	background-color: #fff;
+	box-shadow: 0 0 2px rgba(0,0,0,.2)
+}
+.new-box:hover{
+	border-top: 3px solid #8ea8e1;
+}
+.new-box hr{margin: 8px 0;}
+.new-box-up{padding: 1.2em 1em;}
 .new-box a{color: #444;}
 .new-box .new-face{
 	width: 50px;
+	height: 50px;
 	float: left;
 	border-radius: 50%;
 	overflow: hidden;
@@ -19,7 +29,7 @@ hr{border-top: 1px solid #ccc;}
 .new-box  a{color: #444;}
 .new-box  a:hover{
 	text-decoration: none;
-	color: #c55151;
+	color: #00a1d6;
 }
 .new-box .new-detail{margin-left: 60px;}
 .new-box .new-detail div{margin-bottom: 5px;}
@@ -37,3 +47,14 @@ hr{border-top: 1px solid #ccc;}
 	text-align: center;
 	border-right: 1px solid #ccc;
 }
+.new-box .new-feet span{padding: .3em .6em;border: 1px solid #fff}
+.new-box .new-feet span:hover{border: solid 1px #ddd;}
+div.siderbar-notice>a{	
+    font-size: 1.3em;
+    color: #000;
+}
+div.siderbar-notice>ul{    
+	border-top: 2px solid #5992CB;
+    border-radius: 0;
+    margin: .5em 0;
+    padding-top: 1em;}

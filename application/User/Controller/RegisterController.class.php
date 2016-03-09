@@ -11,6 +11,8 @@ class RegisterController extends HomeBaseController {
 	        redirect(__ROOT__."/");
 	    }else{
             $faculty = M('faculty')->where('parent = 0')->select();
+            $org = M('org')->select();
+            $this -> assign('org', $org);
 	        $this -> assign('faculty', $faculty);
             $this -> display(":register");
 	    }
@@ -26,7 +28,6 @@ class RegisterController extends HomeBaseController {
                 }
     }
 	function doregister(){
-    	
 		if(!sp_check_verify_code()){
     		$this->error("验证码错误！");
     	}
@@ -99,19 +100,20 @@ class RegisterController extends HomeBaseController {
         		if($uc_register){
         			$need_email_active=C("SP_MEMBER_EMAIL_ACTIVE");
         			$data=array(
-        					'user_number' => $user_number,
-        					'user_email' => $email,
-        					'username' =>$username,
-                            'user_major'=>$user_major,
-        					'user_pass' => sp_password($password),
-        					'last_login_ip' => get_client_ip(),
-        					'create_time' => date("Y-m-d H:i:s"),
-        					'last_login_time' => date("Y-m-d H:i:s"),
-        					'user_status' => $need_email_active?2:1,
-        					"user_type"=>2,
+    					'user_number' => $user_number,
+    					'user_email' => $email,
+    					'username' =>$username,
+                        'user_major'=>$user_major,
+    					'user_pass' => sp_password($password),
+    					'last_login_ip' => get_client_ip(),
+    					'create_time' => date("Y-m-d H:i:s"),
+    					'last_login_time' => date("Y-m-d H:i:s"),
+    					'user_status' => $need_email_active?2:1,
+    					"user_type"=>2,
         			);
         			$rst = $users_model->add($data);
         			if($rst){
+                        M('org_relationships')->add(array('oid'=>$org,'uid'=>$rst));
                         $faculty_rel->add(array('user_id'=>$rst,'major_id'=>$_POST['user_major'],'faculty_id'=>$_POST['user_faculty']));
         				//登入成功页面跳转
         				$data['id']=$rst;

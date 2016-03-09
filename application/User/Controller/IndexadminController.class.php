@@ -11,42 +11,28 @@ class IndexadminController extends AdminbaseController {
     	$count=$users_model->where(array("user_type"=>2))->count();
     	$page = $this->page($count, 20);
     	$lists = $users_model
+        ->alias('u')
+        ->join(array('RIGHT JOIN '.C('DB_PREFIX').'faculty_relationships fr on u.id=fr.user_id',
+            C('DB_PREFIX').'faculty f on fr.major_id=f.fid',
+            'LEFT JOIN '.C('DB_PREFIX').'org_relationships orl on u.id=orl.uid'
+            ))
+        ->field('user_number,username,fa_name,f.fid,parent,u.duration')
     	->where(array("user_type"=>2))
-    	->order("create_time DESC")
+    	->order("u.create_time DESC")
     	->limit($page->firstRow . ',' . $page->listRows)
     	->select();
+        foreach ($lists as &$l) {
+            $l['faculty'] = M('faculty')->where(array('fid'=>$l['parent']))->getField('fa_name');
+        }
+        // var_dump($lists);
     	$this->assign('lists', $lists);
-    	$this->assign("page", $page->show('Admin'));
+    	$this->assign("page", $page->show());
     	
     	$this->display(":index");
     }
     function record() {
-        $this->recordInfo($_GET['id']);
+        R('User/Record/recordInfo',array($_GET['id']));
         $this -> display(':record');
-    }
-    function recordInfo($uid) {
-        $userInfo = M('users')
-        ->alias('u')
-        ->join(C('DB_PREFIX').'faculty_relationships fr on u.id = fr.user_id')
-        ->join(C('DB_PREFIX').'faculty f on fr.faculty_id = f.fid')
-        ->field('username, user_number, fa_name, sex, birthday, major_id, duration')
-        ->where(array('u.id'=>$uid))
-        ->find();
-        $userInfo['major'] = M('faculty')->where(array('fid'=>$userInfo['major_id']))->getField('fa_name');
-        $tid = M('recruit') -> where(array('uid' => $uid)) -> field('tid') -> select();
-        foreach ($tid as $t) {
-            $tidString = $tidString.$t['tid'].',';
-        }
-        $where['tid'] = $tid ? array("in", $tidString) : 'NULL';
-        $where['active_status'] = 2;
-        $record = M('term_relationships')
-        ->alias('tr')   
-        ->join(C('DB_PREFIX').'posts p on tr.object_id = p.id')
-        ->where($where)
-        ->field('post_title,post_address,ac_start,ac_end,duration')
-        ->select();
-        $this -> assign('userInfo',$userInfo);
-        $this->assign("record",$record);
     }
     function ban(){
     	$id=intval($_GET['id']);

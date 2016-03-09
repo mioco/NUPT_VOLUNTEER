@@ -14,7 +14,7 @@ use Common\Controller\HomeBaseController;
 class IndexController extends HomeBaseController {
 	
     //首页
-	public function index() {
+	public function index() {		
     	$this->display(":index");
     }
 }

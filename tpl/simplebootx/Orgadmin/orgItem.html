@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{$name} {$seo_title} {$site_name}</title>
+    <meta name="keywords" content="{$seo_keywords}" />
+    <meta name="description" content="{$seo_description}">
+    <tc_include file="Public:head" /> 
+	<style>	
+		#orgLogo{border-radius: 50%;}
+		button.join-btn{
+		        background-color: #428bca;
+		    color: #fff;
+		    padding: .2em .5em;
+		    border-radius: 4px;
+		    border: 1px solid #428bca;
+		}
+		button.join-btn:hover{
+		    background: #fff;
+		    color: #428bca;
+		}
+		div.modal{border-radius: 4px;}
+		div.modal .modal-content{padding: 1em;}
+		body{background-color: #f9f9f9;}
+	</style>
+</head>
+<body>
+<tc_include file="Public:nav" />
+<tc_include file="orgCenter" />
+<div class="load"></div>
+<script>
+$(function(){
+	var oid = "{$oid}";
+	$.ajax({
+		url:"{:u('orgadmin/org/orgCenter')}",
+		data:{oid:oid},
+		success:function(data){
+			$('.load').html(data);
+	}//success
+	})//ajax
+
+})
+
+</script>
+<tc_include file="Public:footer"/>
+</body>

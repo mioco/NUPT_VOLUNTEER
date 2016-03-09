@@ -32,8 +32,8 @@
 					</span>
 				</div>
 			</div>
+			<h2>{$post_title}</h2>
 			<div class="item-info-r span4">
-				<h2>{$post_title}</h2>
 				<p>{$post_excerpt}</p>
 				<p>时间： {$ac_start}&nbsp;到&nbsp;{$ac_end}</p>
 				<p>地址： {$post_address}</p>
@@ -64,43 +64,51 @@
 		</foreach>
 		</ul>
 	</div>
-	<div class="row">		
+	<div class="row">
+		<div class="menber row">
+        	<div class="headtitle">
+        		<hr>
+        		<h2>活动成员</h2>
+        	</div>
+        	<div class="menber-box">
+        		<php>
+					$hot_articles=sp_sql_posts("cid:$portal_index_lastnews;field:post_title,post_excerpt,tid,smeta;order:post_hits desc;");
+					$menber = M('recruit')
+					->alias('b')
+					->join(C('DB_PREFIX').'users as u on b.uid = u.id')
+					->where(array('tid'=>$tid,'status'=>'1'))->field('username,avatar,u.id,status')->order('createtime desc')->select();
+				</php>
+        		<foreach name="menber" item="vo">
+        			<div>
+        				<if condition="empty($vo['avatar'])">
+			            <img src="__TMPL__/Public/images/headicon_50.png" class="headicon"/>
+			            <else/>
+			            <img src="{:sp_get_user_avatar_url($vo['avatar'])}" class="headicon"/>
+			            </if>
+        			</div>
+				</foreach>
+			</div>
+		</div>
     	<div class="tag">
     		<div class="btn active-detail active">活动详情</div>
     		<div class="btn active-comment">讨论</div>
     	</div>
+    	<h2>{$post_title}</h2>
+    	<hr>
 		<div class="span9">			
 			<div class="tc-box first-box article-box">
-		    	<h2>{$post_title}</h2>
-		    	<hr>
 		    	<div id="article_content">
 		    	{$post_content}
 		    	</div>
 		    </div>
 	    	<div class="article-comment">
-			{:Comments("posts",$id)}
+			{:Comments("posts",$_GET['id'])}
 	    	</div>		    
 		</div>
-		<div class="span3">        	
-        	<div class="tc-box">
-	        	<div class="headtitle">
-	        		<h2>热门文章</h2>
-	        	</div>
-	        	<div class="ranking">
-	        		<php>
-						$hot_articles=sp_sql_posts("cid:$portal_index_lastnews;field:post_title,post_excerpt,tid,smeta;order:post_hits desc;limit:5;"); 
-					</php>
-		        	<ul class="unstyled">
-		        		<foreach name="hot_articles" item="vo">
-		        			<php>$top=$key<3?"top3":"";</php>
-							<li class="{$top}"><i>{$key+1}</i><a title="{$vo.post_title}" href="{:leuu('article/index',array('id'=>$vo['tid']))}">{$vo.post_title}</a></li>
-						</foreach>
-					</ul>
-				</div>
-			</div>
-			
+		<div class="span3">
 			<div class="tc-box">
 	        	<div class="headtitle">
+	        		<hr>
 	        		<h2>最新评论</h2>
 	        	</div>
 	        	<div class="comment-ranking">
@@ -120,8 +128,6 @@
 	</div>    
 </div>
 <tc_include file="Public:footer"/>
-
-<tc_include file="Public:scripts"/>
 <script>
 	$(function(){
 		$('.recruit-btn').click(function() {
@@ -145,5 +151,7 @@
 	})
 
 </script>
+
+<tc_include file="Public:scripts" />
 </body>
 </html>

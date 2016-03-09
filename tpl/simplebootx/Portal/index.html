@@ -62,27 +62,27 @@
 		</ul>
 		<!-- new important -->
 		<div class="notice">
-			<a href="">公告</a>
+			<php>
+				$tag = "field:tid,post_title,post_content,post_date,post_excerpt;order:post_modified DESC;limit:4;";
+				$notice = sp_sql_posts_bycatid(6,$tag);
+			</php>
+			<a href="{:u('portal/list/index',array('id'=>6))}">公告</a>
 			<hr>
 			<ul>
-				<php>
-					$tag = "field:post_title,post_content,post_date,post_excerpt;order:post_modified DESC;limit:8;";
-					$notice = sp_sql_posts_bycatid(6,$tag);
-				</php>
 				<foreach name="notice" item="no">
-				<li><a href="">{$no.post_title}</a> <p>{$no.post_date|strtotime|date="Y-m-d",###}</p> </li>
-				<p><a href="">{$no.post_excerpt} </a></p>
+				<li><a href="{:leuu('article/index',array('id'=>$no['tid']))}">{$no.post_title}</a> <p>{$no.post_date|strtotime|date="Y-m-d",###}</p> </li>
+				<p>{$no.post_excerpt}</p>
 				</foreach>
 			</ul>
 		</div>
 	</div>
 	<div class="contain-box">
 		<div class="recruit">
-			<a href="">志愿活动</a>
+			<a href="{:u('recruit/recruit/index')}">志愿活动</a>
 			<hr>
 			<ul>
 				<php>
-					$tag = "field:tid,post_title,post_content,post_address,post_date,ac_start,user_number,smeta,post_hits;order:post_modified DESC;limit:8;";
+					$tag = "field:tid,post_title,post_content,post_address,post_date,ac_start,user_number,smeta,post_hits;order:post_modified DESC;limit:5;";
 					$volun = sp_sql_posts_bycatid(3,$tag);
 				</php>
 				<foreach name="volun" item="vo">
@@ -102,20 +102,16 @@
 		                        </a>
 		                    </div>
 		                </div>
-		                <div class="body">
-		                    <h3><a href="{:leuu('portal/article/index',array('id'=>$vo['tid']))}">{$vo.post_title}</a></h3>
+		                <a class="body" href="{:leuu('portal/article/index',array('id'=>$vo['tid']))}">
+		                    <h3>{$vo.post_title}</h3>
 		                    <p>活动地点：{$vo.post_address}</p>
 		                    <p>活动发起：{$vo.user_number}</p>
-		                    <div class="timebox">
-		                        <p>报名截止：{$vo.ac_start}</p>
-		                        <p><div class="time"><div class="pass_time" id="{$vo.tid}" style="width:{$vo.time_width}%"></div></div></p>
-		                        <p class="residue">{$status[$vo['active_status']]}</p>
-		                    </div>
+		                    <p>报名截止：{$vo.ac_start}</p>
 			                <div class="footer">
 			                    <i class="iconfont">&#xe608</i>{$vo.join_count}&nbsp;
 			                    <i class="iconfont">&#xe610</i>{$vo.post_hits}
 			                </div>
-		                </div>
+		                </a>
 		            </div>
 		        </div>
 				</foreach>
@@ -124,29 +120,53 @@
 	</div>
 	<div class="contain-box">
 		<div class="news">
-			<a href="">新闻</a>
+			<a href="{:u('portal/list/index',array('id'=>7))}">新闻</a>
 			<hr>
 			<ul>
 				<php>
-					$tag = "field:post_title,post_content,post_date,post_content;order:post_modified DESC;limit:8;";
-					$notice = sp_sql_posts_bycatid(7,$tag);
-					dump($notice);
+					$tag = "field:tid,post_title,post_excerpt,post_date;order:post_modified DESC;limit:5;";
+					$new = sp_sql_posts_bycatid(7,$tag);
 				</php>
-				<foreach name="notice" item="no">
-				<li><a href="">{$no.post_title}</a> <p>{$no.post_date|strtotime|date="Y-m-d",###}</p> </li>
+				<foreach name="new" item="n">
+				<li>
+					<a href="{:leuu('article/index',array('id'=>$n['tid']))}">{$n.post_title}</a> 
+					<p>{$n.post_date|strtotime|date="Y-m-d",###}</p> 
+					<p>{$n.post_excerpt}</p>
+				</li>
 				</foreach>
-				<li class="pull-right"><a href=""> >>></a></li>
 			</ul>
 		</div>
 		<div class="org">
-			<a href="">志愿者之家</a>
+			<php>
+			</php>
+			<a href="{:u('orgadmin/org/index')}">志愿者之家</a>
 			<hr>
+			<div>
+			<php>				
+				$org = M('org')->select();
+				shuffle($org);
+		        $logo=json_decode($o['logo'],true);
+			</php>
+			<foreach name="org" item="o">
+				<div class="org-avatar">
+					<a href="">		
+					<div>	
+					<if condition="empty($o['logo'])"> 
+			            <img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
+			        <else /> 
+			            <img src="{:sp_get_org_logo_url($o['logo'])}" class="img-responsive img-thumbnail" alt="{$o.post_title}" />
+			        </if>
+			    	</div>	
+					<span>{$o.org_name}</span>
+					</a>
+				</div>
+			</foreach>
+			</div>
 		</div>
 	</div>
 </div>
 
 <tc_include file="Public:footer"/>
-<tc_include file="Public:scripts"/>
 <script src="__TMPL__Public/js/slippry.min.js"></script>
 <script>
 $(function() {

@@ -47,14 +47,10 @@ class AdminPostController extends AdminbaseController {
 					$_POST['smeta']['photo'][]=array("url"=>$photourl,"alt"=>$_POST['photos_alt'][$key]);
 				}
 			}
-			$start = strtotime($_POST['ac_start']);
-			$end = strtotime($_POST['ac_end']);
-			$a = ($acet-$reet)/60/60/24;
-				$_POST['duration'] = ($acet-$reet)/60/60/24;
 				$_POST['smeta']['thumb'] = sp_asset_relative_url($_POST['smeta']['thumb']);			 
 				$_POST['post']['post_date']=date("Y-m-d H:i:s",time());
 				$_POST['post']['post_author']=get_current_admin_id();
-				$_POST['post']['quality'] = join(',', $_POST['quality']);
+				$_POST['post']['cycle'] = join(',', $_POST['cycle']);
 				$article=I("post.post");
 				$article['smeta']=json_encode($_POST['smeta']);
 				$article['post_content']=htmlspecialchars_decode($article['post_content']);
@@ -183,7 +179,7 @@ class AdminPostController extends AdminbaseController {
 		->join(C ( 'DB_PREFIX' )."posts b ON a.object_id = b.id")
 		->where($where)
 		->count();
-		$page = $this->page($count, 20);
+		$page = $this->page($count, 10);
 		$posts=$this->term_relationships_model
 		->alias("a")
 		->join(C ( 'DB_PREFIX' )."posts b ON a.object_id = b.id")

@@ -15,8 +15,6 @@
 <tc_include file="Public:nav" />
 <div class="container tc-main">
 	<div class="row">
-		<div class="span8">
-			
 			<div class="tc-box first-box article-box">
 		    	<h2>{$post_title}</h2>
 		    	<div class="article-infobox">
@@ -59,30 +57,7 @@
                         </script>
 					<div class="clearfix"></div>-->
 				</div>
-		    	
-		    	{:Comments("posts",$object_id)}
 		    </div>
-		    
-		</div>
-		<div class="span3">
-        	
-        	<div class="tc-box">
-	        	<div class="headtitle">
-	        		<h2>热门文章</h2>
-	        	</div>
-	        	<div class="ranking">
-	        		<php>
-						$hot_articles=sp_sql_posts("cid:$term_id;field:post_title,post_excerpt,tid,smeta;order:post_hits desc;limit:5;"); 
-					</php>
-		        	<ul class="unstyled">
-		        		<foreach name="hot_articles" item="vo">
-		        			<php>$top=$key<3?"top3":"";</php>
-							<li class="{$top}"><i>{$key+1}</i><a title="{$vo.post_title}" href="{:leuu('article/index',array('id'=>$vo['tid']))}">{$vo.post_title}</a></li>
-						</foreach>
-					</ul>
-				</div>
-			</div>
-		</div>
 		
 	</div>
               

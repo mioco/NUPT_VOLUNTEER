@@ -12,7 +12,6 @@
 <tc_include file="Public:nav" />
 <div class="container new-container">
     <div class="span8">
-    <hr>
         <php>
             $tag = "field:tid,post_author,post_modified,post_title,post_content,post_like,user_number,avatar,comment_count;order:post_date desc;";
             $posts = sp_sql_posts_paged_bycatid(7,$tag,16,$pagesetting);
@@ -35,32 +34,46 @@
                 </div>
                 <div class="new-detail">
                     <div class="new-name"><a href="{:leuu('article/index',array('id'=>$vo['tid']))}">{$vo.post_title}</a></div>
-                    <div class="new-text"><?php echo '<pre>'.substr($vo['post_content'],0,10).'</pre>'; ?></div>
+                    <div class="new-text">{$vo.post_content}</div>
                     <div class="new-from">来自：<a href="{:leuu('article/index',array('id'=>$vo['tid']))}">{$vo.user_login}</a>&nbsp;{$vo.post_modified}</div>
-                    <ul class="pull-right">
-                        <li><a href=""> 评论&nbsp;{$vo.comment_count}</a></li>
-                        <li><a href="{:U('article/do_like',array('id'=>$object_id))}"> <i class="iconfont">&#xe604&nbsp;{$vo.post_like}</i></a></li>
-                    </ul>
                     <hr>
+                    <div class="new-feet">
+                        <span><a href="{:leuu('article/index',array('id'=>$vo['tid']))}#comment"> 评论&nbsp;{$vo.comment_count}</a></span>
+                        <span><a href="{:U('article/do_like',array('id'=>$object_id))}"> <i class="iconfont">&#xe604&nbsp;{$vo.post_like}</i></a></span>
+                    </div>
                 </div>
                 </div>
             </div>
         </foreach> 
     </div>
     <div class="span3">
-        <div class="sidebar-notice">
-            <div class="siderbar-notice-title"><p>公告栏</p> </div>
+        <div class="sidebar-notice">            
+            <div class="siderbar-notice">
+                <php>
+                    $tag = "field:tid,post_title,post_content,post_date,post_excerpt;order:post_modified DESC;limit:4;";
+                    $notice = sp_sql_posts_bycatid(6,$tag);
+                </php>
+                <a href="{:u('portal/list/index',array('id'=>6))}">公告</a>
+                <ul>
+                    <foreach name="notice" item="no">
+                    <li><a href="{:leuu('article/index',array('id'=>$no['tid']))}">{$no.post_title}</a> <p>{$no.post_date|strtotime|date="Y-m-d",###}</p> </li>
+                    <p>{$no.post_excerpt}</p>
+                    <hr>
+                    </foreach>
+                </ul>
+            </div>
             <div class="siderbar-notice-content"></div>
         </div>
+    </div>
+    <div class="span3">
         <div class="sidebar-hot-new"></div>
     </div>
 </div>
 <tc_include file="Public:footer"/>
     
 <!-- JavaScript -->
-<tc_include file="Public:scripts" />
  <script src="__TMPL__Public/js/imagesloaded.pkgd.min.js"></script>
-    <script src="__TMPL__Public/js/masonry.pkgd.min.js"></script>
+    // <script src="__TMPL__Public/js/masonry.pkgd.min.js"></script>
     <script>
     var $container=$('#container').masonry({
           columnWidth: '.grid-sizer',
@@ -71,6 +84,9 @@
       $container.masonry();
     });
     
+    $('.new-text').each(function() {
+        $(this).html($(this).text().substr(0,80)+"...");
+    })
     </script>
 </body>
 </html>

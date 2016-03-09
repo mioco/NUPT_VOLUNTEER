@@ -1,0 +1,66 @@
+
+.span7>div,.span4>div{
+    background-color: #fff;
+}
+.span4>div{
+    padding: 20px;
+    margin-bottom: 1em;
+}
+.span4>div>p {
+    border-radius: 0;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 12px;}
+div#link-item {
+    height: 240px;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: -1px;
+    padding: 1em;
+    font-size: 13px;
+}
+.progress{height: 20px;}
+.progress-bar{background: #66a7d1;
+    color: #fff;
+    text-align: center;}
+/*org style*/
+.orgDetail{    
+    padding: 1.7em 2em 0;
+    height: 15em;}
+.orgDetail #orgLogo{  
+    overflow: hidden;
+    width: 13em;  
+    height: 13em;
+    float: left;
+    margin-right: 2em;
+    border: 1px solid #f0f0f0;
+}
+div.orgInner{padding: 1em;}
+.orgDetail #orgLogo img{max-width: 100%;}
+div#post-img {
+    width: 200px;
+    height: 120px;
+    overflow: hidden;
+}
+div#post-img img{width: 100%;}
+.one-detail{
+    vertical-align: top;
+}
+.one-detail .control-group {
+    padding-bottom: .7em;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1em;
+    font-size: 14px;
+    width: 50%;
+    float: left;
+}
+label.control-label {
+    color: #3FA6D7;
+}
+div#org-img{
+        width: 60px;
+    height: 60px;
+    overflow: hidden;
+    float: left;
+    margin-right: .7em;
+}
+div#org-img img{width: 100%;}

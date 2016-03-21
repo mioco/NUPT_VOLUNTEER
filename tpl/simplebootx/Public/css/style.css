@@ -1,5 +1,6 @@
 @CHARSET "UTF-8";
 body{overflow-x:hidden; }
+h3{font-size: 1.3em;}
 /*body{
     background: -webkit-gradient(to bottom right, #507ba3 0%, #a6c8dc 100%);
     background: -o-gradient(to bottom right, #507ba3 0%, #a6c8dc 100%);

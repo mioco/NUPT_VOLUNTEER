@@ -131,6 +131,7 @@
                     </if>
                 </a>
                   </div>
+                  <hr>
                 </div>
             </foreach>
             </div>  
@@ -162,7 +163,7 @@
          			<div class="control-group">
          				<label class="control-label" for="input-signature">注册时间</label>
          				<div class="controls">
-         					{$signature|default='未填写'}
+         					{$create_time|date="Y-m-d",###}
          				</div>
          			</div>
             <h3>社团</h3>

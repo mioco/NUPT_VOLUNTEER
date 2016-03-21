@@ -34,12 +34,11 @@
 				 <input type="text" placeholder="Search" value="">
 				 <input type="submit" class="btn" value="搜索">
 			</form>
-	<form class="J_ajaxForm" action="" method="post">
+	<form class="J_ajaxForm" action="" method="get">
 		<div class="table-actions">
 			<button class="btn btn-primary btn-small J_ajax_submit_btn" type="submit" data-action="{:u('Recruitadmin/check',array('check'=>1))}" data-subcheck="true">审核</button>
 			<button class="btn btn-primary btn-small J_ajax_submit_btn" type="submit" data-action="{:u('Recruitadmin/check',array('uncheck'=>1))}" data-subcheck="true">取消审核</button>
-			<button class="btn btn-primary btn-small J_ajax_submit_btn" type="submit" data-action="{:u('Recruitadmin/active_status',array('active_start'=>1))}" data-subcheck="true">开始活动</button>
-			<button class="btn btn-primary btn-small J_ajax_submit_btn" type="submit" data-action="{:u('Recruitadmin/active_status',array('active_end'=>1))}" data-subcheck="true">结束活动</button>
+			<button class="btn btn-primary btn-small J_ajax_submit_btn" type="submit" data-action="{:u('Recruitadmin/active_status',array('ac_status'=>0))}" data-subcheck="true">开始活动</button>
 			<button class="btn btn-primary btn-small J_ajax_submit_btn" type="submit" data-action="{:u('Recruitadmin/delete')}" data-subcheck="true" data-msg="你确定删除吗？">删除</button>
 		</div>
 		<table class="table table-hover table-bordered table-list">

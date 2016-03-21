@@ -1,3 +1,4 @@
+<iframe src="" frameborder="0" name="userinfo" class="hidden" style="width:100%;min-height:1080px;"></iframe>
 <link rel="stylesheet" href="__TMPL__Public/css/orgItem.css">
 		<div class="container tc-main">
 			       
@@ -77,7 +78,7 @@
 	                    	<hr>
 	                    	<foreach name="member" item="m">
 					              <div id="org-img">
-					                    <a href="{:leuu('article/index',array('id'=>$m['tid']))}">
+					                    <a href="{:u('user/userinfo/index',array('id'=>$m['id']))}" target="userinfo">
 					                    <if condition="empty($m['avatar'])"> 
 					                        <img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$m.username}"/>
 					                    <else /> 
@@ -111,7 +112,6 @@
 			});
 	    //join org
 	    $('.join-btn').on('click',function(){
-			console.log('run')
 	        var url = $(this).attr('href');
 	        $.ajax({
 	            url:url,
@@ -120,6 +120,10 @@
 	                return false;
 	            }
 	        })			
+	    });
+	    $('div#org-img>a').on('click',function(){
+	    	$('iframe[name=userinfo]').removeClass('hidden');
+	    	$('div.container').addClass('hidden');
 	    })
 	})
 </script>

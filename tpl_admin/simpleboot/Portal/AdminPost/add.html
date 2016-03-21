@@ -104,19 +104,18 @@
             <tr class="recruit hidden">
             	<th>性质</th>
             	<td>
-            		<select class="quality" name="quality[]">
+            		<select class="cycle_type" name="post[cycle_type]">
             			<option value="0">临时活动</option>
             			<option value="1">长期活动</option>
             		</select>
-            		<div class="week hidden">
-        			<input value="2" type="checkbox" name="quality[]">全周
-        			<input value="3" type="checkbox" name="quality[]">周一
-        			<input value="4" type="checkbox" name="quality[]">周二
-        			<input value="5" type="checkbox" name="quality[]">周三
-        			<input value="6" type="checkbox" name="quality[]">周四
-        			<input value="7" type="checkbox" name="quality[]">周五
-        			<input value="8" type="checkbox" name="quality[]">周六
-        			<input value="9" type="checkbox" name="quality[]">周日
+            		<div class="cycle">
+        			<input value="0" type="checkbox" name="cycle[]">周日
+        			<input value="1" type="checkbox" name="cycle[]">周一
+        			<input value="2" type="checkbox" name="cycle[]">周二
+        			<input value="3" type="checkbox" name="cycle[]">周三
+        			<input value="4" type="checkbox" name="cycle[]">周四
+        			<input value="5" type="checkbox" name="cycle[]">周五
+        			<input value="6" type="checkbox" name="cycle[]">周六
         			</div>
             	</td>
             </tr>
@@ -312,10 +311,6 @@ $(function () {
 	$('.full-inner').change(function(){
 		if ($('.full-inner').attr('checked')) {$('.recruit').removeClass('hidden');}
 			else{$('.recruit').addClass('hidden')}
-	})
-	$('.quality').change(function(){
-		if ($('.quality').val() == 0) {$('.week').addClass('hidden')}
-		if ($('.quality').val() == 1) {$('.week').removeClass('hidden')}
 	})
 });
 </script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{$site_name}</title>
+<meta name="keywords" content="{$site_seo_keywords}" />
+<meta name="description" content="{$site_seo_description}">
+<meta name="author" content="ThinkCMF">
+<tc_include file="Public:head" />
+<link href="__TMPL__Public/css/login.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="header">
+		<a href="__ROOT__/"><img src="__TMPL__Public/images/nulogo.png" alt=""></a>
+		<div>
+			<h4>注册</h4>
+		</div>
+	</div>
+	<div class="container">
+			<div class="">
+				<form class="form-horizontal J_ajaxForm" action="{:U('user/register/doregister')}" method="post">
+						<div class="controls">
+							<input type="text" id="input_number" name="user_number" placeholder="请输入你的学号" class="span3">
+						</div>
+
+						<div class="controls">
+							<input type="text" id="username" name="username" placeholder="请输入你的姓名" class="span3">
+						</div>
+
+						<div class="controls">
+							<input type="text" id="input_email" name="email" placeholder="请输入邮箱" class="span3">
+						</div>
+						<div class="controls">							
+							<select class="faculty" name="user_faculty">
+								<option value="0">---选择学院---</option>
+								<foreach name="faculty" item="fa">
+								<option value="{$fa.fid}">{$fa.fa_name}</option>
+								</foreach>
+							</select>
+							<select class="major" name="user_major">
+								{$major}
+							</select>
+						</div>
+
+						<div class="controls">
+							<input type="password" id="input_password" name="password" placeholder="请输入密码" class="span3">
+						</div>
+
+						<div class="controls">
+							<input type="password" id="input_repassword" name="repassword" placeholder="请输入重复密码" class="span3">
+						</div>
+
+						<div class="controls verify">
+							<input type="text" id="input_verify" name="verify"  placeholder="请输入验证码" class="span3">
+							{:sp_verifycode_img('length=4&font_size=15&width=100&height=35&charset=1234567890')}
+						</div>
+					
+						<div class="controls">
+							<label class="checkbox persistent"><input type="checkbox" name="terms" value="1">
+								我同意<a href="#">网站内容服务条款</a></label>
+						</div>
+						<div class="btn-box">
+							<input type="submit" value="注册"></input>
+							<div><a href="{:U('user/login/index')}">登录</a></div>
+						</div>
+				</form>
+			</div>
+	</div>
+	<tc_include file="Public:footer" />
+</body>
+</html>

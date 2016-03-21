@@ -1,0 +1,15 @@
+
+<div class="post-box">
+    <div class="item-image">
+        <a href="{:leuu('portal/article/index',array('id'=>$vo['tid']))}" data-ajax="false">
+            <if condition="empty($smeta['thumb'])"> 
+                <img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
+            <else /> 
+                <img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive img-thumbnail" alt="{$vo.post_title}" />
+            </if>
+        </a>
+    </div>
+    <a class="body" href="{:leuu('portal/article/index',array('id'=>$vo['tid']))}" data-ajax="false">
+        <h5>{$vo.post_title}</h5>
+    </a>
+</div>

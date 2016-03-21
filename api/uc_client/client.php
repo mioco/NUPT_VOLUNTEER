@@ -350,6 +350,10 @@ function uc_user_checkemail($email) {
 	return call_user_func(UC_API_FUNC, 'user', 'check_email', array('email'=>$email));
 }
 
+function uc_user_checkuser_number($user_number) {
+	return call_user_func(UC_API_FUNC, 'user', 'check_user_number', array('user_number'=>$user_number));
+}
+
 function uc_user_addprotected($username, $admin='') {
 	return call_user_func(UC_API_FUNC, 'user', 'addprotected', array('username'=>$username, 'admin'=>$admin));
 }

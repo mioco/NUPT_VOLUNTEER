@@ -165,8 +165,8 @@ ul.dropdown-menu.pull-right>li{
     margin-bottom: 2.5em;
     border-bottom: 1px solid #ddd;}
 .list-group>a{
-	    font-size: 15px;
-    padding: 1em;
+    font-size: 15px;
+    padding-right: 1em;
 }
 #user_detail #left{width: 70%;}
 #user_detail #right{width: 30%;}

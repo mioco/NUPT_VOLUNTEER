@@ -4,6 +4,8 @@
 .col-right { float: right; width: 210px; overflow: hidden; margin-left: 6px; }
 .table th, .table td {vertical-align: middle;}
 .picList li{margin-bottom: 5px;}
+.week{display: inline;}
+.hidden{display: none;}
 </style>
 </head>
 <body class="J_scroll_fixed">
@@ -98,6 +100,7 @@
 				<select style="max-height: 100px;" name="term[]">
 					{$taxonomys}
 				</select>
+				<input class="full-inner" type="checkbox" value="ture">完善招募内容
 				<div>
 					windows：按住 Ctrl 按钮来选择多个选项,Mac：按住 command 按钮来选择多个选项
 				</div>
@@ -113,14 +116,36 @@
             </tr>
             <tr class="recruit">
               <th width="80">活动时间 </th>
-	          <td><input type="text" name="post[recruit_end_time]" id="activetimes" value="{:date('Y-m-d',time())}"style="width: 160px;">
+	          <td><input type="text" name="post[recruit_end_time]" id="activetimes" value="{$post['ac_start']}"style="width: 160px;">
 	          <span>&nbsp;到&nbsp;</span>
-	          <input type="text" name="post[active_end_time]" id="activetimee" value="{:date('Y-m-d',time())}" size="21" style="width: 160px;"></td>
+	          <input type="text" name="post[active_end_time]" id="activetimee" value="{$post['ac_end']}" size="21" style="width: 160px;"></td>
+            </tr>
+            <tr class="recruit hidden">
+            	<th>提供时长</th>
+            	<td><input name="post[duration]" type="text" style="width: 160px;" value="{$post['duration']}"></td>            	
+            </tr>
+            <tr class="recruit hidden">
+            	<th>性质</th>
+            	<td>
+            		<select class="cycle_type" name="post[cycle_type]">
+            			<option value="0">临时活动</option>
+            			<option value="1">长期活动</option>
+            		</select>
+            		<div class="cycle">
+        			<input value="0" type="checkbox" name="cycle[]">周日
+        			<input value="1" type="checkbox" name="cycle[]">周一
+        			<input value="2" type="checkbox" name="cycle[]">周二
+        			<input value="3" type="checkbox" name="cycle[]">周三
+        			<input value="4" type="checkbox" name="cycle[]">周四
+        			<input value="5" type="checkbox" name="cycle[]">周五
+        			<input value="6" type="checkbox" name="cycle[]">周六
+        			</div>
+            	</td>
             </tr>
             <tr class="recruit">
               <th width="80">活动地址 </th>
               <td>
-              	<input type="text" style="width:400px;" name="post[post_address]" id="address" value="" style="color:" class="input" placeholder="请输入活动地址" />
+              	<input type="text" style="width:400px;" name="post[post_address]" id="address" value="{$post['post_address']}" style="color:" class="input" />
               </td>
             </tr>
             <tr>
@@ -310,6 +335,25 @@ $(function () {
 	        });
 	    });
 	////-------------------------
+	$('.full-inner').change(function(){
+		if ($('.full-inner').attr('checked')) {$('.recruit').removeClass('hidden');}
+			else{$('.recruit').addClass('hidden')}
+	})
+	////========================
+	if($('.recruit td input').val()) {
+		$('.full-inner').attr('checked',true);
+		$('.recruit').removeClass('hidden');}
+	
+	var cycle = "{$post['cycle']}",
+		cycle = cycle.split(','),
+		cycle_type = "{$post['cycle_type']}";
+		$('.cycle_type').find('option[value='+cycle_type+']').attr('selected', true);
+		for (var i = cycle.length - 1; i >= 0; i--) {
+			$('.cycle').find('input[value='+cycle[i]+']').attr('checked', true);
+		};
+		
+
+	
 });
 </script>
 </body>

@@ -1,0 +1,131 @@
+<admintpl file="header" />
+<style>
+	#org-detail{
+	height: 250px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #D1D1D1;
+    padding: 1em;
+    margin-bottom: 2em;
+	}
+	#org-logo{
+		width: 250px;
+    height: 250px;
+    overflow: hidden;
+    float: left;
+    margin-right: 2em;
+	}
+	.member-item{
+		padding: 1em;
+    float: left;}
+	.member-item .mi-avatar{
+	height: 70px;
+    width: 70px;
+	}
+</style>
+</head>
+<body>
+	<div id="org-detail">
+		<div id="org-logo">
+		  <if condition="empty($org['logo'])">
+          <img src="__TMPL__/Public/images/headicon_128.png" class="headicon"/>
+          <else/>
+          <img src="{:sp_get_asset_upload_path('orgLogo/'.$org['logo'])}" class="headicon"/>
+          </if>
+        </div>
+		<div id="org-info">
+			<p>社团名称：{$org['org_name']}</p>
+			<p>社团简介：{$org['org_des']}</p>
+			<p>社团人数：{$member_count['member']|default="0"}</p>
+			<p>社团已结束活动共计时长：{$org['time']}</p>
+			<!-- <p>创建时间：{$org['create_time']}</p> -->
+		</div>
+	</div>
+	<div id="org-member">
+	<h4>申请列表&nbsp;<a href="">{$member_count['un_check']|default="0"}人</a></h4>
+	<hr>
+		<!-- <div class="table-actions">
+			<button class="btn btn-primary btn-small J_ajax_submit_btn" type="submit" data-action="{:u('orgadmin/check',array('status'=>1))}" data-subcheck="true">通过</button>
+			<button class="btn btn-primary btn-small J_ajax_submit_btn" type="submit" data-action="{:u('orgadmin/check',array('status'=>0))}" data-subcheck="true">拒绝</button>
+		</div> -->
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<!-- <th><input type="checkbox"></th> -->
+					<th align='center'>学号</th>
+					<th>姓名</th>
+					<th>学院</th>
+					<th>专业</th>
+					<th>志愿服务活动总时长</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<php>$user_statuses=array("0"=>"已拉黑","1"=>"正常","2"=>"未验证");</php>
+				<foreach name="un_check" item="uc">
+				<tr>
+					<!-- <td><input type="checkbox" value="{$uc.id}"></td> -->
+					<td align='center'>{$uc.user_number}</td>
+					<!-- <td><img width="25" height="25" src="{:U('user/public/avatar',array('id'=>$m['id']))}" /></td>
+	                <if condition="empty($m['user_nicename'])"> -->
+					  <td><a href="{:U('User/Indexadmin/record',array('id'=>$uc['id']))}">{$uc.username}</a> </td>
+	                <else /> 
+					  <td><a href="">{$uc.user_number}</a> </td>                   
+	                </if>
+					<td>{$uc.fa_name}</td>
+					<td>{$uc.major}</td>
+					<td>{$uc.duration}</td>
+					<td align='center'>
+						<a href="{:U('orgadmin/check',array('id'=>$uc['id'],'status'=>1))}" class="J_ajax_dialog_btn" data-msg="您确定要拉黑此用户吗？">通过</a>|
+						<a href="{:U('orgadmin/check',array('id'=>$uc['id'],'status'=>0))}" class="J_ajax_dialog_btn" data-msg="您确定要启用此用户吗？">拒绝</a>
+					</td>
+				</tr>
+				</foreach>
+			</tbody>
+		</table>
+		<div class="pagination">
+				{$page}
+			<ul>
+			</ul>
+		</div>
+	<h4>社团成员&nbsp;<a href="">{$member_count['member']|default="0"}人</a></h4>
+	<hr>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th align='center'>学号</th>
+					<th>姓名</th>
+					<th>学院</th>
+					<th>专业</th>
+					<th>志愿服务活动总时长</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<php>$user_statuses=array("0"=>"已拉黑","1"=>"正常","2"=>"未验证");</php>
+				<foreach name="member" item="m">
+				<tr>
+					<td align='center'>{$m.user_number}</td>
+					<!-- <td><img width="25" height="25" src="{:U('user/public/avatar',array('id'=>$m['id']))}" /></td>
+	                <if condition="empty($m['user_nicename'])"> -->
+					  <td><a href="{:U('User/Indexadmin/record',array('id'=>$m['id']))}">{$m.username}</a> </td>
+	                <else /> 
+					  <td><a href="">{$m.user_number}</a> </td>                   
+	                </if>
+					<td>{$m.faculty}</td>
+					<td>{$m.fa_name}</td>
+					<td>{$m.duration}</td>
+					<td align='center'>
+						<a href="{:U('indexadmin/ban',array('id'=>$m['id']))}" class="J_ajax_dialog_btn" data-msg="您确定要拉黑此用户吗？">拉黑</a>|
+						<a href="{:U('indexadmin/cancelban',array('id'=>$m['id']))}" class="J_ajax_dialog_btn" data-msg="您确定要启用此用户吗？">启用</a>
+					</td>
+				</tr>
+				</foreach>
+			</tbody>
+		</table>
+		<div class="pagination">
+					{$page}
+				<ul>
+				</ul>
+			</div>
+	</div>
+</body>

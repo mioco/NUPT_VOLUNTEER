@@ -115,7 +115,23 @@ function sp_get_user_avatar_url($avatar){
 	}
 	
 }
-
+/**
+* 这是org logo的地址
+*/
+function sp_get_org_logo_url($orgLogo){
+	
+	if($orgLogo){
+		if(strpos($orgLogo, "http")===0){
+			return $orgLogo;
+		}else {
+			return sp_get_asset_upload_path("orgLogo/".$orgLogo);
+		}
+		
+	}else{
+		return $orgLogo;
+	}
+	
+}
 /**
  * CMF密码加密方法
  * @param string $pw 要加密的字符串

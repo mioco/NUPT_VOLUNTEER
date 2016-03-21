@@ -1,7 +1,0 @@
-[ 2015-11-05T19:07:50+08:00 ] ::1 /thcmf/index.php?g=user&m=index&a=is_login
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001606s ]
-INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003191s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.005782s ]
-NOTIC: [8] Undefined index: url E:\wamp\www\thcmf\application\Common\Controller\AppframeController.class.php 第 45 行.
-

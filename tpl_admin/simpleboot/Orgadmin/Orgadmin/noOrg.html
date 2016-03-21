@@ -1,0 +1,12 @@
+<admintpl file="header" />
+</head>
+<body>
+	<p>尚未创建志愿小组。</p>
+	<form action="{:u('Orgadmin/Orgadmin/create')}" method="post" enctype="multipart/form-data">
+		<input type="text" name="orgName" required="required" placeholder="社团名称"><br>
+		<textarea name="orgDes" required="required" placeholder="社团描述"></textarea><br>
+		<label for="orgLogo">社团标志</label>
+		<input type="file" name="orgLogo" id="orgLogo"><br>
+		<input type="submit" class="btn" value="创建">
+	</form>
+</body>

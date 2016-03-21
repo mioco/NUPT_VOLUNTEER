@@ -1,0 +1,168 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1450770953_3717797.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1450770953_3717797.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1450770953_3717797.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1450770953_3717797.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1450770953_3717797.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+                    
+*{
+	font-family: "微软雅黑";
+	transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+}                 
+*:focus{
+	outline: none;
+}
+li{list-style: none;}
+ul{padding: 0;}
+a{text-decoration: none;}
+.iconfont{font-family: "iconfont";font-style:normal;}
+body{margin: 0;overflow-x: hidden;}
+.hidden{display: none;}
+.container{margin-top: 1em;display: table;}
+.container>div{width: 100%;}
+.container>div>ul{margin: 1em 5px;}
+/*header*/
+header{
+	background-color: #67A5DD;
+    height: 40px;
+}
+header .logo{}
+header>div>i{
+    font-size: 1.3em;
+    margin: .3em;	
+    position: absolute;
+    color: #fff;
+}
+.btn{
+	background-color: #59a1de;
+    padding: .3em .5em;
+    display: inline;
+    margin: .2em;
+    border-radius: 4px;
+    color: #FFFFFF;
+}
+/*nav*/
+header>.nav{
+	left: 0;
+	width: 100%;
+	position: absolute;}
+.navbar .user-info{
+	background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    height: 4.5em;
+    margin: 0;
+    padding: 0;
+}
+.navbar .user-info>.user .img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: .5em 1em 0 1.5em;
+    float: left;
+    border: 2px solid #67A5DD;
+}
+.navbar .user-info .right-btn{
+    float: right;
+    height: 3em;
+    background-color: #67A5DD;
+    width: 7em;
+    padding-top: 1.5em;
+    text-align: center;
+    color: #fff;
+}
+.navbar .user-info .login>div{
+    font-size: .9em;float: left;}
+.navbar .user-info .login>div>p{
+    margin: 1em 0 .3em 0;
+    color: #ccc;
+}
+.navbar .user-info .offline ul li a{
+    width: 50%;
+}
+.navbar #main-menu li a{float: left;}
+/*search*/
+header>.search>.search-btn{
+	right: 0;
+}
+.search-hid{
+	display: none;
+}
+.search-dis{
+	display: inline;
+	width: 100%;
+	position: absolute;
+    z-index: 1;
+	top: 40px;
+	background-color: rgba(255,255,255,.8);
+	padding-bottom: 1.5em;
+    border-bottom: 1px solid #67A5DD;
+}
+header>.search>.search-box>form{margin: 7px 0 1em 1em;}
+header>.search>.search-box>form div{display: inline;}
+header>.search>.search-box>form input{
+	width: 67%;
+    padding: .2em .3em;
+    font-size: 1.2em;
+    border: 2px solid #59a1de;
+}
+header>.search>.search-box>form input:focus,header>.search>div>form button:focus{
+	outline: none;
+}
+header>.search>.search-box>form button{
+	height: 37px;
+    width: 5em;
+    font-size: 1.1em;
+    vertical-align: top;
+    margin-left: -5px;
+    border: none;
+    color: #fff;
+    background-color: #59a1de;
+}
+
+/*notice*/
+.notice>ul{
+    display: block;
+    width: 97.5%;
+    height: 100px;
+}
+.notice>ul>li{
+	width: 100%;
+	height: 1.5em;
+	margin-bottom: .5em;
+	border-bottom: 1px solid #ddd;
+
+}
+.notice>ul>li>a{
+}
+.notice>ul>li>a>p{
+	font-size: 1em;
+	margin: 0;
+	margin-right: .5em;
+	float: left;}
+.notice>ul>li>p{
+	float: right;
+	margin: 0;
+}
+
+/*recruit*/
+.recruit .post-box{
+	width: 50%;
+    height: 160px;
+    float: left;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.recruit .post-box .item-image{
+	width: 100%;
+    height: 120px;
+    overflow: hidden;
+}
+.recruit .post-box .item-image img{min-width: 100%;min-height: 100%;width: 100%;}
+.recruit .post-box a h5{margin: .2em 0;}

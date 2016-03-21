@@ -23,6 +23,7 @@ class IndexController extends HomeBaseController {
     }
     
     function is_login(){
+        // header('Content-Type: charset=utf-8');
     	if(sp_is_user_login()){
     		$this->ajaxReturn(array("status"=>1,"user"=>sp_get_current_user()));
     	}else{

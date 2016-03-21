@@ -57,9 +57,9 @@ class OrgController extends HomeBaseController{
 		$member = $this->orgrl
 		->alias('orl')
 		->join(C('DB_PREFIX').'users u on u.id = orl.uid')
-		->field('avatar,username,duration,user_number')
+		->field('u.id,avatar,username,duration,user_number')
 		// ->limit($page->firstRow . ',' . $page->listRows)
-		->where(array('orl.oid'=>$org['oid']))->select();
+		->where(array('orl.oid'=>$org['oid'],'user_type'=>2))->select();
 		$org['u_count'] = count($member);
 		$org['ratio'] = round($org['u_count']*100/(M('users')->count()),1);
 		foreach ($member as $key) {

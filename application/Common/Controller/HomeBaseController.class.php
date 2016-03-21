@@ -8,7 +8,7 @@ class HomeBaseController extends AppframeController {
 		parent::__construct();
 	}
 	
-	function _initialize() {
+	function _initialize() {		
 		parent::_initialize();
 		$site_options=get_site_options();
 		$this->assign($site_options);
@@ -31,6 +31,13 @@ class HomeBaseController extends AppframeController {
 			}
 		}
 		
+		$data = array('check'=>'login');
+		$url = U('user/index/is_login');
+		$ch = curl_init();
+		curl_setopt ($ch, CURLOPT_URL, $url);
+		curl_setopt ($ch, CURLOPT_POST, 1);
+		curl_setopt ($ch, CURLOPT_POSTFIELDS, $data);
+		curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
 		if(sp_is_user_login()){
 			$this->assign("user",sp_get_current_user());
 		}

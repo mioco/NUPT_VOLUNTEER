@@ -1,0 +1,51 @@
+<link href="__TMPL__Public/css/style.css" rel="stylesheet">
+<header>
+<div class="nav">
+	<i class="nav-btn iconfont">&#xe604</i>
+	{:hook('body_start')}
+	<div class="navbar search-hid">
+		<div class="user-info" id="main-menu-user">
+			<div class="user login hidden">
+				<a class="user" href="{:u('user/center/index')}" data-ajax="false">
+            		<div class="img"><img src="__TMPL__/Public/images/headicon_50.png" class="headicon"/></div>
+	            </a>
+				<div>
+		            <p>时长：{$user['duration']}</p>
+		            <span>{$user['user_number']}</span>	
+				</div>
+	            <a class="right-btn" href="{:u('user/index/logout')}"><i class="iconfont">&#xe601</i>退出</a>
+	      	</div>
+	      	<div class="user offline hidden">
+	            <div>
+	               <a class="right-btn" href="{:u('user/login/index')}" data-ajax="false"><i class="iconfont">&#xe602</i>注册</a>
+	               <a class="right-btn" href="{:u('user/login/index')}" data-ajax="false"><i class="iconfont">&#xe600</i>登录</a>
+	            </div>
+	      	</div>
+		</div>
+		<!-- <hr> -->
+	    <nav id="main-menu">
+	   	<?php
+			$effected_id="menu";
+		  	$filetpl="<a class='btn' href='\$href' target='\$target'>\$label</a>";
+		  	$foldertpl="<a href='\$href' target='\$target' class='dropdown-toggle' data-toggle='dropdown' data-ajax='false'>\$label <b class='caret'></b></a>";
+		  	$ul_class="dropdown-menu" ;
+		  	$li_class="menu-item" ;
+		  	$style="nav";
+		  	$showlevel=6;
+		  	$dropdown='dropdown';
+		  	echo sp_get_menu("main",$effected_id,$filetpl,$foldertpl,$ul_class,$li_class,$style,$showlevel,$dropdown);
+		?>		
+	    </nav>
+	 </div>
+</div>    	
+<div><img src="" alt=""></div>
+<div class="search"> 
+	<i class="search-btn iconfont">&#xe603</i>
+	<div class="search-box search-hid">
+		<form method="post" action="{:U('portal/search/index')}">
+			 <input type="text" class="" placeholder="Search" name="keyword" value="{:I('get.keyword')}"/>
+			 <button type="button">搜索</button>
+		</form>
+	</div>				
+</div>
+</header>

@@ -16,6 +16,7 @@
 							<th>专业</th>
 							<th>所在组织</th>
 							<th>志愿服务活动总时长</th>
+							<th>操作</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -27,12 +28,12 @@
 			                <if condition="empty($vo['user_nicename'])"> -->
 							  <td><a href="{:U('User/Indexadmin/record',array('id'=>$vo['id']))}">{$vo.username}</a> </td>
 			                <else /> 
-							  <td><a href="">{$vo.user_faculty}</a> </td>                   
+							  <td><a href="">{$vo.user_number}</a> </td>                   
 			                </if>
-							<td>{$vo.user_org}</td>
+							<td>{$vo.faculty}</td>
+							<td>{$vo.fa_name}</td>
+							<td>{$vo.org}</td>
 							<td>{$vo.duration}</td>
-							<td></td>
-							<td>{$user_statuses[$vo['user_status']]}</td>
 							<td align='center'>
 								<a href="{:U('indexadmin/ban',array('id'=>$vo['id']))}" class="J_ajax_dialog_btn" data-msg="您确定要拉黑此用户吗？">拉黑</a>|
 								<a href="{:U('indexadmin/cancelban',array('id'=>$vo['id']))}" class="J_ajax_dialog_btn" data-msg="您确定要启用此用户吗？">启用</a>
@@ -41,7 +42,7 @@
 						</foreach>
 					</tbody>
 				</table>
-				<div class="pagination">{$page}</div>
+				<div class="pagination">{$Page}</div>
 			</div>
 		</form>
 	</div>

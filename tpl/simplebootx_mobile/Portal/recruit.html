@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>{$post_title} {$site_name} </title>
+		<meta name="keywords" content="{$post_keywords}" />
+		<meta name="description" content="{$post_excerpt}">
+		<tc_include file="Public:head" />
+		<link href="__TMPL__Public/css/recruit.css" rel="stylesheet">
+		<style>
+			#article_content img{height:auto !important}
+		</style>
+    <tc_include file="Public:head" />
+</head>
+<body>
+<tc_include file="Public:header" /> 			
+<if condition="empty($smeta['thumb'])">
+	<div class="gallery" style="background: url('/nupt_volunteer/data/upload/566c4432a0ab2.jpeg');background-size:cover;"></div>
+<else /> 
+	<div class="gallery" style="background: url({:sp_get_asset_upload_path($smeta['thumb'])});background-size:cover;"></div>
+</if>
+<div class="title-box">
+	<h3>{$post_title}</h3>
+	<p>发布组织:&nbsp;{$user_number}</p>
+	<p>{$post_date}</p>
+</div>
+<div class="nav-box">
+	<div class="nav-box-btn nav-nomal " id="comment">讨论</div>
+	<div class="nav-box-btn nav-nomal " id="content">详情</div>
+	<div class="nav-box-btn nav-active" id="intro">简介</div>
+</div>
+<div class="nav-bottom">
+	<form class="recruit_form" action="{:u('recruit/recruit/post')}" method="post">
+	    <input type="hidden" name="post_id" value="{$id}"/>
+	    <input type="hidden" name="tid" value="{$tid}">
+	</form>
+	<a type="submit" class="recruit-btn" toUrl="{:u('Recruit/RecruitPost/post')}" tid="{$tid}">报名</a>
+	<a class="haveFun" href="{:U('user/favorite/do_favorite',array('id'=>$object_id))}" class="J_favorite_btn" data-title="{$post_title}" data-url="{:U('article/index',array('id'=>$tid))}" data-key="{:sp_get_favorite_key('posts',$object_id)}">收藏</a>
+	<div>
+		<a href="javascript:;"><i class="iconfont">&#xe608;</i><span>{$post_hits}</span></a>
+		<a href="{:U('article/do_like',array('id'=>$object_id))}"><i class="iconfont">&#xe609;</i><span class="count">{$post_like}</span></a>
+	</div>
+</div>
+<div class="container">
+	<div class="intro">
+		<p>{$post_excerpt}</p>
+		<p>时间： {$ac_start}&nbsp;到&nbsp;{$ac_end}</p>
+		<p>地址： {$post_address}</p>
+		<p>分类： {$term[name]}</p>		
+	</div>
+	<div class="content" hidden>
+		{$post_content}
+	</div>	
+	<div class="comment" hidden>
+		{:Comments("posts",$id)}
+    </div>
+</div>
+
+<div class="menber">
+	<div class="headtitle">
+		<hr>
+		<h2>活动成员</h2>
+	</div>
+	<div class="menber-box">
+		<php>
+			$hot_articles=sp_sql_posts("cid:$portal_index_lastnews;field:post_title,post_excerpt,tid,smeta;order:post_hits desc;");
+			$menber = M('recruit')
+			->alias('b')
+			->join(C('DB_PREFIX').'users as u on b.uid = u.id')
+			->where(array('tid'=>$tid,'status'=>'1'))->field('username,avatar,u.id,status')->order('createtime desc')->select();
+		</php>
+		<foreach name="menber" item="vo">
+			<div>
+				<if condition="empty($vo['avatar'])">
+	            <img src="__TMPL__/Public/images/headicon_50.png" class="headicon"/>
+	            <else/>
+	            <img src="{:sp_get_user_avatar_url($vo['avatar'])}" class="headicon"/>
+	            </if>
+			</div>
+		</foreach>
+	</div>
+</div> 
+</div>
+<tc_include file="Public:footer"/>
+
+<tc_include file="Public:scripts"/>
+<script>
+	$(function(){
+		$('.recruit-btn').click(function() {
+			var url = $(this).attr('toUrl'),
+				tid = $(this).attr('tid');
+			$.ajax({
+				url: url,
+				data: {tid: tid},
+				type: 'post',
+				success: function(data) {
+					alert(data);
+					return false;
+				},
+				error: function() {
+					alert('报名失败，请稍后再试');
+					return false;
+				}
+			});
+			return false;
+		})
+		$('.nav-box-btn').on('tap',function(){
+			var id = "."+$(this).attr('id');
+			$('.nav-box-btn').each(function(){
+				if ($(this).is('.nav-active')) {
+					var id_1 = "."+$(this).attr('id');
+					console.log(id_1)
+					$(this).removeClass('nav-active').addClass('nav-nomal');
+					$(id_1).attr('hidden', 'hidden');
+				};
+			});
+			$(this).removeClass('nav-nomal').addClass('nav-active');
+			$(id).removeAttr('hidden');
+		})
+	})
+
+</script>
+</body>
+</html>

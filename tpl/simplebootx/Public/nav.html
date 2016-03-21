@@ -61,8 +61,9 @@
 	                <ul class="dropdown-menu pull-right">
 	                  <div>
 	                    <p style="text-align:center;font-weight:600;">{$user['username']}</p>
-	                    <p>头衔&nbsp;</p>
-	                    <div><span>时长 {$user['duration']}</span><span>性别 </span></div>
+	                    <p>头衔&nbsp;未获得</p>
+	                    <php>$sexs=array("0"=>"未填写","1"=>"男","2"=>"女");</php>
+	                    <div><span>时长 {$user['duration']|default='0'}</span><span>性别 {$sexs[$user['sex']]}</span></div>
 	                    <li><a href="{:u('user/center/index')}"><i class="iconfont">&#xe60f</i> 个人中心</a></li>
 	                  </div>            
 	                   <li><a href="{:u('user/index/logout')}"><i class="iconfont">&#xe60d</i> &nbsp;退出</a></li>

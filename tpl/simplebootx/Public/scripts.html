@@ -1,3 +1,4 @@
+
 <script type="text/javascript">
 //全局变量
 var GV = {
@@ -9,10 +10,12 @@ var GV = {
 <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="__ROOT__/statics/js/jquery.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
     <script src="__ROOT__/statics/js/wind.js"></script>
     <script src="__TMPL__Public/simpleboot/bootstrap/js/bootstrap.min.js"></script>
     <script src="__ROOT__/statics/js/frontend.js"></script>
+    <script src="__ROOT__/statics/js/common.js"></script>
 	<script>
 	$(function(){
 		$('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
@@ -23,7 +26,7 @@ var GV = {
 			$(this).removeClass("open");
 		});
 		
-		$.post("{:U('user/index/is_login')}",{},function(data){
+		$.post("{:U('user/index/is_login')}",{is_login:''},function(data){
 			if(data.status==1){
 				if(data.user.avatar){
 					$("#main-menu-user .headicon").attr("src",data.user.avatar.indexOf("http")==0?data.user.avatar:"__UPLOAD__avatar/"+data.user.avatar);
@@ -84,20 +87,7 @@ var GV = {
 			$('.active-comment').removeClass("active");
 		});
 
-		  // ------------------------
-		  //注册时院系选择
-		  $('.faculty').on("change", function() {
-		  	var pid = $(this).val();
-		  	$.ajax({
-		  		url: "{:U('user/register/majorSelect')}",
-		  		data: '&pid='+pid,
-		  		type: 'get',
-		  		success: function(data) {
-		  			$('.major').html(data);
-		  		}
-		  	})
 		  
-		  })
 		  //------------------------
 		  //list多条件选项
 		  

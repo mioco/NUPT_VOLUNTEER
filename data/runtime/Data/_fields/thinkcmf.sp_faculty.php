@@ -1,1 +1,0 @@
-a:5:{i:0;s:3:"fid";i:1;s:7:"fa_name";i:2;s:6:"parent";s:3:"_pk";s:3:"fid";s:5:"_type";a:3:{s:3:"fid";s:7:"int(10)";s:7:"fa_name";s:11:"varchar(10)";s:6:"parent";s:7:"int(10)";}}

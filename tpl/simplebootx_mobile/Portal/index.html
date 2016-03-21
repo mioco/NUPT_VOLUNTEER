@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 	<html>
 	<head>
-		<title>ThinkCMF内容管理框架 ThinkCMF内容管理框架</title>
+		<title>{$site_seo_title} {$site_name}</title>
 		<meta name="keywords" content="" />
-		<meta name="description" content="ThinkCMF是简约风网络科技发布的一款用于快速开发的内容管理框架">
-				<meta name="author" content="ThinkCMF">
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="南京邮电大学青年志愿者联合会">
+		<meta name="author" content="ThinkCMF">
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <tc_include file="Public:head" />
     </head>
     <body>
-    just a demo, you can do it yourself, like pc template!
-    不要手机模板请把这个模板删除！
+    <tc_include file="Public:header" />    
+    <div class="container">
+    	<div class="notice">
+    		<a href="" class="btn">公告</a>
+			<ul>
+				<php>
+					$tag = "field:tid,post_title,post_date;order:post_modified DESC;limit:8;";
+					$notice = sp_sql_posts_bycatid(6,$tag);
+				</php>
+				<foreach name="notice" item="no">
+				<li>
+					<a href="{:leuu('portal/article/index',array('id'=>$vo['tid']))}" data-ajax="false">
+						<p>{$no.post_title}</p>
+					</a>
+					<p>{$no.post_date|strtotime|date="Y-m-d",###}</p>
+				</li>
+				</foreach>
+			</ul>
+    	</div>
+    	<div class="recruit">
+    		<a href="" class="btn">志愿活动</a>
+			<ul>
+				<php>
+					$tag = "field:tid,post_title,smeta;order:post_modified DESC;limit:6;";
+					$volun = sp_sql_posts_bycatid(3,$tag);
+				</php>
+				<foreach name="volun" item="vo">
+					<php>
+			            $smeta=json_decode($vo['smeta'],true);
+			        </php>
+        			<tc_include file="Recruit:list"/>
+			    </foreach>
+			</ul>
+    	</div>
+    	<tc_include file="Public:footer" />   
+    </div> 
     </body>
-    
+   
+<tc_include file="Public:scripts" />
+
 </html>
 
 

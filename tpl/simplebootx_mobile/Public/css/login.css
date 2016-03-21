@@ -1,0 +1,66 @@
+body{margin: 0;}
+*{font-family: "微软雅黑";}
+a{text-decoration: none;}
+.header{
+    height: 3em;
+    padding: .7em 0 0 1em;
+    border-bottom: 1px solid #ddd;
+}
+.header>a>img{
+    height: 44px;
+    float: left;
+    margin-right: .5em;
+}
+.header>div{
+    float: left;
+    padding: .5em .7em 0;
+    border-left: 2px solid #59a1de;
+    color: #59a1de;
+}
+.header>div>h4{
+	margin: 0;
+}
+.container{
+	background-color: #f4f4f4;
+	padding: 1.5em 1em;
+}
+.controls>input, .controls select{
+	width: 100%;
+    width: 100%;
+    height: 3.4em;
+    padding: .4em;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 1em;
+
+}
+.controls select{width: 50%;float: left;}
+.controls #input_verify{
+	width: 66%;
+	vertical-align: top;
+}
+.verify img{
+	width: 32%;
+}
+.btn-box{margin-top: 3em;}
+.btn-box>* {
+    width: 100%;
+    border-radius: 3em;
+    border: none;
+    margin-bottom: 1em;
+    font-size: 1em;
+    text-align: center;
+}
+.btn-box>*:focus{outline: none;}
+.btn-box>input{
+    background-color: #59a1de;
+    color: #fff;
+    height: 3em;}
+.btn-box>div{
+	background-color: #fff;
+	border: 1px solid #59a1de;
+	padding-top: .7em;
+	height: 2.3em;
+}
+.btn-box>div a{color: #59a1de;padding: 0 45%;}

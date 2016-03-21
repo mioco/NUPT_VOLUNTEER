@@ -1,6 +1,5 @@
 <?php	
 	$data = explode(',', $_POST['table']);
-	//var_dump($data);
 	include './PHPExcel.php'; 
 	//$objPHPExcel = new PHPExcel();
 	$path = './recordMode.xls';
@@ -18,10 +17,10 @@
 	$objPHPExcel->getActiveSheet()->setCellValue('A7', $data[7]);
 	$objPHPExcel->getActiveSheet()->setCellValue('C7', $data[8]);
 	$objPHPExcel->getActiveSheet()->setCellValue('E7', $data[9]);
-	$objPHPExcel->getActiveSheet()->setCellValue('C8', $data[10]);
-	$objPHPExcel->getActiveSheet()->setCellValue('A10', $data[11]);
-	$objPHPExcel->getActiveSheet()->setCellValue('C10', $data[12]);
-	$objPHPExcel->getActiveSheet()->setCellValue('E10', $data[13]);
+	@$objPHPExcel->getActiveSheet()->setCellValue('C8', $data[10]);
+	@$objPHPExcel->getActiveSheet()->setCellValue('A10', $data[11]);
+	@$objPHPExcel->getActiveSheet()->setCellValue('C10', $data[12]);
+	@$objPHPExcel->getActiveSheet()->setCellValue('E10', $data[13]);
 
 	header("Pragma: public");
 	header("Expires: 0");

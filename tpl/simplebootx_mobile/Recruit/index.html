@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{$name} {$seo_title} {$site_name}</title>
+    <meta name="keywords" content="{$seo_keywords}" />
+    <meta name="description" content="{$seo_description}">
+    <tc_include file="Public:head" />
+
+    <link href="__TMPL__Public/css/recruit.css" rel="stylesheet">
+</head>
+<body>
+<tc_include file="Public:header" />
+<div class="container">
+    <div class="term-bar">
+        <div class="term-item active" id="time_type">
+            <a class="item-title">时间类型</a>
+            <div class="term-item-1 ">
+                <a href="{:u('index',array('id'=>'3'))}">全部活动</a>
+                <a value="1">长期活动</a>
+                <a value="0">临时活动</a>
+            </div>
+        </div>
+        <div class="term-item" id="term">
+            <a class="item-title">服务类型</a>
+            <foreach name="terms" item="te">
+                <div class="term-item-1 hidden">
+                    <a id="term-item-{$te.term_id}" value="{$te.term_id}"><span>{$te.name}</span></a>
+                </div>
+                
+            </foreach>
+        </div>
+        <div class="term-item" id="time_limit">
+            <a class="item-title">时间限制</a>
+            <div class="term-item-1 hidden">
+                <a href="" type="checkbox" value="0" target="main">全周</a>
+                <a value="1" target="main">周一</a>
+                <a value="2" target="main">周二</a>
+                <a value="3" target="main">周三</a>
+                <a value="4" target="main">周四</a>
+                <a value="5" target="main">周五</a>
+                <a value="6" target="main">周六</a>
+                <a value="7" target="main">周日</a>
+            </div>
+        </div>
+        <div class="term-item" id="active_status" class=" status-bar">
+            <a class="item-title">活动状态</a>
+            <div class="term-item-1 hidden">
+                <a href="">全部</a>
+                <a value="0" class="recruiting">招募中</a>
+                <a value="1" class="underway">进行中</a>
+                <a value="2" class="over">已结束</a>
+            </div>
+        </div>
+    </div>
+    <div class="recruit">
+        <volist name="posts" id="vo">
+        <php>
+            $smeta=json_decode($vo['smeta'],true);
+        </php>
+        <tc_include file="Recruit:list"/>
+        </volist>
+    </div>
+    <div class="pagination"><ul>{$posts['page']}</ul></div>
+    <hr>
+    <input class="seachUrl" value="{:u('recruit/recruit/listIndex')}" type="hidden">
+</div>
+<tc_include file="Public:footer"/>
+    
+<!-- JavaScript -->
+<tc_include file="Public:scripts" />
+<script>
+    $(function(){
+        $('.term-item-1').on('tap','a',function(){
+            var variate = $(this).parent().attr('id'),
+                value = $(this).attr('value'),
+                url = $('.seachUrl').val(),
+                time_type = '',
+                term = '',
+                time_limit = '',
+                active_status = '',
+                reg = RegExp(("variate+") +'=(\d+,?)+', 'g'),
+                check = reg.exec(url);
+                console.log(url,variate,check);
+            if (check) {
+                var reg = RegExp(variate +'='+ value)
+                check = url.search(reg);
+                console.log('匹配是否已存在该标签和值'+reg);
+                if (check) {
+                    url = url.replace(reg, '');
+                    $('.seachUrl').val(url);
+                    console.log('检测到该标签和值，删除'+url);
+                }else{
+                    console.log(url+','+reg);
+                    var reg = RegExp(variate +'=(\d+,?)+');
+                    //这里替换有问题，是自己替换自己了。
+                    url = url.replace(reg, variate +'='+ value);
+                    $('.seachUrl').val(url);
+                    console.log('没检测到标签的值，添加',url);
+
+                }              
+            }else{
+                url = url + '&' + variate + '=' + value;
+                $('.seachUrl').val(url);
+                console.log('没检测到标签，添加',url);
+            }
+
+            // console.log('check:'+check+','+'url:'+url+','+'vari:'+variate+','+'value:'+ value);
+            $.ajax({
+                url: url,
+                success:function(data){
+                    $('.list-container').html(data);
+                }
+            });
+        })    
+    //navbar
+        $('.item-title').on('tap', function(){
+            console.log('12');
+            $('.item-title').each(function(){
+                    console.log($(this));
+                if($(this).parent().is('.active')) {
+                    $(this).next().addClass('hidden');
+                    $(this).parent().removeClass('active');
+                }
+            })
+            $(this).parent().addClass('active');
+            $(this).next().removeClass('hidden');
+        })
+    })
+        
+</script>
+<script>
+</script>
+</body>
+</html>

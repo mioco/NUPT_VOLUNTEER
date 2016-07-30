@@ -22,11 +22,8 @@
 		    	<div class="article-infobox">
 		    		<span>{$post_date} by {$user_nicename|default=$user_login}</span>
 		    		<span>
-		    			<a href="javascript:;"><i class="fa fa-eye"></i><span>{$post_hits}</span></a>
+		    		<a href="javascript:;"><i class="fa fa-eye"></i><span>{$post_hits}</span></a>
 						<a href="{:U('article/do_like',array('id'=>$object_id))}" class="J_count_btn"><i class="fa fa-thumbs-up"></i><span class="count">{$post_like}</span></a>
-						<a href="{:U('user/favorite/do_favorite',array('id'=>$object_id))}" class="J_favorite_btn" data-title="{$post_title}" data-url="{:U('article/index',array('id'=>$tid))}" data-key="{:sp_get_favorite_key('posts',$object_id)}">
-							<i class="fa fa-star-o"></i>
-						</a>
 					</span>
 		    	</div>
 		    	<hr>

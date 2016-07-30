@@ -9,11 +9,11 @@
 	margin-top: 20px;
 }
 .uploaded_avatar_area .uploaded_avatar_btns{display: none;}
+/*div#one img{width: 270px;height: auto;}*/
 </style>
                     <div class="span8">
                            <div class="tabs">
                                <ul class="nav nav-tabs">
-                                   <li class="active"><a href="#one" data-toggle="tab"> 修改头像</a></li>
                                </ul>
                                <div class="tab-content">
                                    <div class="tab-pane active" id="one">
@@ -27,7 +27,7 @@
                                    		
                                    		<div class="uploaded_avatar_btns">
                                    			<a class="btn btn-primary confirm_avatar_btn" onclick="update_avatar()">确定</a>
-                                   			<a class="btn" onclick="reloadPage()">取消</a>
+                                   			<a class="btn" onclick="reloadPage(window)">取消</a>
                                    		</div>
                                    		</div>
                                    </div>

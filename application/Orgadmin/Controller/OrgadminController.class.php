@@ -147,13 +147,13 @@ class OrgadminController extends AdminbaseController{
         $org = M('org_relationships');
         if($_GET){
             if($_GET['status']) {
-                if ( $org->where(array('user_id'=>$_GET['id']))->save(array('status'=>1))!=false) {
+                if ( $org->where(array('uid'=>$_GET['id']))->save(array('status'=>1))!=false) {
                     $this->success("审核成功！");
                 } else {
                     $this->error("审核出错！");
                 }
             }else{
-                if ($org->where(array('user_id'=>$_GET['id']))->delete()!=false) {
+                if ($org->where(array('uid'=>$_GET['id']))->delete()!=false) {
                     $this->success('已拒绝该申请');
                 }else{
                     $this->error('发生错误');

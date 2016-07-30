@@ -24,8 +24,8 @@
     <![endif]-->
   <link rel="icon" href="__TMPL__Public/images/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="__TMPL__Public/images/favicon.ico" type="image/x-icon">
-    <link href="__TMPL__Public/simpleboot/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="__TMPL__Public/simpleboot/font-awesome/4.2.0/css/font-awesome.min.css"  rel="stylesheet" type="text/css">
+  <link href="__TMPL__Public/simpleboot/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+  <link href="__TMPL__Public/simpleboot/font-awesome/4.2.0/css/font-awesome.min.css"  rel="stylesheet" type="text/css">
   <!--[if IE 7]>
   <link rel="stylesheet" href="__TMPL__Public/simpleboot/font-awesome/4.2.0/css/font-awesome-ie7.min.css">
   <![endif]-->
@@ -67,11 +67,12 @@
                 <ul class="dropdown-menu pull-right hidden">
                   <div>
                     <p style="text-align:center;font-weight:600;">{$user['username']}</p>
-                    <p>头衔&nbsp;</p>
-                    <div><span>时长 {$user['duration']}</span><span>性别 </span></div>
+                    <p>头衔&nbsp;未获得</p>
+                    <php>$sexs=array("0"=>"未填写","1"=>"男","2"=>"女");</php>
+                    <div><span>时长 {$user['duration']|default='0'}</span><span>性别 {$sexs[$user['sex']]}</span></div>
                     <li><a href="{:u('user/center/index')}"><i class="iconfont">&#xe60f</i> 个人中心</a></li>
                   </div>            
-                   <li><a href="{:u('user/index/logout')}"><i class="iconfont">&#xe60d</i> &nbsp;退出</a></li>
+                  <li><a href="{:u('user/index/logout')}"><i class="iconfont">&#xe60d</i> &nbsp;退出</a></li>
                 </ul>
               </li>
       </ul>
@@ -103,7 +104,7 @@
             <div class="detail-box" id="right">
               <h2>{$user['duration']}小时</h2>             
               <div class="controls">
-                <a href="{:U('user/profile/edit')}" type="submit" class="btn" style="color:#fff;" class="editLink">编辑</a>
+                <a href="{:U('user/profile/edit')}" type="submit" class="btn editLink">编辑</a>
               </div>
             </div>
           </div>
@@ -117,17 +118,17 @@
               <foreach name="posts" item="p">
                 <php>$smeta=json_decode($p['smeta'],true);</php>
                 <div id="link-item">
-                  <div id="user-name"><a href="" style="font-size:1.1em;font-weight:600;"><span>{$p.org_name}</span></a>
+                  <div id="user-name"><a href="{:leuu('orgadmin/org/orgItem',array('oid'=>$org['oid']))}" style="font-size:1.1em;font-weight:600;"><span>{$p.org_name}</span></a>
                   <p id="time" style="color:#aaa;">{$p.createtime}</p></div>
-                  <div><span style="color:#aaa;">参加了&nbsp;</span><a href="" style="color:#00a1d6;">{$p.post_title}</a></div>
+                  <div><span style="color:#aaa;">参加了&nbsp;</span><a href="{:leuu('portal/article/index',array('id'=>$p['tid']))}" style="color:#00a1d6;">{$p.post_title}</a></div>
                   
                   <p>{$p.post_excerpt}</p>
                   <div id="post-img">
-                    <a href="{:leuu('article/index',array('id'=>$vo['tid']))}">
+                    <a href="{:leuu('portal/article/index',array('id'=>$p['tid']))}">
                     <if condition="empty($smeta['thumb'])"> 
-                        <img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
+                        <img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$p.post_title}"/>
                     <else /> 
-                        <img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive img-thumbnail" alt="{$vo.post_title}" />
+                        <img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive img-thumbnail" alt="{$p.post_title}" />
                     </if>
                 </a>
                   </div>
@@ -169,12 +170,12 @@
             <h3>社团</h3>
             <div>
               <div id="org-img">
-                    <a href="{:leuu('article/index',array('id'=>$vo['tid']))}">
-                    <if condition="empty($smeta['thumb'])"> 
-                        <img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
-                    <else /> 
-                        <img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive img-thumbnail" alt="{$vo.post_title}" />
-                    </if>
+                <a href="{:leuu('orgadmin/org/orgItem',array('oid'=>$org['oid']))}">
+                  <if condition="empty($org['logo'])"> 
+                      <img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
+                  <else /> 
+                      <img src="{:sp_get_org_logo_url($org['logo'])}" class="img-responsive img-thumbnail" alt="{$vo.post_title}" />
+                  </if>
                 </a>
               </div>
               <span>{$org['org_name']}</span>
@@ -187,13 +188,13 @@
     <tc_include file="Public:footer" />
 
 	<tc_include file="Public:scripts" />
+  <!-- <script src="__ROOT__/statics/js/ajaxForm.js"></script> -->
   <input id="uid_hidden" type="text" value="{$_SESSION['user']['id']}" hidden>
   <script>
     $(function(){
       $('.editLink').on('click', function(){
         var link = $(this).attr('href'),
             uid = $('#uid_hidden').val();
-            console.log(uid);
           $.ajax({
             url: link,
             data: {uid:uid},
@@ -212,6 +213,14 @@
           "height":"38px"
         })}
       })
+
+      //form submit
+      $('.J_ajax_submit_btn').on('submit', function(e) {
+          e.preventDefault(); // <-- important
+          $(this).ajaxSubmit({
+              target: '编辑成功'
+          });
+      });
     })
   </script>
 </body>

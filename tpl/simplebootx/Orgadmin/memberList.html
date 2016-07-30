@@ -9,34 +9,33 @@
 
 </head>
 <body>
-<tc_include file="Public:nav" />
 <div class="container new-container" id="org-container">
     <div class="span8">
-        <h3>社团目录</h3>
+        <h3>社团成员</h3>
+        <hr>
         <div class="row">
-        <foreach name="org" item="o">
+        <foreach name="member" item="m">
             <div class="org-item">
                 <div class="org-left">                    
                     <div class="logo">
-                        <a href="{:u('orgadmin/org/orgItem',array('oid'=>$o['oid']))}">
-                            <if condition="empty($o['logo'])"> 
-                                <img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
-                            <else /> 
-                                <img src="{:sp_get_org_logo_url($o['logo'])}" class="img-responsive img-thumbnail" alt="{$o.logo}" />
-                            </if>
+                        <a href="{:u('user/userinfo/index',array('id'=>$m['id']))}" target="——blank">
+                        <if condition="empty($m['avatar'])"> 
+                        <img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$m.username}"/>
+                        <else /> 
+                        <img src="{:sp_get_user_avatar_url($m['avatar'])}" class="img-responsive img-thumbnail" alt="{$m.username}" />
+                        </if>
                         </a>
                     </div>
                 </div>
                 <div class="org-right">
                     <div class="detail">
-                        <a class="detail-title" href="{:u('orgadmin/org/orgItem',array('oid'=>$o['oid']))}" oid="{$o.oid}">{$o.org_name}</a>
-                        <div><span><i class="iconfont">&#xe60e;</i> {$o.count}</span>&nbsp;&nbsp;&nbsp;
-                        <span><i class="iconfont">&#xe613;</i> {$o.posts_count}</span></div>
-                        
+                        <a class="detail-title" href="{:u('user/userinfo/index',array('id'=>$m['id']))}" oid="{$o.oid}">{$m.username}</a>
+                        <php>$sex = array('0'=>'未填写','1'=>'男','2'=>'女');</php>
+                        <div><span>{$sex[$m['sex']]}</span></div>                        
                     </div>
-                    <p>{$o.org_des}</p>
+                    <span> {$m.duration} 小时</span><br/>
+                    <span> {$m.signature|default='未填写'} </span><br/>
                 </div>
-                <button type="button" data-toggle="modal" data-target=".join-box-{$o.oid}" href="{:u('orgadmin/org/orgJoin',array('oid'=>$o['oid'],'uid'=>$_SESSION['user']['id']))}" class="join-btn">加入社团</button>
                 <div class="modal fade join-box-{$o.oid}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
                   <div class="modal-dialog modal-sm">
                     <div class="modal-header">
@@ -49,21 +48,6 @@
         </foreach> 
         </div>
         {$page}
-    </div>
-    <div class="span3">
-        <div class="sidebar-notice">
-            <div class="siderbar-notice-title"><h3>社团动态</h3></div>
-            <div class="siderbar-notice-content">
-                <foreach name="orgNews" item="o">
-                    <div>
-                        <span><a href="{:u('orgadmin/org/orgItem',array('oid'=>$o['oid']))}">{$o.org_name}</a> 发起&nbsp;</span><a href="">{$o.post_title}</a>
-                        <p>{$o.post_modified}</p>
-                    </div>
-                    
-                </foreach>
-            </div>
-        </div>
-        <div class="sidebar-hot-new"></div>
     </div>
 </div>
 

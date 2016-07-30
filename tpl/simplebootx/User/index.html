@@ -1,45 +1,71 @@
  <!-- 进行中的项目 -->
-<div class="content-item i-link">
-
-</div>  
-<!-- 个人信息    -->
-<div class="content-item one-detail">
-		<div class="control-group">
-			<label class="control-label" for="input-user_nicename">姓名</label>
-			<div class="controls">
-				{$username|default='未填写'}
-			</div>
-		</div>
-		<div class="control-group">
-			<label class="control-label" for="input-sex">性别</label>
-			<div class="controls">
-			<php>
-			$sexs=array("0"=>"未填写","1"=>"男","2"=>"女");
-			
-			</php>
-				{$sexs[$sex]}
-			</div>
-		</div>
-		<div class="control-group">
-			<label class="control-label" for="input-birthday">生日</label>
-			<div class="controls">
-				{$birthday|default='未填写'}
-			</div>
-		</div>
-		<div class="control-group">
-			<label class="control-label" for="input-user_url">个人网址</label>
-			<div class="controls">
-				{$user_url|default='未填写'}
-			</div>
-		</div>
-		<div class="control-group">
-			<label class="control-label" for="input-signature">个人简介</label>
-			<div class="controls">
-				{$signature|default='未填写'}
-			</div>
-		</div>
-		<div class="control-group">
-		</div>
-	</div>
-
-<tc_include file="Public:scripts" />
+         		<div class="span8 i-link">
+            <h3>个人动态</h3>
+              <foreach name="posts" item="p">
+                <php>$smeta=json_decode($p['smeta'],true);</php>
+                <div id="link-item">
+                  <div id="user-name"><a href="" style="font-size:1.1em;font-weight:600;"><span>{$p.org_name}</span></a>
+                  <p id="time" style="color:#aaa;">{$p.createtime}</p></div>
+                  <div><span style="color:#aaa;">参加了&nbsp;</span><a href="" style="color:#00a1d6;">{$p.post_title}</a></div>
+                  
+                  <p>{$p.post_excerpt}</p>
+                  <div id="post-img">
+                    <a href="{:leuu('article/index',array('id'=>$vo['tid']))}">
+                    <if condition="empty($smeta['thumb'])"> 
+                        <img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
+                    <else /> 
+                        <img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive img-thumbnail" alt="{$vo.post_title}" />
+                    </if>
+                </a>
+                  </div>
+                  <hr>
+                </div>
+            </foreach>
+            </div>  
+            <!-- 个人信息    -->
+            <div class="span4 one-detail">
+            <h3>个人信息</h3>
+         			<div class="control-group">
+         				<label class="control-label" for="input-user_nicename">姓名</label>
+         				<div class="controls">
+         					{$username|default='未填写'}
+         				</div>
+         			</div>
+         			<div class="control-group">
+         				<label class="control-label" for="input-sex">性别</label>
+         				<div class="controls">
+         				<php>
+         				$sexs=array("0"=>"未填写","1"=>"男","2"=>"女");
+         				
+         				</php>
+         					{$sexs[$sex]}
+         				</div>
+         			</div>
+         			<div class="control-group">
+         				<label class="control-label" for="input-birthday">生日</label>
+         				<div class="controls">
+         					{$birthday|default='未填写'}
+         				</div>
+         			</div>
+         			<div class="control-group">
+         				<label class="control-label" for="input-signature">注册时间</label>
+         				<div class="controls">
+         					{$create_time|date="Y-m-d",###}
+         				</div>
+         			</div>
+            <h3>社团</h3>
+            <div>
+              <div id="org-img">
+                <a href="{:leuu('orgadmin/org/orgItem',array('oid'=>$org['oid']))}">
+                  <if condition="empty($org['logo'])"> 
+                      <img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
+                  <else /> 
+                      <img src="{:sp_get_org_logo_url($org['logo'])}" class="img-responsive img-thumbnail" alt="{$vo.post_title}" />
+                  </if>
+                </a>
+              </div>
+              <span>{$org['org_name']}</span>
+              <p>{$org['org_des']}</p>
+            </div>
+         		</div>
+          </div>

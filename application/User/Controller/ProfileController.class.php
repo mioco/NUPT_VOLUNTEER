@@ -29,7 +29,7 @@ class ProfileController extends MemberbaseController {
 				if ($this->users_model->save()!==false) {
 					$user=$this->users_model->find($userid);
 					sp_update_current_user($user);
-					$this->success("保存成功！",U("user/profile/edit"));
+					$this->success("保存成功！");
 				} else {
 					$this->error("保存失败！");
 				}

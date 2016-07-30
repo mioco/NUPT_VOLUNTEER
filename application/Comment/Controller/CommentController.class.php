@@ -42,6 +42,7 @@ class CommentController extends MemberbaseController{
 			$url=parse_url(urldecode($_POST['url']));
 			$query=empty($url['query'])?"":"?{$url['query']}";
 			$url="{$url['scheme']}://{$url['host']}{$url['path']}$query";
+
 			$_POST['url']=sp_get_relative_url($url);
 			
 			if(isset($_SESSION["user"])){//用户已登陆,且是本站会员
@@ -75,10 +76,10 @@ class CommentController extends MemberbaseController{
 					
 					$post_table_model->create(array("comment_count"=>array("exp","comment_count+1")));
 					$post_table_model->where(array($pk=>intval($_POST['post_id'])))->save();
-					
 					$post_table_model->create(array("last_comment"=>time()));
 					$post_table_model->where(array($pk=>intval($_POST['post_id'])))->save();
 					
+					$this->ajaxReturn(sp_ajax_return(array("id"=>$result),"评论成功！",1));
 				} else {
 					$this->error("评论失败！");
 				}

@@ -38,19 +38,32 @@
 				<p>时间： {$ac_start}&nbsp;到&nbsp;{$ac_end}</p>
 				<p>地址： {$post_address}</p>
 				<p>分类： {$term[name]}</p>
+				<php>$status=array('0'=>'招募中','1'=>'进行中','2'=>'已结束');</php>
+				<p>状态：{$status[$active_status]}</p>
 				<form class="recruit_form" action="{:u('recruit/recruit/post')}" method="post">
 				    <input type="hidden" name="post_id" value="{$id}"/>
 				    <input type="hidden" name="tid" value="{$tid}">
-				<a type="submit" class="btn btn-primary recruit-btn" toUrl="{:u('Recruit/RecruitPost/post')}" tid="{$tid}">报名</a></form>
+				    <if condition="($active_status!=0)">
+							<a type="submit" class="btn btn-primary recruit-btn disabled" toUrl="{:u('Recruit/RecruitPost/post')}" tid="{$tid}">报名</a>
+				    <else/>
+							<a type="submit" class="btn btn-primary recruit-btn" toUrl="{:u('Recruit/RecruitPost/post')}" tid="{$tid}">报名</a>
+				    </if></form>
 				<a href="{:U('article/do_like',array('id'=>$object_id))}" class="J_count_btn btn btn-primary">感兴趣&nbsp;<i class="fa fa-thumbs-up"></i><span class="count">{$post_like}</span></a>
 			</div>
 		</div>
 		<div class="sidebar span3">
-			<a href=""><p><strong>发起组织： {$user_number}</strong></p></a>
+			<php>
+				$poster = M('org_relationships')
+				->alias('orl')
+				->join(C('DB_PREFIX').'org as o on orl.oid = o.oid')
+				->where(array('uid'=>$post_author))->field('o.oid,o.org_name,org_des')->find();
+			</php>
+			<a href="{:u('orgadmin/org/orgitem',array('oid'=>$poster['oid']))}"><p><strong>发起组织： {$poster['org_name']}</strong></p></a>
+			<p>发表用户： {$user_number}</p>
 			<p>发布时间： {$post_date}</p>
 			<p>联系方式</p>
-			<button class="btn btn-default">团队信息</button>
-			<p>该组织的信息介绍</p>
+			<a href="{:u('orgadmin/org/orgitem',array('oid'=>$poster['oid']))}" class="btn btn-default">团队信息</a>
+			<p>{$poster['org_des']}</p>
 		</div>
 	</div>
 	<div>
@@ -78,13 +91,17 @@
 					->join(C('DB_PREFIX').'users as u on b.uid = u.id')
 					->where(array('tid'=>$tid,'status'=>'1'))->field('username,avatar,u.id,status')->order('createtime desc')->select();
 				</php>
-        		<foreach name="menber" item="vo">
+        		<foreach name="menber" item="m">
         			<div>
-        				<if condition="empty($vo['avatar'])">
-			            <img src="__TMPL__/Public/images/headicon_50.png" class="headicon"/>
-			            <else/>
-			            <img src="{:sp_get_user_avatar_url($vo['avatar'])}" class="headicon"/>
-			            </if>
+        				<div id="org-img">
+					                    <a href="{:u('user/userinfo/index',array('id'=>$m['id']))}" target="userinfo">
+					                    <if condition="empty($m['avatar'])"> 
+					                        <img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$m.username}"/>
+					                    <else /> 
+					                        <img src="{:sp_get_user_avatar_url($m['avatar'])}" class="img-responsive img-thumbnail" alt="{$m.username}" />
+					                    </if>
+					                </a>
+					              </div>
         			</div>
 				</foreach>
 			</div>
@@ -105,32 +122,12 @@
 			{:Comments("posts",$_GET['id'])}
 	    	</div>		    
 		</div>
-		<div class="span3">
-			<div class="tc-box">
-	        	<div class="headtitle">
-	        		<hr>
-	        		<h2>最新评论</h2>
-	        	</div>
-	        	<div class="comment-ranking">
-	        		<php>$last_comments=sp_get_comments("field:*;limit:0,5;order:createtime desc;");</php>
-	        		<foreach name="last_comments" item="vo">
-	                    <div class="comment-ranking-inner">
-	                        <i class="fa fa-comment"></i>
-	                        <a href="{:U('user/index/index',array('id'=>$vo['uid']))}">{$vo.full_name}:</a>
-	                        <span>{$vo.content}</span>
-	                        <a href="__ROOT__/{$vo.url}#comment{$vo.id}">查看原文</a>
-	                        <span class="comment-time">{:date('m月d日  H:i',strtotime($vo['createtime']))}</span>
-	                    </div>
-                    </foreach>
-                </div>
-			</div>
-		</div>
 	</div>    
 </div>
 <tc_include file="Public:footer"/>
 <script>
 	$(function(){
-		$('.recruit-btn').click(function() {
+		$('.recruit-btn:not(.disabled)').click(function() {
 			var url = $(this).attr('toUrl'),
 				tid = $(this).attr('tid');
 			$.ajax({
@@ -151,7 +148,5 @@
 	})
 
 </script>
-
-<tc_include file="Public:scripts" />
 </body>
 </html>

@@ -18,7 +18,7 @@ class RecruitController extends HomeBaseController{
 	
 	function index(){
 		// $this->listIndex();
-        $field = "po.id,object_id,post_title,post_address,post_date,ac_start,ac_end,smeta,post_hits,post_like";
+        $field = "po.id,tid,post_title,post_address,post_date,ac_start,ac_end,smeta,post_hits,post_like,active_status";
         $posts = $this->posts_model
         ->alias('po')
         ->join(C('DB_PREFIX').'term_relationships tr on po.id = tr.object_id')

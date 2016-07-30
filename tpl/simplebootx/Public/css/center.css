@@ -28,6 +28,23 @@ a {
     color: #000;
 }
 a:hover{color: #00a1d6;}
+hr{
+margin: 20px 0;
+border: 0;
+border-top: 1px solid #f0f0f0;
+border-bottom: 1px solid #fff;
+}
+.btn{
+    background-color: #428bca;
+    color: #fff;
+    padding: .2em .5em;
+    border-radius: 4px;
+    border: 1px solid #428bca;
+}
+.btn:hover{
+    background: #fff;
+    color: #428bca;
+}
 nav{
 	    height: 20px;
     padding: 12px 0;
@@ -75,6 +92,7 @@ a.user>div.nav-avatar{
     z-index: 1;    
     left: 50%;
     margin-left: -15px;
+    box-shadow: 1px 1px #ddd;
 }
 a.user>div.nav-avatar img {
     width: auto\9;
@@ -125,6 +143,7 @@ ul.dropdown-menu.pull-right>li{
 	width: 1170px;
     background-image: url('../images/head.jpg');
     height: 245px;
+    margin-left: -30px;
     position: absolute;
     top: 0;
     background-size: cover;
@@ -134,7 +153,7 @@ ul.dropdown-menu.pull-right>li{
     filter:blur(13px);
 }
 #user_detail #avatar {
-    border-radius: 50%;
+    border-radius: 5px;
     overflow: hidden;
     width: 128px;
     height: 128px;
@@ -193,6 +212,7 @@ div#post-img img{width: 100%;}
 }
 label.control-label {
     color: #3FA6D7;
+    padding-top: 5px;
 }
 div#org-img{
         width: 60px;
@@ -202,4 +222,12 @@ div#org-img{
     margin-right: .7em;
 }
 div#org-img img{width: 100%;}
+
+.control-group{padding-bottom: 1em;}
+.controls>input,.controls>select,.controls>textarea{
+    padding: .5em;
+    width: 15em;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
 

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{$name} {$seo_title} {$site_name}</title>
-    <meta name="keywords" content="{$seo_keywords}" />
-    <meta name="description" content="{$seo_description}">
-    <tc_include file="Public:head" /> 
+  <title>{$name} {$seo_title} {$site_name}</title>
+  <meta name="keywords" content="{$seo_keywords}" />
+  <meta name="description" content="{$seo_description}">
+  <tc_include file="Public:head" /> 
 	<style>	
 		#orgLogo{border-radius: 50%;}
 		button.join-btn{
@@ -20,26 +20,131 @@
 		}
 		div.modal{border-radius: 4px;}
 		div.modal .modal-content{padding: 1em;}
-		body{background-color: #f9f9f9;}
 	</style>
+	<link rel="stylesheet" href="__TMPL__Public/css/orgItem.css">
 </head>
 <body>
 <tc_include file="Public:nav" />
-<tc_include file="orgCenter" />
-<div class="load"></div>
-<script>
-$(function(){
-	var oid = "{$oid}";
-	$.ajax({
-		url:"{:u('orgadmin/org/orgCenter')}",
-		data:{oid:oid},
-		success:function(data){
-			$('.load').html(data);
-	}//success
-	})//ajax
+<div class="container tc-main">
+<div class="row">
+<div class="span7">
+	<div class="orgDetail">
+		<div id="orgLogo">
+			<if condition="empty($data['logo'])"> 
+				<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
+			<else /> 
+				<img src="{:sp_get_org_logo_url($data['logo'])}" class="img-responsive img-thumbnail" alt="{$vo.post_title}" />
+			</if>
+		</div>
+		<div id="orgTitle">
+			<p>{$data['org_name']}</p>
+			<p>{$data['org_des']}</p>
+		</div>
+	<div>						
+		<button type="button" data-toggle="modal" data-target=".join-box" href="{:u('orgadmin/org/orgJoin',array('oid'=>$data['oid'],'uid'=>$_SESSION['user']['id']))}" class="join-btn">加入社团</button>
+		<div class="modal fade join-box" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				</div>
+				<div class="modal-content">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<hr>
+<h3>社团动态</h3>
+<div class="orgInner">
+<div class="org-link">
+<if condition="empty($posts)">该社团暂时没有动态</if>
+<foreach name="posts" item="p">
+	<php>$smeta=json_decode($p['smeta'],true);</php>
+	<div id="link-item">
+		<div id="user-name"><a href="" style="font-size:1.1em;font-weight:600;"><span>{$p.org_name}</span></a>
+		<p id="time" style="color:#aaa;">{$p.post_date}</p></div>
+		<div><span style="color:#aaa;">发布&nbsp;</span><a href="{:leuu('portal/article/index',array('id'=>$p['tid']))}" style="color:#00a1d6;">{$p.post_title}</a></div>
 
-})
+		<p>{$p.post_excerpt}</p>
+		<div id="post-img">
+		<a href="{:leuu('portal/article/index',array('id'=>$posts['tid']))}">
+		<if condition="empty($smeta['thumb'])"> 
+		<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$p.post_title}"/>
+		<else /> 
+		<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive img-thumbnail" alt="{$p.post_title}" />
+		</if>
+		</a>
+		</div>
+	</div>
+</foreach>
+</div>
+<div id="page">{$page}</div>
+</div>
+</div>
+<div class="span4">
+<div>
+<p><strong>社团成员：</strong>{$data['u_count']}人</p>
+<p><strong>发起活动：</strong>{$data['p_count']} 项</p>
+<p><strong>服务时长：</strong>{$data['time']} 小时</p>
+<p><strong>社团描述：</strong>{$data['org_des']}</p>
+</div>
+<div>
+<div>
+<strong>{$data['u_count']} 成员</strong>
+<a href="{:u('org/memberList',array('id'=>$data['oid']))}" class="pull-right">更多 ></a>
+</div>
+<hr>
+<foreach name="member" item="m">
+<div id="org-img">
+<a href="{:u('user/userinfo/index',array('id'=>$m['id']))}" target="——blank">
+<if condition="empty($m['avatar'])"> 
+<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$m.username}"/>
+<else /> 
+<img src="{:sp_get_user_avatar_url($m['avatar'])}" class="img-responsive img-thumbnail" alt="{$m.username}" />
+</if>
+</a>
+</div>
+</foreach>
+<br style="clear:left"/>
+</div>
+</div>
+</div>
+		</div>
+		<script>
+		$(function(){
+			console.log('run');
+			$('#page').find('a').each(function(){
+				var href = $(this).attr('href');
+				$(this).attr('data-url',href);
+				$(this).removeAttr('href');
+			})
 
+			$('#page').on('click','a',function(){
+				var url = $(this).attr('data-url');
+				$.ajax({
+					url:url,
+					success: function(data){
+					$('.container.tc-main').html(data);
+				}
+				});
+			});
+	    //join org
+	    $('.join-btn').on('click',function(){
+	        var url = $(this).attr('href');
+	        $.ajax({
+	            url:url,
+	            success: function(data){
+	                $('.join-box').find('.modal-content').html(data);
+	                return false;
+	            }
+	        })			
+	    });
+	    // $('div#org-img>a').on('click',function(){
+	    // 	$('iframe[name=userinfo]').removeClass('hidden');
+	    // 	$('div.container').addClass('hidden');
+	    // })
+	})
 </script>
 <tc_include file="Public:footer"/>
 </body>
+		

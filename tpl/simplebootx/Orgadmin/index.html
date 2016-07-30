@@ -1,6 +1,32 @@
-<iframe src="" frameborder="0" name="userinfo" class="hidden" style="width:100%;min-height:1080px;"></iframe>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{$name} {$seo_title} {$site_name}</title>
+    <meta name="keywords" content="{$seo_keywords}" />
+    <meta name="description" content="{$seo_description}">
+    <tc_include file="Public:head" /> 
+	<style>	
+		#orgLogo{border-radius: 50%;}
+		button.join-btn{
+		        background-color: #428bca;
+		    color: #fff;
+		    padding: .2em .5em;
+		    border-radius: 4px;
+		    border: 1px solid #428bca;
+		}
+		button.join-btn:hover{
+		    background: #fff;
+		    color: #428bca;
+		}
+		div.modal{border-radius: 4px;}
+		div.modal .modal-content{padding: 1em;}
+		body{background-color: #f9f9f9;}
+	</style>
 <link rel="stylesheet" href="__TMPL__Public/css/orgItem.css">
-		<div class="container tc-main">
+</head>
+<body>
+<tc_include file="Public:nav" />
+<div class="container tc-main">
 			       
                 <div class="row">
                     <div class="span7">
@@ -58,12 +84,6 @@
 				</div>
                     <div class="span4">
                     	<div>
-                    		<strong style="float:left;margin-right:1em;">成员占比</strong>
-                    		<div class="progress">
-							  <div class="progress-bar" role="progressbar" aria-valuenow="{$org['ratio']}" aria-valuemin="0" aria-valuemax="100" style="width: {$org['ratio']}%;">
-							    {$org['ratio']}%
-							  </div>
-							</div>
                     		<p><strong>社团成员：</strong>{$org['u_count']}人</p>
                     		<p><strong>发起活动：</strong>{$org['p_count']} 项</p>
                     		<p><strong>服务时长：</strong>{$org['time']} 小时</p>
@@ -121,9 +141,12 @@
 	            }
 	        })			
 	    });
-	    $('div#org-img>a').on('click',function(){
-	    	$('iframe[name=userinfo]').removeClass('hidden');
-	    	$('div.container').addClass('hidden');
-	    })
+	    // $('div#org-img>a').on('click',function(){
+	    // 	$('iframe[name=userinfo]').removeClass('hidden');
+	    // 	$('div.container').addClass('hidden');
+	    // })
 	})
 </script>
+<tc_include file="Public:footer"/>
+</body>
+		

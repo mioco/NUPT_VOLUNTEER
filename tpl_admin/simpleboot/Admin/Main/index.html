@@ -21,7 +21,8 @@ list-style: none;
   <h4 class="well">消息通知</h4>
   <div class="home_info">
     <div class="not_check">
-    <strong>未审核报名：&nbsp;</strong>
+    <if condition="get_current_admin_id()==1">
+    <strong>未审核报名：&nbsp;</strong></if>
     <a href="{:u('Recruit/Recruitadmin/not_check')}">{$count}</a></div>
   </div>
 </div>

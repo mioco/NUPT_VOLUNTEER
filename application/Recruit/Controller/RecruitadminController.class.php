@@ -60,19 +60,19 @@ class RecruitadminController extends AdminbaseController{
 		$this->memberList(1);
 	}
 	function memberList($status){
-		$where['jo.status'] = $status;
-		if ($_GET['id']) $where['jo.tid'] = $_GET['id'];
+		$where['r.status'] = $status;
+		if ($_GET['id']) $where['r.tid'] = $_GET['id'];
 		if ($_SESSION['ADMIN_ID'] != 1) {
-			$where['post_id'] = $_SESSION['ADMIN_ID'];
+			$where['pid'] = $_SESSION['ADMIN_ID'];
 		}
 		$page = $this->page($count, 20);
 		$menber=$this->recruit_model
-		->alias('jo')
-		->join(C('DB_PREFIX').'users u on jo.uid = u.id')
-		->join(C('DB_PREFIX').'faculty_relationships fr on jo.uid = fr.user_id')
+		->alias('r')
+		->join(C('DB_PREFIX').'users u on r.uid = u.id')
+		->join(C('DB_PREFIX').'faculty_relationships fr on r.uid = fr.user_id')
 		->join(C('DB_PREFIX').'faculty f on fr.major_id = f.fid')
 		->where($where)
-		->field('jo.id,u.id as uid,user_number,username,user_email,status,fa_name,faculty_id,org')
+		->field('r.id,u.id as uid,user_number,username,user_email,status,fa_name,faculty_id,org')
 		->limit($page->firstRow . ',' . $page->listRows)
 		->order("status")
 		->select();

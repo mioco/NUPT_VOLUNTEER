@@ -1,0 +1,112 @@
+/*nav*/
+.navbar{
+  height: 232px;
+  box-shadow: none;
+  margin: 0;} 
+.top-nav .mask-0 {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);}
+.top-nav .mask-0, .top-nav .mask-1{
+  height: 42px;
+  width: 100%;
+  position: absolute;
+}
+.top-nav .mask-1 {
+  background-color: rgba(255,255,255,.5);
+}
+.navbar .nav-container{
+  max-width: 1170px;
+  margin: auto;
+}
+.navbar .nav-container>div{width:1170px;position: absolute;}
+.navbar .nav-container>div>.weather>li{
+  font-size: 1.1em;
+  margin-right: 1em;
+  margin-top: .6em;
+}
+.navbar .nav-container>div>ul .offline>ul>li {    
+  height: 22px;
+    width: 47px;
+    padding: 1em .8em;
+    letter-spacing: 1px;
+    border-radius: 0 0 7px 7px;
+    background-color: #FF8186;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+
+}
+.navbar .nav-container>div>ul .offline>ul>li:hover{
+  background-color: #f98589;
+}
+/*top*/
+.navbar .top-nav .container>*{
+  margin-right: 10px;
+}
+.navbar .top-nav{
+  width: 100%;
+  height: 42px;
+  min-width: 1170px;
+  position: absolute;
+  box-shadow: 0 2px 2px rgba(0,0,0,.7);
+  -webkit-box-shadow: 0 2px 2px rgba(0,0,0,.7);
+  background-color: rgba(255,255,255,0.5);
+}
+.navbar .top-nav .img,.navbar .top-nav ul,.navbar .top-nav ul li{
+  float: left;
+  color: #000;
+  font-weight: 400;
+}
+/*nav*/
+.navbarInner, .top-nav .mask-0 {
+  background-image: url(../images/head.jpg);
+  background-size: cover;
+}
+.navbarInner{
+    padding-top: 42px;
+  height: 125px;}
+.navbarInner img{height: 70px;}
+.navbarInner .nav-container{
+  width: 1170px;
+  min-width: 1170px;
+  margin: auto;
+}
+.navbar .navbarInner form{
+  background-color: rgba(255,255,255,0.4);
+  margin-top: 3em;    
+  border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0,0,0,.8);
+}
+.navbar .navbarInner form:hover{
+  background-color: #fff;
+}
+.navbar .navbarInner form input{
+  padding: 8px;
+}
+.navbar .navbarInner form input,.navbar .navbarInner form button{
+  background-color: initial;
+  border: none;
+}
+.navbar .navbarInner form button{font-size: 2em;}
+nav#main-menu {
+  width: 1170px;
+  margin: 0 auto;
+}
+nav#main-menu ul>li>a{
+  padding: 1.5em 1.7em 0 0;
+  color: #000;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+nav#main-menu ul>li>a:hover{
+  background: none;
+  color: #00a1d6;
+}
+/*login*/
+.pull-right>ul>li{
+  float: left;
+  margin: 10px 15px 0 0;
+  
+}
+.offline .pull-right li a{color: #fff;}
+/*search*/
+.form-inline{margin: 0;}
+.form-inline .btn{margin: 0;}

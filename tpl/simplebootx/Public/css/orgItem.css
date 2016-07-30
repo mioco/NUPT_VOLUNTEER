@@ -63,4 +63,7 @@ div#org-img{
     float: left;
     margin-right: .7em;
 }
-div#org-img img{width: 100%;}
+div#org-img img{
+    min-width: 100%;
+    min-height: 100%;
+}

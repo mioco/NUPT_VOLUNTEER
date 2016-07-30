@@ -1,7 +1,7 @@
 <?php
 namespace User\Controller;
-use Common\Controller\MemberbaseController;
-class RecordController extends MemberbaseController{
+use Common\Controller\HomeBaseController;
+class RecordController extends HomeBaseController{
 	function index(){
 		$this->recordInfo($_REQUEST['uid']);
         $this -> display(':record');
@@ -16,7 +16,7 @@ class RecordController extends MemberbaseController{
         ->where(array('u.id'=>$uid))
         ->find();
         $userInfo['major'] = M('faculty')->where(array('fid'=>$userInfo['major_id']))->getField('fa_name');
-        $tid = M('recruit') -> where(array('uid' => $uid)) -> field('tid') -> select();
+        $tid = M('recruit') -> where(array('uid' => $uid,'status'=>1)) -> field('tid') -> select();
         foreach ($tid as $t) {
             $tidString = $tidString.$t['tid'].',';
         }

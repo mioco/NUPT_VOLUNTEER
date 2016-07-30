@@ -7,9 +7,13 @@ class MainController extends AdminbaseController {
 	   $this->recruit_model = D('Common/Recruit'); 
     }
     public function index(){
-        $where = array('status' => '0');
-    	$count = $this->recruit_model->where($where)->count();
-    	$mysql= mysql_get_server_info();
+        if (get_current_admin_id()==1) {
+            $where['orl.uid'] = get_current_admin_id();
+            $where['r.status'] = 0;
+            $join = C('DB_PREFIX').'org_relationships orl on r.pid = orl.uid';
+            $count = $this->recruit_model->alias('r')->join($join)->where($where)->count();
+        }
+    	// $mysql= mysql_get_server_info();
     	$mysql=empty($mysql)?"未知":$mysql;
     	//服务器信息
     	$info = array(

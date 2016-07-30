@@ -46,7 +46,7 @@ class HomeBaseController extends AppframeController {
 	
 	protected function check_login(){
 		if(!isset($_SESSION["user"])){
-			$this->error('您还没有登录！',__ROOT__."/");
+			$this->error('您还没有登录！');
 		}
 		
 	}

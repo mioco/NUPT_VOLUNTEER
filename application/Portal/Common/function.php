@@ -317,7 +317,6 @@ function sp_sql_post($tid,$tag){
 	//根据参数生成查询条件
 	$where['status'] = array('eq',1);
 	$where['tid'] = array('eq',$tid);
-
 	$join = "".C('DB_PREFIX').'posts as b on a.object_id =b.id';
 	$join2= "".C('DB_PREFIX').'users as c on b.post_author = c.id';
 	$term_relationships_model= M("TermRelationships");

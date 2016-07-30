@@ -21,9 +21,8 @@ class ArticleController extends HomeBaseController {
     	    header('Status:404 Not Found');
     	    if(sp_template_file_exists(MODULE_NAME."/404")){
     	        $this->display(":404");
-    	    }
-    	    
-    	    return ;
+    	    }  
+    	    return;
     	}
     	$termid=$article['term_id'];
     	$term_obj= M("Terms");
